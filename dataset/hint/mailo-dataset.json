@@ -1,0 +1,904 @@
+{
+  "app": "mailo",
+  "display_name": "Mailo Email",
+  "reference_service": "Gmail",
+  "category": "email",
+  "datasetPath": "dataset/hint/mailo-dataset.json",
+  "baseUrl": "http://localhost:3207",
+  "states": {
+    "1": "Default Mailo inbox. Primary tab active, sidebar fully expanded (240px).",
+    "2": "Mailo inbox scrolled down — early emails are above the visible area.",
+    "3": "Mailo inbox with the 'Upgrade to Mailo Pro' modal open, covering the email list.",
+    "4": "Mailo inbox with the sidebar collapsed to 64px — folder icons and label color dots are visible but all text labels are hidden.",
+    "5": "Mailo inbox with the recent searches panel open from the search bar, covering the tab row.",
+    "6": "Incoming mail notification state — Alice Kim reply appears after async delay.",
+    "7": "Incoming mail notification state — James Park reply appears after async delay.",
+    "8": "Incoming mail notification state — Eunji Oh reply appears after async delay.",
+    "9": "Incoming mail notification state — Brian Choi reply appears after async delay.",
+    "10": "Compose window open with To and Subject filled in, while Q3_Report.pptx is uploading — Send is disabled until upload completes.",
+    "11": "Banner auto-advance state — starts on Mailo Pro banner, advances to Mailo Drive banner after delay."
+  },
+  "tasks": [
+    {
+      "id": "mailo-01-click-github-verify-email-address-email",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction_original": "Click the email from GitHub about verifying your email address.",
+      "instruction": "Scroll down and click the email from GitHub about verifying your email address.",
+      "target_id": "mailo.inbox.e25.row",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='mailo.inbox.scroll-region']",
+          "dy": 1100,
+          "label": "scroll list down"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.inbox.e25.row']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 1,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-02-click-hyunwoo-design-sprint-kickoff-email",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction_original": "Click the email from Hyunwoo Jang about the design sprint kickoff.",
+      "instruction": "Scroll down and click the email from Hyunwoo Jang about the design sprint kickoff.",
+      "target_id": "mailo.inbox.e20.row",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='mailo.inbox.scroll-region']",
+          "dy": 900,
+          "label": "scroll list down"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.inbox.e20.row']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 2,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-03-click-marcus-park-q3-design-review-email",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "2",
+      "instruction_original": "Click the email from Marcus Park about the Q3 Design Review.",
+      "instruction": "Scroll up and click the email from Marcus Park about the Q3 Design Review.",
+      "target_id": "mailo.inbox.e1.row",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='mailo.inbox.scroll-region']",
+          "dy": -1000,
+          "label": "scroll list up"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.inbox.e1.row']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 3,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-04-click-sarah-chen-hiking-trip-email",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "2",
+      "instruction_original": "Click the email from Sarah Chen about the weekend hiking trip.",
+      "instruction": "Scroll up and click the email from Sarah Chen about the weekend hiking trip.",
+      "target_id": "mailo.inbox.e2.row",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='mailo.inbox.scroll-region']",
+          "dy": -1000,
+          "label": "scroll list up"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.inbox.e2.row']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 4,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-05-click-minjoon-lee-invoice-email",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "2",
+      "instruction_original": "Click the email from Minjoon Lee about Invoice #1042.",
+      "instruction": "Scroll up and click the email from Minjoon Lee about Invoice #1042.",
+      "target_id": "mailo.inbox.e3.row",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='mailo.inbox.scroll-region']",
+          "dy": -900,
+          "label": "scroll list up"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.inbox.e3.row']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 5,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-06-click-ella-roberts-product-roadmap-email",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "2",
+      "instruction_original": "Click the email from Ella Roberts about Product Roadmap Feedback.",
+      "instruction": "Scroll up and click the email from Ella Roberts about Product Roadmap Feedback.",
+      "target_id": "mailo.inbox.e4.row",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='mailo.inbox.scroll-region']",
+          "dy": -900,
+          "label": "scroll list up"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.inbox.e4.row']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 6,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-07-hover-archive-ella-roadmap",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the archive button for Ella Roberts's email about the product roadmap feedback.",
+      "instruction": "Hover over Ella Roberts's email and click the archive button for Ella Roberts's email about the product roadmap feedback.",
+      "target_id": "mailo.inbox.e4.archive",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='mailo.inbox.e4.row']",
+          "label": "hover to reveal"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.inbox.e4.archive']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 7,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-09-hover-delete-marcus-component",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the delete button for Marcus Park's email about the component library naming convention.",
+      "instruction": "Scroll down, hover over Marcus Park's email and click the delete button for Marcus Park's email about the component library naming convention.",
+      "target_id": "mailo.inbox.e22.delete",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='mailo.inbox.scroll-region']",
+          "dy": 900,
+          "label": "scroll list down"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='mailo.inbox.e22.row']",
+          "label": "hover to reveal"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.inbox.e22.delete']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 9,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-10-hover-snooze-daisy-birthday",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the snooze button for Daisy Park's email about the birthday dinner plans.",
+      "instruction": "Scroll down, hover over Daisy Park's email and click the snooze button for Daisy Park's email about the birthday dinner plans.",
+      "target_id": "mailo.inbox.e11.snooze",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='mailo.inbox.scroll-region']",
+          "dy": 400,
+          "label": "scroll list down"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='mailo.inbox.e11.row']",
+          "label": "hover to reveal"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.inbox.e11.snooze']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 10,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-11-hover-archive-jisu-concert",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the archive button for Jisu Kim's email about the concert tickets.",
+      "instruction": "Scroll down, hover over Jisu Kim's email and click the archive button for Jisu Kim's email about the concert tickets.",
+      "target_id": "mailo.inbox.e24.archive",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='mailo.inbox.scroll-region']",
+          "dy": 1000,
+          "label": "scroll list down"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='mailo.inbox.e24.row']",
+          "label": "hover to reveal"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.inbox.e24.archive']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 11,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-12-click-oldest-first-sort-option",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the 'Oldest first' sort option.",
+      "instruction": "Open the sort menu and click the 'Oldest first' sort option.",
+      "target_id": "mailo.toolbar.sort.oldest",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.toolbar.sort-btn']",
+          "label": "open sort menu"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.toolbar.sort.oldest']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 12,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-13-click-unread-first-sort-option",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the 'Unread first' sort option.",
+      "instruction": "Open the sort menu and click the 'Unread first' sort option.",
+      "target_id": "mailo.toolbar.sort.unread",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.toolbar.sort-btn']",
+          "label": "open sort menu"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.toolbar.sort.unread']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 13,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-14-click-mark-as-important-marcus-park-email",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click 'Mark as important' on Marcus Park's Q3 design review email.",
+      "instruction": "Hover over Marcus Park's email, open its message menu and click 'Mark as important' on Marcus Park's Q3 design review email.",
+      "target_id": "mailo.inbox.e1.more.mark-important",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='mailo.inbox.e1.row']",
+          "ms": 220,
+          "label": "hover row"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.inbox.e1.more']",
+          "label": "open more menu"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.inbox.e1.more.mark-important']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 14,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-15-click-report-as-spam-minjoon-lee-email",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click 'Report as spam' on the email from Minjoon Lee.",
+      "instruction": "Hover over Minjoon Lee's email, open its message menu and click 'Report as spam' on the email from Minjoon Lee.",
+      "target_id": "mailo.inbox.e3.more.report-spam",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='mailo.inbox.e3.row']",
+          "ms": 220,
+          "label": "hover row"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.inbox.e3.more']",
+          "label": "open more menu"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.inbox.e3.more.report-spam']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 15,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-17-popup-search-panel-click-linkedin-email-social-tab",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "5",
+      "instruction_original": "Click the LinkedIn email about Ella Roberts commenting on your post.",
+      "instruction": "Close the recent searches panel, open Social and click the LinkedIn email about Ella Roberts commenting on your post.",
+      "target_id": "mailo.social.s1.row",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.search.recent.close']",
+          "label": "close recent searches panel"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.tab.social']",
+          "label": "switch to social tab"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.social.s1.row']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 17,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-18-popup-search-panel-click-figma-email-promotions-tab",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "5",
+      "instruction_original": "Click the Figma email about your plan renewing in 3 days.",
+      "instruction": "Close the recent searches panel, open Promotions and click the Figma email about your plan renewing in 3 days.",
+      "target_id": "mailo.promotions.p1.row",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.search.recent.close']",
+          "label": "close recent searches panel"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.tab.promotions']",
+          "label": "switch to promotions tab"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.promotions.p1.row']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 18,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-19-popup-close-select-all",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "3",
+      "instruction_original": "Click the select-all checkbox in Mailo.",
+      "instruction": "Dismiss the upgrade modal and click the select-all checkbox in Mailo.",
+      "target_id": "mailo.toolbar.select-all",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.modal.upgrade.close']",
+          "label": "close modal"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.toolbar.select-all']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 19,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-20-popup-search-panel-click-instagram-follow-email",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "5",
+      "instruction_original": "Click the Instagram email about Sarah Chen starting to follow you.",
+      "instruction": "Close the recent searches panel, open Social and click the Instagram email about Sarah Chen starting to follow you.",
+      "target_id": "mailo.social.s2.row",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.search.recent.close']",
+          "label": "close recent searches panel"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.tab.social']",
+          "label": "switch to social tab"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.social.s2.row']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 20,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-21-reply-alice-kim-q3-budget-review",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "6",
+      "instruction_original": "Click the Reply button on Alice Kim's Q3 Budget Review notification.",
+      "instruction": "Wait for Alice Kim's Q3 Budget Review notification and click the Reply button on Alice Kim's Q3 Budget Review notification.",
+      "target_id": "mailo.notification.reply",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 4800
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.notification.reply']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 21,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-22-forward-alice-kim-q3-budget-review",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "6",
+      "instruction_original": "Click the Forward button on Alice Kim's Q3 Budget Review notification.",
+      "instruction": "Wait for Alice Kim's Q3 Budget Review notification and click the Forward button on Alice Kim's Q3 Budget Review notification.",
+      "target_id": "mailo.notification.forward",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 4800
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.notification.forward']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 22,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-23-archive-alice-kim-q3-budget-review",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "6",
+      "instruction_original": "Click the Archive button on Alice Kim's Q3 Budget Review notification.",
+      "instruction": "Wait for Alice Kim's Q3 Budget Review notification and click the Archive button on Alice Kim's Q3 Budget Review notification.",
+      "target_id": "mailo.notification.archive",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 4800
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.notification.archive']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 23,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-24-reply-james-park-project-atlas",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "7",
+      "instruction_original": "Click the Reply button on James Park's Project Atlas notification.",
+      "instruction": "Wait for James Park's Project Atlas notification and click the Reply button on James Park's Project Atlas notification.",
+      "target_id": "mailo.notification.reply",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 4800
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.notification.reply']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 24,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-25-forward-james-park-project-atlas",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "7",
+      "instruction_original": "Click the Forward button on James Park's Project Atlas notification.",
+      "instruction": "Wait for James Park's Project Atlas notification and click the Forward button on James Park's Project Atlas notification.",
+      "target_id": "mailo.notification.forward",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 4800
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.notification.forward']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 25,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-26-archive-james-park-project-atlas",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "7",
+      "instruction_original": "Click the Archive button on James Park's Project Atlas notification.",
+      "instruction": "Wait for James Park's Project Atlas notification and click the Archive button on James Park's Project Atlas notification.",
+      "target_id": "mailo.notification.archive",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 4800
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.notification.archive']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 26,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-27-reply-sarah-chen-deadline",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "8",
+      "instruction_original": "Click the Reply button on Eunji Oh's report deadline notification.",
+      "instruction": "Wait for Eunji Oh's report deadline notification and click the Reply button on Eunji Oh's report deadline notification.",
+      "target_id": "mailo.notification.reply",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 4800
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.notification.reply']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 27,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-28-forward-sarah-chen-deadline",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "8",
+      "instruction_original": "Click the Forward button on Eunji Oh's report deadline notification.",
+      "instruction": "Wait for Eunji Oh's report deadline notification and click the Forward button on Eunji Oh's report deadline notification.",
+      "target_id": "mailo.notification.forward",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 4800
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.notification.forward']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 28,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-29-archive-sarah-chen-deadline",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "8",
+      "instruction_original": "Click the Archive button on Eunji Oh's report deadline notification.",
+      "instruction": "Wait for Eunji Oh's report deadline notification and click the Archive button on Eunji Oh's report deadline notification.",
+      "target_id": "mailo.notification.archive",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 4800
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.notification.archive']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 29,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-31-forward-minjoon-lee-invoice",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "9",
+      "instruction_original": "Click the Forward button on Brian Choi's Invoice #2847 notification.",
+      "instruction": "Wait for Brian Choi's Invoice #2847 notification and click the Forward button on Brian Choi's Invoice #2847 notification.",
+      "target_id": "mailo.notification.forward",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 4800
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.notification.forward']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 31,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-32-archive-minjoon-lee-invoice",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "9",
+      "instruction_original": "Click the Archive button on Brian Choi's Invoice #2847 notification.",
+      "instruction": "Wait for Brian Choi's Invoice #2847 notification and click the Archive button on Brian Choi's Invoice #2847 notification.",
+      "target_id": "mailo.notification.archive",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 4800
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.notification.archive']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 32,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-33-send-email-with-attachment",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "10",
+      "instruction_original": "Click the 'Send' button for the pptx upload to Jisu.",
+      "instruction": "Wait for the upload to finish and click the 'Send' button for the pptx upload to Jisu.",
+      "target_id": "mailo.compose.send",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 4800
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.compose.send']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 33,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-34-click-learn-more-mailo-pro-banner",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "1",
+      "instruction_original": "Click 'Learn more' in the Mailo Pro announcement banner.",
+      "instruction": "Use the announcement banner arrow and click 'Learn more' in the Mailo Pro announcement banner.",
+      "target_id": "mailo.banner.pro.cta",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.banner.arrow-next']",
+          "label": "advance to Pro banner"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.banner.pro.cta']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 34,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-35-auto-advance-drive-banner-view-files",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "11",
+      "instruction_original": "Click 'View files' in the Mailo Drive announcement banner.",
+      "instruction": "Use the announcement banner arrow and click 'View files' in the Mailo Drive announcement banner.",
+      "target_id": "mailo.banner.drive.cta",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.banner.arrow-next']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.banner.drive.cta']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 35,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-36-auto-advance-meet-banner-start-call",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "11",
+      "instruction_original": "Click 'Start a call' in the Mailo Meet announcement banner.",
+      "instruction": "Use the announcement banner arrow and click 'Start a call' in the Mailo Meet announcement banner.",
+      "target_id": "mailo.banner.meet.cta",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.banner.arrow-next']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.banner.arrow-next']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.banner.meet.cta']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 36,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-37-click-drafts-folder-sidebar",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "4",
+      "instruction_original": "Click the 'Drafts' folder.",
+      "instruction": "Drag the sidebar wider and click the 'Drafts' folder.",
+      "target_id": "mailo.sidebar.drafts",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 60,
+          "startY": 400,
+          "endX": 260,
+          "endY": 400,
+          "label": "expand sidebar"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.sidebar.drafts']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 37,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-39-click-travel-label-sidebar",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "4",
+      "instruction_original": "Click the 'Travel' label.",
+      "instruction": "Drag the sidebar wider and click the 'Travel' label.",
+      "target_id": "mailo.sidebar.label.travel",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 60,
+          "startY": 400,
+          "endX": 260,
+          "endY": 400,
+          "label": "expand sidebar"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.sidebar.label.travel']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 39,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "mailo-40-click-finance-label-sidebar",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "4",
+      "instruction_original": "Click the 'Finance' label.",
+      "instruction": "Drag the sidebar wider and click the 'Finance' label.",
+      "target_id": "mailo.sidebar.label.finance",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 60,
+          "startY": 400,
+          "endX": 260,
+          "endY": 400,
+          "label": "expand sidebar"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='mailo.sidebar.label.finance']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 40,
+      "gold_trace_executable": true
+    }
+  ]
+}

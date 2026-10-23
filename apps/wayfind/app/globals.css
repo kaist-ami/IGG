@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --background: #eef2f7;
+  --foreground: #172033;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+html { scroll-behavior: auto; }
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+[data-igg-review-hover="true"] .group-hover\:opacity-100,
+[data-igg-review-hover="true"].group-hover\:opacity-100 { opacity: 1 !important; }
+[data-igg-review-hover="true"] .group-hover\:flex,
+[data-igg-review-hover="true"].group-hover\:flex { display: flex !important; }
+[data-igg-review-hover="true"] .group-hover\:block,
+[data-igg-review-hover="true"].group-hover\:block { display: block !important; }
+[data-igg-review-hover="true"] .group-hover\:visible,
+[data-igg-review-hover="true"].group-hover\:visible { visibility: visible !important; }
+
+.map-grid {
+  background-image:
+    linear-gradient(30deg, rgba(37, 99, 235, .12) 12%, transparent 12.5%, transparent 87%, rgba(37, 99, 235, .12) 87.5%, rgba(37, 99, 235, .12)),
+    linear-gradient(150deg, rgba(37, 99, 235, .12) 12%, transparent 12.5%, transparent 87%, rgba(37, 99, 235, .12) 87.5%, rgba(37, 99, 235, .12)),
+    linear-gradient(30deg, rgba(37, 99, 235, .12) 12%, transparent 12.5%, transparent 87%, rgba(37, 99, 235, .12) 87.5%, rgba(37, 99, 235, .12)),
+    linear-gradient(150deg, rgba(37, 99, 235, .12) 12%, transparent 12.5%, transparent 87%, rgba(37, 99, 235, .12) 87.5%, rgba(37, 99, 235, .12));
+  background-size: 92px 160px;
+  background-position: 0 0, 0 0, 46px 80px, 46px 80px;
+}

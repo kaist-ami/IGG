@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6f8fa;
+  --foreground: #24292f;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+button,
+a {
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease, opacity 120ms ease, transform 120ms ease;
+}
+
+[data-igg-review-hover="true"] .group-hover\:opacity-100,
+[data-igg-review-hover="true"].group-hover\:opacity-100 { opacity: 1 !important; }
+[data-igg-review-hover="true"] .group-hover\:flex,
+[data-igg-review-hover="true"].group-hover\:flex { display: flex !important; }
+[data-igg-review-hover="true"] .group-hover\:block,
+[data-igg-review-hover="true"].group-hover\:block { display: block !important; }
+[data-igg-review-hover="true"] .group-hover\:visible,
+[data-igg-review-hover="true"].group-hover\:visible { visibility: visible !important; }
+
+.devhub-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.devhub-scrollbar::-webkit-scrollbar-thumb {
+  background: #d0d7de;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}

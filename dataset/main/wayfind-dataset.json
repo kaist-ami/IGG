@@ -1,0 +1,627 @@
+{
+  "app": "wayfind",
+  "display_name": "Wayfind Maps",
+  "reference_service": "Google Maps",
+  "category": "maps/navigation",
+  "datasetPath": "dataset/main/wayfind-dataset.json",
+  "baseUrl": "http://localhost:3212",
+  "states": {
+    "1": "Default city map view",
+    "2": "Sidebar footer visible",
+    "3": "Location permission popup open",
+    "4": "Live map updates pending",
+    "5": "Map starts west of Blue Line Station",
+    "6": "Map starts west of Civic Garden Library",
+    "7": "Map starts west of North Pier Museum",
+    "8": "Map starts west of Eastview Park",
+    "9": "Map starts east of Atlas Pharmacy",
+    "10": "Map starts east of West Gate Parking",
+    "11": "Map starts northwest of South Marina Pier",
+    "12": "Map starts east of Harbor Bike Rental",
+    "13": "Map starts east of Garden Square",
+    "14": "Map starts west of Juniper Market Hall"
+  },
+  "tasks": [
+    {
+      "id": "wayfind-02-open-ferry",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction": "Click 'Open' for Ferry terminal status.",
+      "target_id": "wayfind.bottom.ferry.open",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='wayfind.sidebar.scroll']",
+          "dy": 2450
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.bottom.ferry.open']"
+        }
+      ],
+      "ordinal": 2,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-03-open-closures",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction": "Click 'Open' for Weekend closures.",
+      "target_id": "wayfind.bottom.closures.open",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='wayfind.sidebar.scroll']",
+          "dy": 2750
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.bottom.closures.open']"
+        }
+      ],
+      "ordinal": 3,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-04-add-place-footer",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction": "Click 'Add missing place'.",
+      "target_id": "wayfind.sidebar.add-place",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='wayfind.sidebar.scroll']",
+          "dy": 2900
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.sidebar.add-place']"
+        }
+      ],
+      "ordinal": 4,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-05-edit-map-footer",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction": "Click 'Edit the map'.",
+      "target_id": "wayfind.sidebar.edit-map",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='wayfind.sidebar.scroll']",
+          "dy": 2900
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.sidebar.edit-map']"
+        }
+      ],
+      "ordinal": 5,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-06-click-food-nearby",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "2",
+      "instruction": "Click the Food nearby category.",
+      "target_id": "wayfind.sidebar.nearby.food",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='wayfind.sidebar.scroll']",
+          "dy": -2900
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.sidebar.nearby.food']"
+        }
+      ],
+      "ordinal": 6,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-07-click-cafe-nearby",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "2",
+      "instruction": "Click the Cafe nearby category.",
+      "target_id": "wayfind.sidebar.nearby.cafe",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='wayfind.sidebar.scroll']",
+          "dy": -2900
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.sidebar.nearby.cafe']"
+        }
+      ],
+      "ordinal": 7,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-08-click-bus-nearby",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "2",
+      "instruction": "Click the Bus nearby category.",
+      "target_id": "wayfind.sidebar.nearby.bus",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='wayfind.sidebar.scroll']",
+          "dy": -2900
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.sidebar.nearby.bus']"
+        }
+      ],
+      "ordinal": 8,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-09-click-subway-nearby",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "2",
+      "instruction": "Click the Subway nearby category.",
+      "target_id": "wayfind.sidebar.nearby.subway",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='wayfind.sidebar.scroll']",
+          "dy": -2900
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.sidebar.nearby.subway']"
+        }
+      ],
+      "ordinal": 9,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-10-click-hotel-nearby",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "2",
+      "instruction": "Click the Hotel nearby category.",
+      "target_id": "wayfind.sidebar.nearby.hotel",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='wayfind.sidebar.scroll']",
+          "dy": -2900
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.sidebar.nearby.hotel']"
+        }
+      ],
+      "ordinal": 10,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-12-hover-travel-tooltip",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction": "Click the travel modes.",
+      "target_id": "wayfind.travel.button",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wayfind.travel.button']",
+          "ms": 250
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.travel.button']"
+        }
+      ],
+      "ordinal": 12,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-14-hover-saved-tooltip",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction": "Click the saved lists.",
+      "target_id": "wayfind.saved.button",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wayfind.saved.button']",
+          "ms": 250
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.saved.button']"
+        }
+      ],
+      "ordinal": 14,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-15-dismiss-popup-locate",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "3",
+      "instruction": "Click the current location.",
+      "target_id": "wayfind.locate.button",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.popup.close']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.locate.button']"
+        }
+      ],
+      "ordinal": 15,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-16-dismiss-popup-zoom-in",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "3",
+      "instruction": "Click the zoom in button.",
+      "target_id": "wayfind.map.zoom-in",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.popup.close']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.map.zoom-in']"
+        }
+      ],
+      "ordinal": 16,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-17-dismiss-popup-moss-maple",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "3",
+      "instruction": "Click Moss & Maple on the map.",
+      "target_id": "wayfind.map.pin.moss-maple",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.popup.close']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.map.pin.moss-maple']"
+        }
+      ],
+      "ordinal": 17,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-19-dismiss-popup-layers",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "3",
+      "instruction": "Click the map layers tool.",
+      "target_id": "wayfind.layers.button",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.popup.close']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.layers.button']"
+        }
+      ],
+      "ordinal": 19,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-20-update-traffic-ready",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "4",
+      "instruction": "Click Update traffic after live traffic finishes updating.",
+      "target_id": "wayfind.traffic.refresh",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 3500
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.traffic.refresh']"
+        }
+      ],
+      "ordinal": 20,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-21-pan-blue-line-save",
+      "level": "3-3",
+      "constraint_type": "map_pan",
+      "state_id": "5",
+      "instruction": "Without searching, click the button to save Blue Line on the map.",
+      "target_id": "wayfind.map.pin.blue-line.save",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 1280,
+          "startY": 420,
+          "endX": 430,
+          "endY": 420
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.map.pin.blue-line']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.map.pin.blue-line.save']"
+        }
+      ],
+      "ordinal": 21,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-22-pan-civic-library-directions",
+      "level": "3-3",
+      "constraint_type": "map_pan",
+      "state_id": "6",
+      "instruction": "Without searching, click the directions button for Civic Library on the map.",
+      "target_id": "wayfind.map.pin.civic-library.directions",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 1138,
+          "startY": 401,
+          "endX": 348,
+          "endY": 888
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.map.pin.civic-library']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.map.pin.civic-library.directions']"
+        }
+      ],
+      "ordinal": 22,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-23-pan-north-pier-save",
+      "level": "3-3",
+      "constraint_type": "map_pan",
+      "state_id": "7",
+      "instruction": "Without searching, click the button to save North Pier on the map.",
+      "target_id": "wayfind.map.pin.north-pier.save",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 1321,
+          "startY": 482,
+          "endX": 297,
+          "endY": 470
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.map.pin.north-pier']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.map.pin.north-pier.save']"
+        }
+      ],
+      "ordinal": 23,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-24-pan-eastview-park-directions",
+      "level": "3-3",
+      "constraint_type": "map_pan",
+      "state_id": "8",
+      "instruction": "Without searching, click the directions button for Eastview Park on the map.",
+      "target_id": "wayfind.map.pin.eastview-park.directions",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 1189,
+          "startY": 273,
+          "endX": 385,
+          "endY": 862
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.map.pin.eastview-park']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.map.pin.eastview-park.directions']"
+        }
+      ],
+      "ordinal": 24,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-25-pan-atlas-pharmacy-save",
+      "level": "3-3",
+      "constraint_type": "map_pan",
+      "state_id": "9",
+      "instruction": "Without searching, click the button to save Atlas Pharmacy on the map.",
+      "target_id": "wayfind.map.pin.atlas-pharmacy.save",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 430,
+          "startY": 420,
+          "endX": 1280,
+          "endY": 420
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.map.pin.atlas-pharmacy']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.map.pin.atlas-pharmacy.save']"
+        }
+      ],
+      "ordinal": 25,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-26-pan-west-gate-directions",
+      "level": "3-3",
+      "constraint_type": "map_pan",
+      "state_id": "10",
+      "instruction": "Without searching, click the directions button for West Gate on the map.",
+      "target_id": "wayfind.map.pin.west-gate.directions",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 553,
+          "startY": 238,
+          "endX": 1308,
+          "endY": 777
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.map.pin.west-gate']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.map.pin.west-gate.directions']"
+        }
+      ],
+      "ordinal": 26,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-27-pan-south-marina-save",
+      "level": "3-3",
+      "constraint_type": "map_pan",
+      "state_id": "11",
+      "instruction": "Without searching, click the button to save South Marina on the map.",
+      "target_id": "wayfind.map.pin.south-marina.save",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 1240,
+          "startY": 820,
+          "endX": 620,
+          "endY": 360
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.map.pin.south-marina']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.map.pin.south-marina.save']"
+        }
+      ],
+      "ordinal": 27,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-28-pan-harbor-bike-directions",
+      "level": "3-3",
+      "constraint_type": "map_pan",
+      "state_id": "12",
+      "instruction": "Without searching, click the directions button for Harbor Bike on the map.",
+      "target_id": "wayfind.map.pin.harbor-bike.directions",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 430,
+          "startY": 420,
+          "endX": 1280,
+          "endY": 420
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.map.pin.harbor-bike']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.map.pin.harbor-bike.directions']"
+        }
+      ],
+      "ordinal": 28,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-29-pan-garden-square-save",
+      "level": "3-3",
+      "constraint_type": "map_pan",
+      "state_id": "13",
+      "instruction": "Without searching, click the button to save Garden Square on the map.",
+      "target_id": "wayfind.map.pin.garden-sq.save",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 430,
+          "startY": 420,
+          "endX": 1280,
+          "endY": 420
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.map.pin.garden-sq']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.map.pin.garden-sq.save']"
+        }
+      ],
+      "ordinal": 29,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wayfind-30-pan-juniper-market-directions",
+      "level": "3-3",
+      "constraint_type": "map_pan",
+      "state_id": "14",
+      "instruction": "Without searching, click the directions button for Juniper Market on the map.",
+      "target_id": "wayfind.map.pin.juniper-market.directions",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 900,
+          "startY": 420,
+          "endX": 520,
+          "endY": 420
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.map.pin.juniper-market']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wayfind.map.pin.juniper-market.directions']"
+        }
+      ],
+      "ordinal": 30,
+      "gold_trace_executable": true
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "figma-site",
+  "private": true,
+  "scripts": {
+    "dev": "../../node_modules/.bin/next dev --webpack",
+    "build": "../../node_modules/.bin/next build",
+    "start": "../../node_modules/.bin/next start"
+  }
+}

@@ -1,0 +1,834 @@
+{
+  "app": "gridly",
+  "display_name": "Gridly Sheets",
+  "reference_service": "Google Sheets",
+  "category": "spreadsheet",
+  "datasetPath": "dataset/hint/gridly-dataset.json",
+  "baseUrl": "http://localhost:3211",
+  "states": {
+    "1": "Default sheet view",
+    "2": "Save completed popup occluding page",
+    "3": "Formula helper occluding narrow spreadsheet columns",
+    "4": "Refresh data is syncing and the Refresh button becomes available after about 5 seconds.",
+    "5": "The Meet link is being prepared and the Meet button becomes available after about 5 seconds.",
+    "6": "Share settings are loading and the Share button becomes available after about 5 seconds.",
+    "7": "PDF export dialog is open while the file is being generated; the Download PDF button turns green after about 5 seconds.",
+    "8": "CSV export dialog is open while the file is being generated; the Download CSV button turns green after about 5 seconds.",
+    "9": "Procurement insight banner is visible first; use the banner arrow to navigate to Enterprise expansion."
+  },
+  "tasks": [
+    {
+      "id": "gridly-01-click-c3-northwind",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction_original": "Click cell C36.",
+      "instruction": "Scroll down and click cell C36.",
+      "target_id": "gridly.cell.c36",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1000,
+          "label": "scroll 1000"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.cell.c36']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 1,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-02-click-i3-weighted-arr",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction_original": "Click cell I26.",
+      "instruction": "Scroll down and click cell I26.",
+      "target_id": "gridly.cell.i26",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 500,
+          "label": "scroll 500"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.cell.i26']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 2,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-03-click-bluepeak-account",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction_original": "Click the Account cell containing \"Lotus Freight\".",
+      "instruction": "Scroll down and click the Account cell containing \"Lotus Freight\".",
+      "target_id": "gridly.cell.c25",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 200,
+          "label": "scroll 200"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.cell.c25']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 3,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-06-click-summit-account",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction_original": "Click the Account cell containing \"Waveform TV\".",
+      "instruction": "Scroll down and click the Account cell containing \"Waveform TV\".",
+      "target_id": "gridly.cell.c28",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 620,
+          "label": "scroll 620"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.cell.c28']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 6,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-07-click-quantum-account",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction_original": "Click the button that selects all of row 26.",
+      "instruction": "Scroll down and click the button that selects all of row 26.",
+      "target_id": "gridly.row.26.select",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 700,
+          "label": "scroll 700"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.row.26.select']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 7,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-08-click-quantum-note",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction_original": "Click cell A37.",
+      "instruction": "Scroll down and click cell A37.",
+      "target_id": "gridly.cell.a37",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1000,
+          "label": "scroll 1000"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.cell.a37']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 8,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-09-select-row-39",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction_original": "Click the button that selects all of row 39.",
+      "instruction": "Scroll down and click the button that selects all of row 39.",
+      "target_id": "gridly.row.39.select",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "x": 720,
+          "y": 520,
+          "dy": 980
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.row.39.select']"
+        }
+      ],
+      "ordinal": 9,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-10-click-cobalt-systems-account",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction_original": "Click cell C35 in the spreadsheet.",
+      "instruction": "Scroll down and click cell C35 in the spreadsheet.",
+      "target_id": "gridly.cell.c35",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='gridly.sheet.scroll']",
+          "dy": 2400
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.cell.c35']"
+        }
+      ],
+      "ordinal": 10,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-11-click-beacon-news-stage",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction_original": "Click cell D37 in the spreadsheet.",
+      "instruction": "Scroll down and click cell D37 in the spreadsheet.",
+      "target_id": "gridly.cell.d37",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='gridly.sheet.scroll']",
+          "dy": 2500
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.cell.d37']"
+        }
+      ],
+      "ordinal": 11,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-12-click-mosaic-health-owner",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction_original": "Click cell F38 in the spreadsheet.",
+      "instruction": "Scroll down and click cell F38 in the spreadsheet.",
+      "target_id": "gridly.cell.f38",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='gridly.sheet.scroll']",
+          "dy": 2600
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.cell.f38']"
+        }
+      ],
+      "ordinal": 12,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-13-click-ironwood-close-action",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction_original": "Click cell I39 in the spreadsheet.",
+      "instruction": "Scroll down and click cell I39 in the spreadsheet.",
+      "target_id": "gridly.cell.i39",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='gridly.sheet.scroll']",
+          "dy": 2700
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.cell.i39']"
+        }
+      ],
+      "ordinal": 13,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-14-click-quantum-probability",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction_original": "Click cell K39 in the spreadsheet.",
+      "instruction": "Scroll down and click cell K39 in the spreadsheet.",
+      "target_id": "gridly.cell.k39",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='gridly.sheet.scroll']",
+          "dy": 2700
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.cell.k39']"
+        }
+      ],
+      "ordinal": 14,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-15-hover-refresh-data",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click 'Refresh data'.",
+      "instruction": "Hover over the toolbar and click 'Refresh data'.",
+      "target_id": "gridly.refresh.button",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='gridly.refresh.button']",
+          "ms": 250
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.refresh.button']"
+        }
+      ],
+      "ordinal": 15,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-16-hover-open-task-list",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click 'Open task list'.",
+      "instruction": "Hover over the side panel and click 'Open task list'.",
+      "target_id": "gridly.side.tasks",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='gridly.side.tasks']",
+          "ms": 250
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.side.tasks']"
+        }
+      ],
+      "ordinal": 16,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-18-hover-collapse-panel",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click 'Collapse panel'.",
+      "instruction": "Hover over the side panel and click 'Collapse panel'.",
+      "target_id": "gridly.side.collapse",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='gridly.side.collapse']",
+          "ms": 250
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.side.collapse']"
+        }
+      ],
+      "ordinal": 18,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-19-dropdown-stage-risk",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Find the button in cell D7 that sets the value to Risk.",
+      "instruction": "Open the cell dropdown and find the button in cell D7 that sets the value to Risk.",
+      "target_id": "gridly.dropdown.d7.risk",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.cell.d7']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.dropdown.d7.risk']"
+        }
+      ],
+      "ordinal": 19,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-21-dropdown-owner-nadia",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Find the button in cell F13 that sets the value to Nadia Park.",
+      "instruction": "Open the cell dropdown and find the button in cell F13 that sets the value to Nadia Park.",
+      "target_id": "gridly.dropdown.f13.nadia-park",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.cell.f13']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.dropdown.f13.nadia-park']"
+        }
+      ],
+      "ordinal": 21,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-22-dropdown-forecast-churn",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Find the button in cell H17 that sets the value to Churn model.",
+      "instruction": "Scroll down, open the cell dropdown and find the button in cell H17 that sets the value to Churn model.",
+      "target_id": "gridly.dropdown.h17.churn-model",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 260,
+          "label": "scroll 260"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.cell.h17']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.dropdown.h17.churn-model']"
+        }
+      ],
+      "ordinal": 22,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-23-dropdown-next-final-approval",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Find the button in cell K21 that sets the value to Final approval.",
+      "instruction": "Scroll down, open the cell dropdown and find the button in cell K21 that sets the value to Final approval.",
+      "target_id": "gridly.dropdown.k21.final-approval",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 420,
+          "label": "scroll 420"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.cell.k21']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.dropdown.k21.final-approval']"
+        }
+      ],
+      "ordinal": 23,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-24-dropdown-stage-best-case",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Find the button in cell D31 that sets the value to Best case.",
+      "instruction": "Scroll down, open the cell dropdown and find the button in cell D31 that sets the value to Best case.",
+      "target_id": "gridly.dropdown.d31.best-case",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 760,
+          "label": "scroll 760"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.cell.d31']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.dropdown.d31.best-case']"
+        }
+      ],
+      "ordinal": 24,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-25-dropdown-next-procurement",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Find the button in cell K35 that sets the value to Procurement packet.",
+      "instruction": "Scroll down, open the cell dropdown and find the button in cell K35 that sets the value to Procurement packet.",
+      "target_id": "gridly.dropdown.k35.procurement-packet",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 920,
+          "label": "scroll 920"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.cell.k35']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.dropdown.k35.procurement-packet']"
+        }
+      ],
+      "ordinal": 25,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-26-click-share",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "2",
+      "instruction_original": "Click 'Share'.",
+      "instruction": "Dismiss the popup and click 'Share'.",
+      "target_id": "gridly.share.button",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.popup.close']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.share.button']"
+        }
+      ],
+      "ordinal": 26,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-27-click-a-column",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "2",
+      "instruction_original": "Find the button that selects all of column A.",
+      "instruction": "Dismiss the popup and find the button that selects all of column A.",
+      "target_id": "gridly.column.a",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.popup.close']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.column.a']"
+        }
+      ],
+      "ordinal": 27,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-28-click-formula-input",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "2",
+      "instruction_original": "Click the formula input.",
+      "instruction": "Dismiss the popup and click the formula input.",
+      "target_id": "gridly.formula.input",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.popup.close']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.formula.input']"
+        }
+      ],
+      "ordinal": 28,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-31-validate-formulas-after-ready",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "6",
+      "instruction_original": "Click Share after sharing is ready.",
+      "instruction": "Wait for sharing to be ready and click Share.",
+      "target_id": "gridly.share.button",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 5600
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.share.button']"
+        }
+      ],
+      "ordinal": 31,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-32-sync-dashboards-after-ready",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "7",
+      "instruction_original": "Click Download PDF in the export dialog after it turns green.",
+      "instruction": "Wait for the export to be ready and click Download PDF in the export dialog.",
+      "target_id": "gridly.file.download-pdf",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 5600
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.file.download-pdf']"
+        }
+      ],
+      "ordinal": 32,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-33-publish-forecast-after-ready",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "8",
+      "instruction_original": "Click Download CSV in the export dialog after it turns green.",
+      "instruction": "Wait for the export to be ready and click Download CSV in the export dialog.",
+      "target_id": "gridly.file.download-csv",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 5600
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.file.download-csv']"
+        }
+      ],
+      "ordinal": 33,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-36-open-retention-insight",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "1",
+      "instruction_original": "Click 'Open insight' for Gross retention summary is ready in the banner.",
+      "instruction": "Use the insight banner arrow and click 'Open insight' for Gross retention summary is ready in the banner.",
+      "target_id": "gridly.insight.retention.open",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.insight.next']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.insight.next']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.insight.retention.open']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 36,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-37-expand-column-b",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "1",
+      "instruction_original": "Click cell M15.",
+      "instruction": "Drag the sheet horizontally and click cell M15.",
+      "target_id": "gridly.cell.m15",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 582,
+          "startY": 844,
+          "endX": 1031,
+          "endY": 840,
+          "label": "drag"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.cell.m15']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 37,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-38-drag-click-m29",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "1",
+      "instruction_original": "Click cell M29.",
+      "instruction": "Scroll down, drag the sheet horizontally and click cell M29.",
+      "target_id": "gridly.cell.m29",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 760,
+          "label": "scroll 760"
+        },
+        {
+          "type": "drag",
+          "startX": 576,
+          "startY": 840,
+          "endX": 1119,
+          "endY": 832,
+          "label": "drag"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.cell.m29']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 38,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-39-drag-click-m39",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "1",
+      "instruction_original": "Click cell M39.",
+      "instruction": "Scroll down, drag the sheet horizontally and click cell M39.",
+      "target_id": "gridly.cell.m39",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1600,
+          "label": "scroll 1600"
+        },
+        {
+          "type": "drag",
+          "startX": 435,
+          "startY": 846,
+          "endX": 1050,
+          "endY": 845,
+          "label": "drag"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.cell.m39']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 39,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-40-click-c-aperture",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "3",
+      "instruction_original": "Click the button in column C containing \"Aperture Labs\".",
+      "instruction": "Drag the formula helper aside and click the button in column C containing \"Aperture Labs\".",
+      "target_id": "gridly.cell.c13",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 229,
+          "startY": 195,
+          "endX": 322,
+          "endY": 205,
+          "label": "drag"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.cell.c13']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 40,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-41-click-c-lotus",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "3",
+      "instruction_original": "Click the button in column C containing \"Lotus Freight\".",
+      "instruction": "Drag the formula helper aside, scroll down and click the button in column C containing \"Lotus Freight\".",
+      "target_id": "gridly.cell.c25",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 230,
+          "startY": 182,
+          "endX": 319,
+          "endY": 201,
+          "label": "drag"
+        },
+        {
+          "type": "scroll",
+          "dy": 600,
+          "label": "scroll 600"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.cell.c25']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 41,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "gridly-42-click-c-ironwood",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "3",
+      "instruction_original": "Click the button in column C containing \"Ironwood Cloud\".",
+      "instruction": "Drag the formula helper aside, scroll down and click the button in column C containing \"Ironwood Cloud\".",
+      "target_id": "gridly.cell.c38",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 229,
+          "startY": 192,
+          "endX": 334,
+          "endY": 201,
+          "label": "drag"
+        },
+        {
+          "type": "scroll",
+          "dy": 1500,
+          "label": "scroll 1500"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='gridly.cell.c38']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 42,
+      "gold_trace_executable": true
+    }
+  ]
+}

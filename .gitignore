@@ -1,0 +1,12 @@
+node_modules/
+.next/
+**/.next/
+results/
+.tmp-smoke/
+*.tsbuildinfo
+next-env.d.ts
+__pycache__/
+*.pyc
+.env*
+.DS_Store
+results-gold.log

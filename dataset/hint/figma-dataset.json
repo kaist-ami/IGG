@@ -1,0 +1,979 @@
+{
+  "app": "figma",
+  "display_name": "Figma Canvas",
+  "reference_service": "Figma",
+  "category": "design canvas",
+  "datasetPath": "dataset/hint/figma-dataset.json",
+  "baseUrl": "http://localhost:3202",
+  "states": {
+    "1": "Zoomed-out canvas showing the full board.",
+    "2": "Zoomed in to the upper-right area of the board, centered near the Risk and Confirmed notes.",
+    "3": "Zoomed in to the upper-left area of the board, centered on the top cluster of sticky notes.",
+    "4": "Zoomed in to the bottom area, centered near the QA Checklist and Needs Discussion notes.",
+    "5": "Default-zoom canvas view. The lower-right sticky note is off-screen.",
+    "6": "Default-zoom canvas with the left sidebar Shapes/Library section expanded.",
+    "7": "Left sidebar hidden. Starting state for panel reveal and occlusion tasks.",
+    "8": "Partial occlusion state — some sticky notes partially cover the target.",
+    "9": "Drag-based occlusion state — multiple sticky notes stacked on top of each other.",
+    "10": "Default canvas view with the right comment panel open.",
+    "11": "Default canvas view with the team banner starting on Q3 Design System; use the banner arrow to navigate to another team item."
+  },
+  "tasks": [
+    {
+      "id": "figma-02-click-netco-other-libraries",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "6",
+      "instruction_original": "Click 'Netco' in 'Other Libraries'.",
+      "instruction": "Scroll down and click 'Netco' in 'Other Libraries'.",
+      "target_id": "figma.shapes.cisco-library",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='figma.shapes-panel.scroll']",
+          "dy": 1000,
+          "label": "scroll 1000"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.shapes.cisco-library']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 2,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-03-click-nimbus-other-libraries",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "6",
+      "instruction_original": "Click 'Nimbus' in 'Other Libraries'.",
+      "instruction": "Scroll down and click 'Nimbus' in 'Other Libraries'.",
+      "target_id": "figma.shapes-panel.library.aws",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='figma.shapes-panel.scroll']",
+          "dy": 850,
+          "label": "scroll 850"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.shapes-panel.library.aws']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 3,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-04-reply-card-border-radius-comment",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "10",
+      "instruction_original": "Click the Reply button on Ella's comment about 'card border radius'.",
+      "instruction": "Scroll down and click the Reply button on Ella's comment about 'card border radius'.",
+      "target_id": "figma.comment.14.reply",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='figma.comments.scroll']",
+          "dy": 1630,
+          "label": "scroll comments panel down"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.comment.14.reply']",
+          "label": "click Reply"
+        }
+      ],
+      "ordinal": 4,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-05-reply-font-size-mobile-comment",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "10",
+      "instruction_original": "Click the Reply button on Ella's comment about 'font size on mobile'.",
+      "instruction": "Scroll down and click the Reply button on Ella's comment about 'font size on mobile'.",
+      "target_id": "figma.comment.15.reply",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='figma.comments.scroll']",
+          "dy": 1740,
+          "label": "scroll comments panel down"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.comment.15.reply']",
+          "label": "click Reply"
+        }
+      ],
+      "ordinal": 5,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-06-resolve-cta-dark-mode-comment",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "10",
+      "instruction_original": "Click the Resolve button on Minjoon's comment about 'CTA button in dark mode'.",
+      "instruction": "Scroll down and click the Resolve button on Minjoon's comment about 'CTA button in dark mode'.",
+      "target_id": "figma.comment.16.resolve",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='figma.comments.scroll']",
+          "dy": 1850,
+          "label": "scroll comments panel down"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.comment.16.resolve']",
+          "label": "click Resolve"
+        }
+      ],
+      "ordinal": 6,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-07-reply-loading-indicator-comment",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "10",
+      "instruction_original": "Click the Reply button on the comment about 'loading indicator'.",
+      "instruction": "Scroll down and click the Reply button on the comment about 'loading indicator'.",
+      "target_id": "figma.comment.17.reply",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='figma.comments.scroll']",
+          "dy": 1960,
+          "label": "scroll comments panel down"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.comment.17.reply']",
+          "label": "click Reply"
+        }
+      ],
+      "ordinal": 7,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-08-resolve-search-bar-position-comment",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "10",
+      "instruction_original": "Click the Resolve button on Ella's comment about 'search bar position'.",
+      "instruction": "Scroll down and click the Resolve button on Ella's comment about 'search bar position'.",
+      "target_id": "figma.comment.18.resolve",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='figma.comments.scroll']",
+          "dy": 2070,
+          "label": "scroll comments panel down"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.comment.18.resolve']",
+          "label": "click Resolve"
+        }
+      ],
+      "ordinal": 8,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-10-reply-bottom-tab-labels-comment",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "10",
+      "instruction_original": "Click the Reply button on the comment about 'bottom tab labels'.",
+      "instruction": "Scroll down and click the Reply button on the comment about 'bottom tab labels'.",
+      "target_id": "figma.comment.20.reply",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='figma.comments.scroll']",
+          "dy": 2290,
+          "label": "scroll comments panel down"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.comment.20.reply']",
+          "label": "click Reply"
+        }
+      ],
+      "ordinal": 10,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-13-click-wallet-shape-left-shapes-panel",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "6",
+      "instruction_original": "Click the 'Wallet' shape.",
+      "instruction": "Scroll down, hover over the shapes panel and click the 'Wallet' shape.",
+      "target_id": "figma.shapes.wallet",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='figma.shapes.flowchart-section']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='figma.shapes-panel.scroll']",
+          "dy": 700,
+          "label": "scroll 700"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='figma.shapes.wallet']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.shapes.wallet']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 13,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-14-click-main-menu-button",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "6",
+      "instruction_original": "Click the 'main menu' button.",
+      "instruction": "Hover over the top bar and click the 'main menu' button.",
+      "target_id": "figma.topbar.main-menu",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='figma.topbar.main-menu']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.topbar.main-menu']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 14,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-16-click-activity-log-button",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "6",
+      "instruction_original": "Click the 'Activity log' button.",
+      "instruction": "Hover over the panel controls and click the 'Activity log' button.",
+      "target_id": "figma.panel.activity-log",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='figma.panel.activity-log']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.panel.activity-log']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 16,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-17-find-button-adds-sticky-note",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "7",
+      "instruction_original": "Find the button that adds a sticky note.",
+      "instruction": "Hover over the toolbar and find the button that adds a sticky note.",
+      "target_id": "figma.toolbar.sticky",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='figma.toolbar.sticky']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.toolbar.sticky']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 17,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-18-click-server-shape-advanced-section",
+      "level": "2-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "6",
+      "instruction_original": "Click the 'Server' shape.",
+      "instruction": "Scroll down and click the 'Server' shape.",
+      "target_id": "figma.shapes.server",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='figma.shapes-panel.scroll']",
+          "dy": 650,
+          "label": "scroll 650"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='figma.shapes.server']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.shapes.server']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 18,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-19-click-security-shield-shape-advanced-section",
+      "level": "2-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "6",
+      "instruction_original": "Click the 'Security shield' shape.",
+      "instruction": "Scroll down and click the 'Security shield' shape.",
+      "target_id": "figma.shapes.shield",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='figma.shapes-panel.scroll']",
+          "dy": 650,
+          "label": "scroll 650"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='figma.shapes.shield']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.shapes.shield']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 19,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-21-click-globe-shape-advanced-section",
+      "level": "2-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "6",
+      "instruction_original": "Click the 'Globe' shape.",
+      "instruction": "Scroll down and click the 'Globe' shape.",
+      "target_id": "figma.shapes.globe",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='figma.shapes-panel.scroll']",
+          "dy": 750,
+          "label": "scroll 750"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='figma.shapes.globe']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.shapes.globe']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 21,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-23-click-delete-button-key-insight-sticky-note",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "6",
+      "instruction_original": "Click the 'Delete' button on the 'Key Insight' sticky note.",
+      "instruction": "Select the 'Key Insight' sticky note and click the 'Delete' button on the 'Key Insight' sticky note.",
+      "target_id": "figma.canvas.note-insight.delete",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.canvas.note-insight']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.canvas.note-insight.delete']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 23,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-24-find-reverse-parallelogram-shape",
+      "level": "2-2",
+      "constraint_type": "carousel_reveal",
+      "state_id": "5",
+      "instruction_original": "Find the 'Reverse parallelogram' shape.",
+      "instruction": "Open the flowchart shapes section and find the 'Reverse parallelogram' shape.",
+      "target_id": "figma.shapes.parallelogram-reverse",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.shapes.flowchart-section']",
+          "label": "click observed"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='figma.shapes.parallelogram-reverse']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.shapes.parallelogram-reverse']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 24,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-25-click-bold-button-sprint-goal-note",
+      "level": "2-2",
+      "constraint_type": "carousel_reveal",
+      "state_id": "6",
+      "instruction_original": "Click the 'Bold' button on the 'Sprint Goal' note.",
+      "instruction": "Select the 'Sprint Goal' note and click the 'Bold' button on the 'Sprint Goal' note.",
+      "target_id": "figma.canvas.note-sprint-goal.bold",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.canvas.note-sprint-goal']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.canvas.note-sprint-goal.bold']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 25,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-26-click-delete-button-competitor-analysis-sticky-note",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "5",
+      "instruction_original": "Click the 'Delete' button on the 'Competitor analysis' sticky note.",
+      "instruction": "Use the select tool, select the 'Competitor analysis' sticky note and click the 'Delete' button on the 'Competitor analysis' sticky note.",
+      "target_id": "figma.canvas.note-competitor-analysis.delete",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.toolbar.select']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.canvas.note-competitor-analysis']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.canvas.note-competitor-analysis.delete']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 26,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-27-click-delete-button-qa-checklist-sticky-note",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "6",
+      "instruction_original": "Click the 'Delete' button on the 'QA Checklist' sticky note.",
+      "instruction": "Select the 'QA Checklist' sticky note and click the 'Delete' button on the 'QA Checklist' sticky note.",
+      "target_id": "figma.canvas.note-qa-checklist.delete",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.canvas.note-qa-checklist']",
+          "label": "click QA Checklist note to reveal action buttons"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.canvas.note-qa-checklist.delete']",
+          "label": "click Delete button"
+        }
+      ],
+      "ordinal": 27,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-29-click-note-confirmed",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "10",
+      "instruction_original": "Click the note that says 'Confirmed'.",
+      "instruction": "Close the comment panel and click the note that says 'Confirmed'.",
+      "target_id": "figma.canvas.note-confirmed",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.panel.comment.close']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.canvas.note-confirmed']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 29,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-30-click-sprint-goal-note-comment-panel-open",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "10",
+      "instruction_original": "Click the 'Sprint Goal' note.",
+      "instruction": "Close the comment panel and click the 'Sprint Goal' note.",
+      "target_id": "figma.canvas.note-sprint-goal",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.panel.comment.close']",
+          "label": "close right comment panel"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.canvas.note-sprint-goal']",
+          "label": "click Sprint Goal note"
+        }
+      ],
+      "ordinal": 30,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-31-click-risks-note-comment-panel-open",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "10",
+      "instruction_original": "Click the 'Risks' note.",
+      "instruction": "Close the comment panel and click the 'Risks' note.",
+      "target_id": "figma.canvas.note-risk",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.panel.comment.close']",
+          "label": "close right comment panel"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.canvas.note-risk']",
+          "label": "click Risks note"
+        }
+      ],
+      "ordinal": 31,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-32-open-mobile-onboarding-flow-banner",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "11",
+      "instruction_original": "Click Open for Mobile Onboarding Flow in recent from team.",
+      "instruction": "Use the team banner arrow and click Open for Mobile Onboarding Flow in recent from team.",
+      "target_id": "figma.home.banner.onboarding-flow.open",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.home.banner.next']",
+          "label": "click next"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.home.banner.onboarding-flow.open']",
+          "label": "click Open"
+        }
+      ],
+      "ordinal": 32,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-33-open-icon-library-v2-banner",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "11",
+      "instruction_original": "Click Open for Icon Library v2 in recent from team.",
+      "instruction": "Use the team banner arrow and click Open for Icon Library v2 in recent from team.",
+      "target_id": "figma.home.banner.icon-library.open",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"figma.home.banner.next\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"figma.home.banner.next\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"figma.home.banner.icon-library.open\"]"
+        }
+      ],
+      "ordinal": 33,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-34-open-brand-guidelines-banner",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "11",
+      "instruction_original": "Click Open for Brand Guidelines in recent from team.",
+      "instruction": "Use the team banner arrow and click Open for Brand Guidelines in recent from team.",
+      "target_id": "figma.home.banner.brand-guidelines.open",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"figma.home.banner.next\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"figma.home.banner.next\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"figma.home.banner.next\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"figma.home.banner.brand-guidelines.open\"]"
+        }
+      ],
+      "ordinal": 34,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-35-open-sprint-review-deck-banner",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "11",
+      "instruction_original": "Click Open for Sprint Review Deck in recent from team.",
+      "instruction": "Use the team banner arrow and click Open for Sprint Review Deck in recent from team.",
+      "target_id": "figma.home.banner.sprint-review.open",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"figma.home.banner.next\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"figma.home.banner.next\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"figma.home.banner.next\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"figma.home.banner.next\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"figma.home.banner.sprint-review.open\"]"
+        }
+      ],
+      "ordinal": 35,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-36-open-user-testing-scripts-banner",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "11",
+      "instruction_original": "Click Open for User Testing Scripts in recent from team.",
+      "instruction": "Use the team banner arrow and click Open for User Testing Scripts in recent from team.",
+      "target_id": "figma.home.banner.testing-scripts.open",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"figma.home.banner.next\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"figma.home.banner.next\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"figma.home.banner.next\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"figma.home.banner.next\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"figma.home.banner.next\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"figma.home.banner.testing-scripts.open\"]"
+        }
+      ],
+      "ordinal": 36,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-37-click-bold-button-sprint-goal-note",
+      "level": "3-3",
+      "constraint_type": "menu_reveal",
+      "state_id": "5",
+      "instruction_original": "Without changing the canvas zoom, click the 'Bold' button on the 'Sprint Goal' note.",
+      "instruction": "Pan the canvas without changing zoom, select the 'Sprint Goal' note and click the 'Bold' button on the 'Sprint Goal' note.",
+      "target_id": "figma.canvas.note-sprint-goal.bold",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 1369,
+          "startY": 695,
+          "endX": 447,
+          "endY": 630,
+          "label": "drag"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.toolbar.select']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.canvas.note-sprint-goal']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.canvas.note-sprint-goal.bold']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 37,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-38-without-changing-canvas-zoom-click-sticky-note-user-research",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "2",
+      "instruction_original": "Without changing the canvas zoom, click the sticky note that says 'User Research'.",
+      "instruction": "Pan the canvas without changing zoom and click the sticky note that says 'User Research'.",
+      "target_id": "figma.canvas.note-user-research",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 413,
+          "startY": 604,
+          "endX": 1456,
+          "endY": 587,
+          "label": "drag"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.canvas.note-user-research']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 38,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-39-without-changing-canvas-zoom-click-sticky-note-risks",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "3",
+      "instruction_original": "Without changing the canvas zoom, click the sticky note that says 'Risks'.",
+      "instruction": "Pan the canvas without changing zoom and click the sticky note that says 'Risks'.",
+      "target_id": "figma.canvas.note-risk",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 1360,
+          "startY": 731,
+          "endX": 133,
+          "endY": 726,
+          "label": "drag"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.canvas.note-risk']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 39,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-40-without-changing-canvas-zoom-click-sticky-note-competitor-analysis",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "4",
+      "instruction_original": "Without changing the canvas zoom, click the sticky note that says 'Competitor analysis'.",
+      "instruction": "Pan the canvas without changing zoom and click the sticky note that says 'Competitor analysis'.",
+      "target_id": "figma.canvas.note-competitor-analysis",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 303,
+          "startY": 166,
+          "endX": 1252,
+          "endY": 1005,
+          "label": "drag"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.canvas.note-competitor-analysis']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 40,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-42-without-deleting-any-notes-find-click-key-insight-note",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "9",
+      "instruction_original": "Without deleting any notes, click the 'Key Insight' note.",
+      "instruction": "Drag the stacked notes aside without deleting any notes and click the 'Key Insight' note.",
+      "target_id": "figma.canvas.note-insight",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 964,
+          "startY": 588,
+          "endX": 828,
+          "endY": 761,
+          "label": "drag"
+        },
+        {
+          "type": "drag",
+          "startX": 1093,
+          "startY": 600,
+          "endX": 1268,
+          "endY": 736,
+          "label": "drag"
+        },
+        {
+          "type": "drag",
+          "startX": 1044,
+          "startY": 489,
+          "endX": 1139,
+          "endY": 525,
+          "label": "drag"
+        },
+        {
+          "type": "drag",
+          "startX": 954,
+          "startY": 495,
+          "endX": 790,
+          "endY": 561,
+          "label": "drag"
+        },
+        {
+          "type": "drag",
+          "startX": 989,
+          "startY": 469,
+          "endX": 1150,
+          "endY": 461,
+          "label": "drag"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.canvas.note-insight']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 42,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-43-without-deleting-any-notes-find-click-qa-checklist-note",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "8",
+      "instruction_original": "Without deleting any notes, click the 'QA Checklist' note.",
+      "instruction": "Drag the covering note aside without deleting any notes and click the 'QA Checklist' note.",
+      "target_id": "figma.canvas.note-qa-checklist",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 1050,
+          "startY": 570,
+          "endX": 1056,
+          "endY": 730,
+          "label": "drag"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.canvas.note-qa-checklist']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 43,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "figma-44-without-deleting-any-notes-find-click-needs-discussion-note",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "8",
+      "instruction_original": "Without deleting any notes, click the 'User Engagement' note.",
+      "instruction": "Drag the covering note aside without deleting any notes and click the 'User Engagement' note.",
+      "target_id": "figma.canvas.note-engagement",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 868,
+          "startY": 751,
+          "endX": 1073,
+          "endY": 751,
+          "label": "drag"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='figma.canvas.note-engagement']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 44,
+      "gold_trace_executable": true
+    }
+  ]
+}

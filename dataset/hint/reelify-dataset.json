@@ -1,0 +1,776 @@
+{
+  "app": "reelify",
+  "display_name": "Reelify",
+  "reference_service": "Netflix",
+  "category": "Streaming entertainment",
+  "datasetPath": "dataset/hint/reelify-dataset.json",
+  "baseUrl": "http://localhost:3217",
+  "states": {
+    "1": "Default view",
+    "2": "Scrolled to New Releases section",
+    "3": "Scrolled to Sci-Fi & Fantasy section",
+    "4": "Mini player at bottom-left occludes footer links",
+    "5": "Mini player at bottom-right occludes footer links",
+    "6": "For You recommendation notification appears after delay",
+    "7": "Local picks recommendation notification appears after delay",
+    "8": "Weekend watchlist recommendation notification appears after delay"
+  },
+  "tasks": [
+    {
+      "id": "reelify-01-click-audio-description-footer",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click the Audio Description link.",
+      "instruction": "Scroll down and click the Audio Description link.",
+      "target_id": "reelify.footer.audio-description",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2200
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.footer.audio-description']"
+        }
+      ],
+      "ordinal": 1,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-02-click-help-center-footer",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click the Help Center link.",
+      "instruction": "Scroll down and click the Help Center link.",
+      "target_id": "reelify.footer.help-center",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2200
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.footer.help-center']"
+        }
+      ],
+      "ordinal": 2,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-03-click-gift-cards-footer",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click the Gift Cards link.",
+      "instruction": "Scroll down and click the Gift Cards link.",
+      "target_id": "reelify.footer.gift-cards",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2200
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.footer.gift-cards']"
+        }
+      ],
+      "ordinal": 3,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-04-click-investor-relations-footer",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click the Investor Relations.",
+      "instruction": "Scroll down and click the Investor Relations.",
+      "target_id": "reelify.footer.investor-relations",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2200
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.footer.investor-relations']"
+        }
+      ],
+      "ordinal": 4,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-06-click-privacy-footer",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click the Privacy link.",
+      "instruction": "Scroll down and click the Privacy link.",
+      "target_id": "reelify.footer.privacy",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2200
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.footer.privacy']"
+        }
+      ],
+      "ordinal": 6,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-08-click-contact-us-footer",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click the Contact Us link.",
+      "instruction": "Scroll down and click the Contact Us link.",
+      "target_id": "reelify.footer.contact-us",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2200
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.footer.contact-us']"
+        }
+      ],
+      "ordinal": 8,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-09-trending-next-from-scifi",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "3",
+      "instruction_original": "Click the next page button in the Trending Now row.",
+      "instruction": "Scroll up and click the next page button in the Trending Now row.",
+      "target_id": "reelify.trending.next",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -2200
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.trending.next']"
+        }
+      ],
+      "ordinal": 9,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-10-click-love-unscripted",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click Love Unscripted in Romantic Comedies.",
+      "instruction": "Scroll down and click Love Unscripted in Romantic Comedies.",
+      "target_id": "reelify.romcom.love-unscripted.card",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1300
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"reelify.romcom.love-unscripted.card\"]"
+        }
+      ],
+      "ordinal": 10,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-11-click-coffee-dates",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click Coffee Dates in Romantic Comedies.",
+      "instruction": "Scroll down and click Coffee Dates in Romantic Comedies.",
+      "target_id": "reelify.romcom.coffee-dates.card",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1300
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"reelify.romcom.coffee-dates.card\"]"
+        }
+      ],
+      "ordinal": 11,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-12-click-the-one",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click The One in Romantic Comedies.",
+      "instruction": "Scroll down and click The One in Romantic Comedies.",
+      "target_id": "reelify.romcom.the-one.card",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1300
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"reelify.romcom.the-one.card\"]"
+        }
+      ],
+      "ordinal": 12,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-13-click-void-walker",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click Void Walker in Sci-Fi & Fantasy.",
+      "instruction": "Scroll down and click Void Walker in Sci-Fi & Fantasy.",
+      "target_id": "reelify.scifi.void-walker.card",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1550
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"reelify.scifi.void-walker.card\"]"
+        }
+      ],
+      "ordinal": 13,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-15-click-quantum-drift",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click Quantum Drift in Sci-Fi & Fantasy.",
+      "instruction": "Scroll down and click Quantum Drift in Sci-Fi & Fantasy.",
+      "target_id": "reelify.scifi.quantum-drift.card",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1550
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"reelify.scifi.quantum-drift.card\"]"
+        }
+      ],
+      "ordinal": 15,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-16-click-apex-rising",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click Apex Rising in New Releases.",
+      "instruction": "Scroll down and click Apex Rising in New Releases.",
+      "target_id": "reelify.new-releases.apex-rising.card",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 900
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"reelify.new-releases.apex-rising.card\"]"
+        }
+      ],
+      "ordinal": 16,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-17-click-crimson-coast",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click Crimson Coast in New Releases.",
+      "instruction": "Scroll down and click Crimson Coast in New Releases.",
+      "target_id": "reelify.new-releases.crimson-coast.card",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 900
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"reelify.new-releases.crimson-coast.card\"]"
+        }
+      ],
+      "ordinal": 17,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-18-click-the-divide",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click The Divide in Critically Acclaimed.",
+      "instruction": "Scroll down and click The Divide in Critically Acclaimed.",
+      "target_id": "reelify.acclaimed.the-divide.card",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1100
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"reelify.acclaimed.the-divide.card\"]"
+        }
+      ],
+      "ordinal": 18,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-19-click-night-shift",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click Night Shift in Critically Acclaimed.",
+      "instruction": "Scroll down and click Night Shift in Critically Acclaimed.",
+      "target_id": "reelify.acclaimed.night-shift.card",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1100
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"reelify.acclaimed.night-shift.card\"]"
+        }
+      ],
+      "ordinal": 19,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-20-click-hunter-protocol",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click Hunter Protocol in Action & Thrillers.",
+      "instruction": "Scroll down and click Hunter Protocol in Action & Thrillers.",
+      "target_id": "reelify.action.hunter-protocol.card",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 500
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.action.hunter-protocol.card']"
+        }
+      ],
+      "ordinal": 20,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-22-rate-dark-waters",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click Not For Me on Dark Waters in Trending Now.",
+      "instruction": "Scroll down, hover over Dark Waters and click Not For Me on Dark Waters in Trending Now.",
+      "target_id": "reelify.trending.dark-waters.rating.not-for-me",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 300,
+          "label": "scroll 300"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='reelify.trending.dark-waters.card']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='reelify.trending.dark-waters.rating']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='reelify.trending.dark-waters.rating.not-for-me']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.trending.dark-waters.rating.not-for-me']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 22,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-23-click-second-chances",
+      "level": "2-2",
+      "constraint_type": "carousel_reveal",
+      "state_id": "1",
+      "instruction_original": "Click Second Chances in Romantic Comedies.",
+      "instruction": "Scroll down, use the Romantic Comedies row arrow and click Second Chances in Romantic Comedies.",
+      "target_id": "reelify.romcom.second-chances.card",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1300
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"reelify.romcom.next\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"reelify.romcom.second-chances.card\"]"
+        }
+      ],
+      "ordinal": 23,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-24-click-arc-genesis",
+      "level": "2-2",
+      "constraint_type": "carousel_reveal",
+      "state_id": "1",
+      "instruction_original": "Click Arc Genesis in Sci-Fi & Fantasy.",
+      "instruction": "Scroll down, use the Sci-Fi & Fantasy row arrow and click Arc Genesis in Sci-Fi & Fantasy.",
+      "target_id": "reelify.scifi.arc-genesis.card",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1550
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"reelify.scifi.next\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"reelify.scifi.arc-genesis.card\"]"
+        }
+      ],
+      "ordinal": 24,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-25-click-cold-november",
+      "level": "2-2",
+      "constraint_type": "carousel_reveal",
+      "state_id": "1",
+      "instruction_original": "Click Cold November in Critically Acclaimed.",
+      "instruction": "Scroll down, use the Critically Acclaimed row arrow and click Cold November in Critically Acclaimed.",
+      "target_id": "reelify.acclaimed.cold-november.card",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1100
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"reelify.acclaimed.next\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"reelify.acclaimed.cold-november.card\"]"
+        }
+      ],
+      "ordinal": 25,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-26-open-for-you-recommendations",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "6",
+      "instruction_original": "Click See recommendations in the For You recommendation notification.",
+      "instruction": "Wait for the notification and click See recommendations in the For You recommendation notification.",
+      "target_id": "reelify.async.for-you.see-recommendations",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 3600
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.async.for-you.see-recommendations']"
+        }
+      ],
+      "ordinal": 26,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-27-open-local-recommendations",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "7",
+      "instruction_original": "Click View local picks in the local favorites notification.",
+      "instruction": "Wait for the notification and click View local picks in the local favorites notification.",
+      "target_id": "reelify.async.local.view-picks",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 3800
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.async.local.view-picks']"
+        }
+      ],
+      "ordinal": 27,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-28-open-weekend-recommendations",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "8",
+      "instruction_original": "Click Browse weekend picks in the weekend watchlist notification.",
+      "instruction": "Wait for the notification and click Browse weekend picks in the weekend watchlist notification.",
+      "target_id": "reelify.async.weekend.browse-picks",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 4000
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.async.weekend.browse-picks']"
+        }
+      ],
+      "ordinal": 28,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-29-dot1-dark-horizon-play",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "2",
+      "instruction_original": "Click Play on Dark Horizon from the hero banner.",
+      "instruction": "Scroll up, use the hero dot and click Play on Dark Horizon from the hero banner.",
+      "target_id": "reelify.hero.dark-horizon.play",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -1500
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.hero.dot-1']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.hero.dark-horizon.play']"
+        }
+      ],
+      "ordinal": 29,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-31-dot0-echoes-play",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "2",
+      "instruction_original": "Click Play on Echoes of Tomorrow from the hero banner.",
+      "instruction": "Scroll up, use the hero dot and click Play on Echoes of Tomorrow from the hero banner.",
+      "target_id": "reelify.hero.echoes.play",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -1500
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.hero.dot-0']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.hero.echoes.play']"
+        }
+      ],
+      "ordinal": 31,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-33-dot1-dark-horizon-info-from-scifi",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "3",
+      "instruction_original": "Click More Info on Dark Horizon from the hero banner.",
+      "instruction": "Scroll up, use the hero dot and click More Info on Dark Horizon from the hero banner.",
+      "target_id": "reelify.hero.dark-horizon.info",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -2200
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.hero.dot-1']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.hero.dark-horizon.info']"
+        }
+      ],
+      "ordinal": 33,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-34-dot2-signal-play-from-scifi",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "3",
+      "instruction_original": "Click Play on Signal from the hero banner.",
+      "instruction": "Scroll up, use the hero dot and click Play on Signal from the hero banner.",
+      "target_id": "reelify.hero.signal.play",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -2200
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.hero.dot-2']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.hero.signal.play']"
+        }
+      ],
+      "ordinal": 34,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-35-drag-footer-audio-description",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "4",
+      "instruction_original": "Click the Audio Description link.",
+      "instruction": "Drag the mini player aside and click the Audio Description link.",
+      "target_id": "reelify.footer.audio-description",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 260,
+          "startY": 650,
+          "endX": 880,
+          "endY": 650
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.footer.audio-description']"
+        }
+      ],
+      "ordinal": 35,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-36-drag-footer-help-center",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "4",
+      "instruction_original": "Click the Help Center link.",
+      "instruction": "Drag the mini player aside and click the Help Center link.",
+      "target_id": "reelify.footer.help-center",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 260,
+          "startY": 650,
+          "endX": 880,
+          "endY": 650
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.footer.help-center']"
+        }
+      ],
+      "ordinal": 36,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-37-drag-footer-gift-cards",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "4",
+      "instruction_original": "Click the Gift Cards link.",
+      "instruction": "Drag the mini player aside and click the Gift Cards link.",
+      "target_id": "reelify.footer.gift-cards",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 260,
+          "startY": 650,
+          "endX": 880,
+          "endY": 650
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.footer.gift-cards']"
+        }
+      ],
+      "ordinal": 37,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-38-drag-footer-cookie-preferences",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "5",
+      "instruction_original": "Click the Cookie Preferences link.",
+      "instruction": "Drag the mini player aside and click the Cookie Preferences link.",
+      "target_id": "reelify.footer.cookie-preferences",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 1040,
+          "startY": 650,
+          "endX": 120,
+          "endY": 650
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.footer.cookie-preferences']"
+        }
+      ],
+      "ordinal": 38,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "reelify-39-drag-footer-contact-us",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "5",
+      "instruction_original": "Click the Contact Us link.",
+      "instruction": "Drag the mini player aside and click the Contact Us link.",
+      "target_id": "reelify.footer.contact-us",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 1040,
+          "startY": 650,
+          "endX": 120,
+          "endY": 650
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='reelify.footer.contact-us']"
+        }
+      ],
+      "ordinal": 39,
+      "gold_trace_executable": true
+    }
+  ]
+}

@@ -1,0 +1,824 @@
+{
+  "app": "docs",
+  "display_name": "Docs Editor",
+  "reference_service": "Google Docs",
+  "category": "document editor",
+  "datasetPath": "dataset/main/docs-dataset.json",
+  "baseUrl": "http://localhost:3204",
+  "states": {
+    "1": "Home screen scrolled down. Top search bar, tabs, template cards, and top recent document cards are outside the viewport.",
+    "2": "Home screen with search bar focused and recent searches visible.",
+    "3": "Editor screen scrolled down. Top toolbar and action buttons are outside the viewport.",
+    "4": "Default editor view. Top toolbar and actions visible, but the checklist at the bottom and lower outline items are not yet visible, and the right panel is narrowly collapsed.",
+    "5": "Document screen with PDF conversion in progress (Save button activates after ~5 seconds).",
+    "6": "Default editor view. A 'Saved to Drive' toast appears shortly.",
+    "7": "Editor view with suggested edits pending. Apply notification appears in the top-right corner after about 5 seconds.",
+    "8": "Home screen with recommended document banner auto-advancing to onboarding draft.",
+    "9": "Editor view with publish pending. Publish version dialog appears after about 5 seconds."
+  },
+  "tasks": [
+    {
+      "id": "docs-01-find-owned-me-tab-home-screen",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction": "Find the 'Owned by me' tab on the home screen.",
+      "target_id": "docs.home.tab.owned",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -4000,
+          "label": "scroll up to home tabs"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.tab.owned']",
+          "label": "click owned tab"
+        }
+      ],
+      "ordinal": 1,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-02-find-shared-me-tab-home-screen",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction": "Find the 'Shared with me' tab on the home screen.",
+      "target_id": "docs.home.tab.shared",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -4000,
+          "label": "scroll up to home tabs"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.tab.shared']",
+          "label": "click shared tab"
+        }
+      ],
+      "ordinal": 2,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-05-find-research-brief-card-template-gallery",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction": "Find the 'Research brief' card in the template gallery.",
+      "target_id": "docs.template.research-brief",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -4000,
+          "label": "scroll up to template gallery"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.template.research-brief']",
+          "label": "click research brief template card"
+        }
+      ],
+      "ordinal": 5,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-06-find-blank-document-card-template-gallery",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction": "Find the 'Blank document' card in the template gallery.",
+      "target_id": "docs.home.new-document",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -4000,
+          "label": "scroll up to template gallery"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.new-document']",
+          "label": "click blank document card"
+        }
+      ],
+      "ordinal": 6,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-07-click-prepare-top-bar-b-design-options-checkbox-document-checklist",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "3",
+      "instruction": "Click the 'Prepare top bar A/B design options' checkbox in the document checklist.",
+      "target_id": "docs.checklist.topbar-ab",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 3000,
+          "label": "scroll 3000"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.checklist.topbar-ab']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 7,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-08-click-star-button-campus-renewal-ideas-document-card",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction": "Click the star button on the 'Campus Renewal Ideas' document card.",
+      "target_id": "docs.doc.campus-renewal.star",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -2400,
+          "label": "scroll -2400"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.doc.campus-renewal.star']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 8,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-09-find-research-task-backlog-document",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction": "Click the 'Research Task Backlog' document in the recent documents list.",
+      "target_id": "docs.home.doc.research-backlog.open",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -3000,
+          "label": "scroll up to the top of the recent documents list"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.doc.research-backlog.open']"
+        }
+      ],
+      "ordinal": 9,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-10-find-operations-snapshot-document",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction": "Click the 'Operations Snapshot' document in the recent documents list.",
+      "target_id": "docs.home.doc.operations-snapshot.open",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -2800,
+          "label": "scroll up near the top of the recent documents list"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.doc.operations-snapshot.open']"
+        }
+      ],
+      "ordinal": 10,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-11-click-list-view-button-recent-documents",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction": "Click the 'List view' button for recent documents.",
+      "target_id": "docs.home.view_list",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -2000,
+          "label": "scroll -2000"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='docs.home.view_list']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.view_list']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 11,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-12-click-grid-view-button-recent-documents",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction": "Click the 'Grid view' button for recent documents.",
+      "target_id": "docs.home.view_grid",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -2000,
+          "label": "scroll to top"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='docs.home.view_grid']",
+          "ms": 220,
+          "label": "hover view grid button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.view_grid']",
+          "label": "click grid view"
+        }
+      ],
+      "ordinal": 12,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-13-find-line-spacing-button-toolbar",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "3",
+      "instruction": "Find the 'Line spacing' button.",
+      "target_id": "docs.editor.toolbar.line_spacing",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='docs.editor.toolbar.line_spacing']",
+          "ms": 220,
+          "label": "hover observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.editor.toolbar.line_spacing']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 13,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-14-click-columns-button-editor-toolbar",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "4",
+      "instruction": "Click the 'Columns' button.",
+      "target_id": "docs.editor.toolbar.columns",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='docs.editor.toolbar.columns']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.editor.toolbar.columns']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 14,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-15-click-italic-button-editor-toolbar",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "4",
+      "instruction": "Click the 'Italic' button.",
+      "target_id": "docs.editor.toolbar.italic",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='docs.editor.toolbar.italic']",
+          "ms": 220,
+          "label": "hover italic button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.editor.toolbar.italic']",
+          "label": "click italic"
+        }
+      ],
+      "ordinal": 15,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-16-click-bulleted-list-button-editor-toolbar",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "4",
+      "instruction": "Click the 'Bulleted list' button.",
+      "target_id": "docs.editor.toolbar.bulleted_list",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='docs.editor.toolbar.bulleted_list']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.editor.toolbar.bulleted_list']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 16,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-17-find-research-ta-row-collaborators-panel-right",
+      "level": "2-2",
+      "constraint_type": "carousel_reveal",
+      "state_id": "3",
+      "instruction": "Find the 'Research TA' row in the 'Collaborators' panel.",
+      "target_id": "docs.collaborator.research-ta",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.panel.collaborators']",
+          "label": "open collaborators panel"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.collaborator.research-ta']",
+          "label": "click research ta row"
+        }
+      ],
+      "ordinal": 17,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-18-click-operations-keyword-document-search",
+      "level": "2-2",
+      "constraint_type": "carousel_reveal",
+      "state_id": "1",
+      "instruction": "Click the 'Operations' keyword in the document search.",
+      "target_id": "docs.home.recent_search.operations",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -2000,
+          "label": "scroll -2000"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.search_input']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.recent_search.operations']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 18,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-19-find-research-log-notes-template-template-gallery",
+      "level": "2-2",
+      "constraint_type": "carousel_reveal",
+      "state_id": "1",
+      "instruction": "Find the 'Research log' 'Notes' template in the template gallery.",
+      "target_id": "docs.template.research-log",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -1500,
+          "label": "scroll -1500"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.templates_show_more']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.template.research-log']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 19,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-20-click-name-option-recent-documents-sort-menu",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction": "Click the Name sort option.",
+      "target_id": "docs.home.sort_name",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -1000,
+          "label": "scroll -1000"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='docs.home.sort_button']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.sort_button']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.sort_name']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 20,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-21-click-delete-button-team-hub-overview-document",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction": "Click the 'Delete' button on the 'Team Hub Overview' document.",
+      "target_id": "docs.home.doc.mock-arch-1.delete",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.doc.mock-arch-1.menu']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.doc.mock-arch-1.delete']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 21,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-22-click-rename-option-product-research-weekly-brief-document",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction": "Click the 'Rename' option on the 'Product Research Weekly Brief' document.",
+      "target_id": "docs.home.doc.product-research.rename",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.doc.product-research.menu']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.doc.product-research.rename']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 22,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-23-click-suggesting-option-editor-mode-menu",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "3",
+      "instruction": "Click the 'Suggesting' option in the editor mode.",
+      "target_id": "docs.editor.mode.option.suggesting",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.editor.mode.suggesting']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.editor.mode.option.suggesting']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 23,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-25-click-resume-coral-template-template-gallery",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "2",
+      "instruction": "Click the 'Resume' 'Coral' template in the template gallery.",
+      "target_id": "docs.template.resume-modern",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.search_input']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.template.resume-modern']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 25,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-26-find-weekly-plan-light-template",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "2",
+      "instruction": "Find the 'Weekly plan' 'Light' template.",
+      "target_id": "docs.template.weekly-plan",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.search_input']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.templates_show_more']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.template.weekly-plan']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 26,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-27-click-dismiss-button-saved-drive-notification",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "6",
+      "instruction": "Click the 'Dismiss' button on the 'Saved to Drive' notification.",
+      "target_id": "docs.toast.dismiss",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 2400,
+          "label": "wait for autosave toast"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.toast.dismiss']",
+          "label": "dismiss autosave toast"
+        }
+      ],
+      "ordinal": 27,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-28-click-save-as-pdf-button",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "5",
+      "instruction": "Click the 'Save as PDF' button.",
+      "target_id": "docs.editor.pdf_save",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 5050,
+          "label": "wait"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.editor.pdf_save']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 28,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-30-publish-version-after-ready",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "9",
+      "instruction": "Click Publish version.",
+      "target_id": "docs.editor.review.publish-version",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 5600
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.editor.review.publish-version']"
+        }
+      ],
+      "ordinal": 30,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-32-open-qa-notes-banner",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "8",
+      "instruction": "Click Open on the recommended QA notes banner.",
+      "target_id": "docs.home.banner.qa-notes.open",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.banner.dot.2']",
+          "label": "click dot to navigate to QA notes slide"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.banner.qa-notes.open']"
+        }
+      ],
+      "ordinal": 32,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-33-open-operations-banner",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "8",
+      "instruction": "Click Open on the recommended operations retrospective banner.",
+      "target_id": "docs.home.banner.operations.open",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.banner.dot.3']",
+          "label": "click dot to navigate to operations slide"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.banner.operations.open']"
+        }
+      ],
+      "ordinal": 33,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-34-open-interview-log-banner",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "8",
+      "instruction": "Click Open on the recommended interview log banner.",
+      "target_id": "docs.home.banner.interview-log.open",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.banner.dot.4']",
+          "label": "click dot to navigate to interview log slide"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.home.banner.interview-log.open']"
+        }
+      ],
+      "ordinal": 34,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-36-find-resolve-button-ellas-comment-right-panel",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "4",
+      "instruction": "Find the 'Resolve' button on Ella's comment.",
+      "target_id": "docs.editor.comment.ella.resolve",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "selector": "[data-igg-id='docs.right_panel.resize_handle']",
+          "startX": 1280,
+          "startY": 500,
+          "endX": 1060,
+          "endY": 500,
+          "label": "drag to expand right panel"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.editor.comment.ella.resolve']",
+          "label": "click ella resolve"
+        }
+      ],
+      "ordinal": 36,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-37-click-resolve-button-daisys-comment-right-panel",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "4",
+      "instruction": "Click the 'Resolve' button on Daisy's comment.",
+      "target_id": "docs.editor.comment.daisy.resolve",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "selector": "[data-igg-id='docs.right_panel.resize_handle']",
+          "startX": 1280,
+          "startY": 431,
+          "endX": 1067,
+          "endY": 433,
+          "label": "drag to expand right panel"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.editor.comment.daisy.resolve']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 37,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-38-find-activity-tab-button-right-panel",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "4",
+      "instruction": "Find the 'Activity' tab button.",
+      "target_id": "docs.panel.activity",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "selector": "[data-igg-id='docs.right_panel.resize_handle']",
+          "startX": 1280,
+          "startY": 537,
+          "endX": 1152,
+          "endY": 529,
+          "label": "drag"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.panel.activity']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 38,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-39-find-collaborators-tab-button-right-panel",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "4",
+      "instruction": "Find the 'Collaborators' tab button.",
+      "target_id": "docs.panel.collaborators",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "selector": "[data-igg-id='docs.right_panel.resize_handle']",
+          "startX": 1280,
+          "startY": 578,
+          "endX": 952,
+          "endY": 589,
+          "label": "drag"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.panel.collaborators']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 39,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "docs-40-find-reply-button-jiyoons-comment-right-panel",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "4",
+      "instruction": "Find the 'Reply' button on Jiyoon's comment.",
+      "target_id": "docs.editor.comment.jiyoon.reply",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "selector": "[data-igg-id='docs.right_panel.resize_handle']",
+          "startX": 1280,
+          "startY": 550,
+          "endX": 1126,
+          "endY": 559,
+          "label": "drag to expand right panel"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='docs.editor.comment.jiyoon.reply']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 40,
+      "gold_trace_executable": true
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, "Google Sans", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #f6f8fc;
+  color: #202124;
+}
+
+button, input, textarea { font: inherit; }
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #dadce0; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #bdc1c6; }
+
+/* synthetic hover for benchmark review runner */
+[data-igg-review-hover="true"] .group-hover\:opacity-100,
+[data-igg-review-hover="true"].group-hover\:opacity-100 { opacity: 1 !important; }
+[data-igg-review-hover="true"] .group-hover\:flex,
+[data-igg-review-hover="true"].group-hover\:flex { display: flex !important; }
+[data-igg-review-hover="true"] .group-hover\:block,
+[data-igg-review-hover="true"].group-hover\:block { display: block !important; }
+[data-igg-review-hover="true"] .group-hover\:visible,
+[data-igg-review-hover="true"].group-hover\:visible { visibility: visible !important; }
+[data-igg-review-hover="true"] .group-hover\:inline-flex,
+[data-igg-review-hover="true"].group-hover\:inline-flex { display: inline-flex !important; }

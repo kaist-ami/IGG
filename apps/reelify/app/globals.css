@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --background: #141414;
+  --foreground: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+[data-igg-review-hover="true"] .group-hover\:opacity-100,
+[data-igg-review-hover="true"].group-hover\:opacity-100 { opacity: 1 !important; }
+[data-igg-review-hover="true"] .group-hover\:flex,
+[data-igg-review-hover="true"].group-hover\:flex { display: flex !important; }
+[data-igg-review-hover="true"] .group-hover\:block,
+[data-igg-review-hover="true"].group-hover\:block { display: block !important; }
+[data-igg-review-hover="true"] .group-hover\:visible,
+[data-igg-review-hover="true"].group-hover\:visible { visibility: visible !important; }
+
+[data-igg-id][data-igg-review-hover="true"] ~ .group-hover\/rate\:opacity-100 { opacity: 1 !important; }
+[data-igg-id][data-igg-review-hover="true"] ~ .group-hover\/rate\:pointer-events-auto { pointer-events: auto !important; }
+
+[data-igg-review-hover="true"].reelify-rating-menu,
+[data-igg-id][data-igg-review-hover="true"] ~ .reelify-rating-menu {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+.reelify-rating-menu:has([data-igg-review-hover="true"]) {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+[data-igg-review-hover="true"] > .reelify-rating-label {
+  opacity: 1 !important;
+}

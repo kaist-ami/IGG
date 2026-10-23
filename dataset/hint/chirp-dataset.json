@@ -1,0 +1,531 @@
+{
+  "app": "chirp",
+  "display_name": "Chirp",
+  "reference_service": "Twitter/X",
+  "category": "social media",
+  "datasetPath": "dataset/hint/chirp-dataset.json",
+  "baseUrl": "http://localhost:3215",
+  "states": {
+    "1": "Default feed view",
+    "2": "Lower feed posts visible",
+    "3": "Phone verification dialog occluding feed",
+    "4": "Compose file upload pending",
+    "5": "DM file upload panel open",
+    "6": "Follow request notification pending",
+    "7": "Mention notification pending",
+    "8": "Like milestone notification pending"
+  },
+  "tasks": [
+    {
+      "id": "chirp-01-reply-priya-nair",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click Reply on Priya Nair post.",
+      "instruction": "Scroll down and click Reply on Priya Nair post.",
+      "target_id": "chirp.tweet.priya-nair.reply",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1070
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.tweet.priya-nair.reply']"
+        }
+      ],
+      "ordinal": 1,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "chirp-02-repost-tobias-klein",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click Repost on Tobias Klein post.",
+      "instruction": "Scroll down and click Repost on Tobias Klein post.",
+      "target_id": "chirp.tweet.tobias-klein.repost",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1570
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.tweet.tobias-klein.repost']"
+        }
+      ],
+      "ordinal": 2,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "chirp-08-show-more-happenings-up",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "2",
+      "instruction_original": "Click Show more in Whats happening.",
+      "instruction": "Scroll up and click Show more in What's happening.",
+      "target_id": "chirp.trending.show-more",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -4200
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.trending.show-more']"
+        }
+      ],
+      "ordinal": 8,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "chirp-09-follow-ellie-brooks-up",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "2",
+      "instruction_original": "Click Follow for Ellie Brooks.",
+      "instruction": "Scroll up and click Follow for Ellie Brooks.",
+      "target_id": "chirp.suggest.ellie-brooks.follow",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -4200
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.suggest.ellie-brooks.follow']"
+        }
+      ],
+      "ordinal": 9,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "chirp-10-share-tobias-klein-up",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "2",
+      "instruction_original": "Click Share on Tobias Klein post.",
+      "instruction": "Scroll up and click Share on Tobias Klein post.",
+      "target_id": "chirp.tweet.tobias-klein.share",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -2860
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.tweet.tobias-klein.share']"
+        }
+      ],
+      "ordinal": 10,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "chirp-11-share-sasha-bell-up",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "2",
+      "instruction_original": "Click Share on Sasha Bell post.",
+      "instruction": "Scroll up and click Share on Sasha Bell post.",
+      "target_id": "chirp.tweet.sasha-bell.share",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -2420
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.tweet.sasha-bell.share']"
+        }
+      ],
+      "ordinal": 11,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "chirp-12-bookmark-priya-nair",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click Bookmark on Priya Nair post.",
+      "instruction": "Scroll down, hover over Priya Nair post, and click Bookmark.",
+      "target_id": "chirp.tweet.priya-nair.bookmark",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 900
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='chirp.tweet.priya-nair.row']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.tweet.priya-nair.bookmark']"
+        }
+      ],
+      "ordinal": 12,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "chirp-13-more-priya-nair",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click More options on Priya Nair post.",
+      "instruction": "Scroll down, hover over Priya Nair post, and click More options.",
+      "target_id": "chirp.tweet.priya-nair.more",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 900
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='chirp.tweet.priya-nair.row']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.tweet.priya-nair.more']"
+        }
+      ],
+      "ordinal": 13,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "chirp-15-bookmark-nadia-osei-scroll",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click Bookmark on Nadia Osei post.",
+      "instruction": "Scroll down, hover over Nadia Osei post, and click Bookmark.",
+      "target_id": "chirp.tweet.nadia-osei.bookmark",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2350
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='chirp.tweet.nadia-osei.row']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.tweet.nadia-osei.bookmark']"
+        }
+      ],
+      "ordinal": 15,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "chirp-16-more-design-systems",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click More options for the #DesignSystems happening.",
+      "instruction": "Hover over the #DesignSystems happening and click More options.",
+      "target_id": "chirp.trending.design-systems.more",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='chirp.trending.design-systems.topic']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.trending.design-systems.more']"
+        }
+      ],
+      "ordinal": 16,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "chirp-17-post-options-tooltip",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the Post options.",
+      "instruction": "Reveal the sidebar Post options and click Post options.",
+      "target_id": "chirp.sidebar.post-options",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='chirp.sidebar.post-options']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.sidebar.post-options']"
+        }
+      ],
+      "ordinal": 17,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "chirp-18-follow-tara-after-show-more",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click Follow for Tara West in Who to follow.",
+      "instruction": "Scroll down, reveal more accounts in Who to follow and click Follow for Tara West.",
+      "target_id": "chirp.suggest.tara-west.follow",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 505
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.suggest.show-more']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.suggest.tara-west.follow']"
+        }
+      ],
+      "ordinal": 18,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "chirp-20-profile-view-profile",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click View profile.",
+      "instruction": "Open the profile menu and click View profile.",
+      "target_id": "chirp.profile.menu.profile",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.profile.menu.button']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.profile.menu.profile']"
+        }
+      ],
+      "ordinal": 20,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "chirp-21-profile-settings-support",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click Settings and support from the profile menu.",
+      "instruction": "Open the profile menu and click Settings and support.",
+      "target_id": "chirp.profile.menu.settings",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.profile.menu.button']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.profile.menu.settings']"
+        }
+      ],
+      "ordinal": 21,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "chirp-22-pin-lena-post-menu",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click Pin to your profile from Lena Hayes post menu.",
+      "instruction": "Reveal Lena Hayes post options and click Pin to your profile.",
+      "target_id": "chirp.tweet.more.pin",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='chirp.tweet.lena-hayes.row']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.tweet.more.button']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.tweet.more.pin']"
+        }
+      ],
+      "ordinal": 22,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "chirp-23-mute-priya-post-menu",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click Mute from Priya Nair post menu.",
+      "instruction": "Scroll down, reveal Priya Nair post options and click Mute.",
+      "target_id": "chirp.tweet.priya-nair.more.mute",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 900
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='chirp.tweet.priya-nair.row']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.tweet.priya-nair.more']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.tweet.priya-nair.more.mute']"
+        }
+      ],
+      "ordinal": 23,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "chirp-25-click-explore",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "3",
+      "instruction_original": "Click 'Explore'.",
+      "instruction": "Dismiss the phone verification dialog and click 'Explore'.",
+      "target_id": "chirp.sidebar.explore",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.popup.dismiss']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.sidebar.explore']"
+        }
+      ],
+      "ordinal": 25,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "chirp-26-click-notifications",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "3",
+      "instruction_original": "Click 'Notifications'.",
+      "instruction": "Dismiss the phone verification dialog and click 'Notifications'.",
+      "target_id": "chirp.sidebar.notifications",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.popup.dismiss']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.sidebar.notifications']"
+        }
+      ],
+      "ordinal": 26,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "chirp-28-follow-request-accept",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "6",
+      "instruction_original": "Click Accept on the follow request notification.",
+      "instruction": "Wait for the follow request notification to appear, then click Accept.",
+      "target_id": "chirp.notification.accept",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 5000
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.notification.accept']"
+        }
+      ],
+      "ordinal": 28,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "chirp-31-dm-upload-send",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "5",
+      "instruction_original": "Click the 'Send' button for the spec.pdf upload to Kai.",
+      "instruction": "Wait for the DM upload to finish, then click the 'Send' button for the spec.pdf upload to Kai.",
+      "target_id": "chirp.dm.upload.send",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 5500
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.dm.upload.send']"
+        }
+      ],
+      "ordinal": 31,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "chirp-32-compose-upload-post",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "4",
+      "instruction_original": "Click the 'Post' button for the launch-note.png upload.",
+      "instruction": "Wait for the compose upload to finish, then click the 'Post' button for the launch-note.png upload.",
+      "target_id": "chirp.compose.submit",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 5500
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.compose.submit']"
+        }
+      ],
+      "ordinal": 32,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "chirp-33-spotlight-dot-python-conf",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "1",
+      "instruction_original": "Click View tweets on the #PythonConf spotlight banner.",
+      "instruction": "Use the spotlight dot and click View tweets on the #PythonConf spotlight banner.",
+      "target_id": "chirp.spotlight.python-conf.open",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.spotlight.dot-2']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.spotlight.python-conf.open']"
+        }
+      ],
+      "ordinal": 33,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "chirp-34-spotlight-dot-ai-bill",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "1",
+      "instruction_original": "Click See more on the AI Safety Oversight Act spotlight banner.",
+      "instruction": "Use the spotlight dot and click See more on the AI Safety Oversight Act spotlight banner.",
+      "target_id": "chirp.spotlight.ai-bill.open",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.spotlight.dot-3']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='chirp.spotlight.ai-bill.open']"
+        }
+      ],
+      "ordinal": 34,
+      "gold_trace_executable": true
+    }
+  ]
+}

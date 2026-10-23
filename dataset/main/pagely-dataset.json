@@ -1,0 +1,707 @@
+{
+  "app": "pagely",
+  "display_name": "Pagely",
+  "reference_service": "Notion",
+  "category": "wiki/notes",
+  "datasetPath": "dataset/main/pagely-dataset.json",
+  "baseUrl": "http://localhost:3214",
+  "states": {
+    "1": "Default page view",
+    "2": "Linked resources visible",
+    "3": "Sync button pending",
+    "4": "Status property menu open over owner property",
+    "5": "Owner property menu open over due date property",
+    "6": "Shared page menu open over page properties",
+    "7": "Sprint task status menu open",
+    "8": "Zoom meeting log action appears after delay",
+    "9": "Jordan Mills comment notification appears after delay",
+    "10": "Deploy status notification appears after delay",
+    "11": "Access request notification appears after delay",
+    "12": "Import review notification appears after delay",
+    "13": "Launch reminder notification appears after delay"
+  },
+  "tasks": [
+    {
+      "id": "pagely-02-open-customer-interviews",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction": "Click 'Open page' for Customer Interviews.",
+      "target_id": "pagely.linked.customer-interviews.open",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2550
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.linked.customer-interviews.open']"
+        }
+      ],
+      "ordinal": 2,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-03-open-roadmap-2026",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction": "Click 'Open page' for Roadmap 2026.",
+      "target_id": "pagely.linked.roadmap-2026.open",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2700
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.linked.roadmap-2026.open']"
+        }
+      ],
+      "ordinal": 3,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-04-open-launch-brief-link",
+      "level": "1-1",
+      "constraint_type": "direct_click",
+      "state_id": "2",
+      "instruction": "Click the launch brief link.",
+      "target_id": "pagely.link.inline.launch-brief",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -2000,
+          "label": "scroll -2000"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.link.inline.launch-brief']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 4,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-05-open-access-guide",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction": "Click the Access guide link.",
+      "target_id": "pagely.link.access-guide",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 700
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.link.access-guide']"
+        }
+      ],
+      "ordinal": 5,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-06-open-api-reference",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction": "Click 'Open page' for API Reference.",
+      "target_id": "pagely.linked.api-reference.open",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2450
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.linked.api-reference.open']"
+        }
+      ],
+      "ordinal": 6,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-07-scroll-up-release-calendar",
+      "level": "1-1",
+      "constraint_type": "scroll_up_find",
+      "state_id": "2",
+      "instruction": "Click the release calendar link.",
+      "target_id": "pagely.link.inline.release-calendar",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -2200
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.link.inline.release-calendar']"
+        }
+      ],
+      "ordinal": 7,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-08-scroll-up-deploy-details",
+      "level": "1-1",
+      "constraint_type": "scroll_up_find",
+      "state_id": "2",
+      "instruction": "Click Details for Deploy infra changes.",
+      "target_id": "pagely.tasks.deploy-infra.details",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -900
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.tasks.deploy-infra.details']"
+        }
+      ],
+      "ordinal": 8,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-10-tooltip-copy-link",
+      "level": "2-1",
+      "constraint_type": "hover_tooltip",
+      "state_id": "1",
+      "instruction": "Click the Copy link.",
+      "target_id": "pagely.header.copy-link",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='pagely.header.copy-link']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.header.copy-link']"
+        }
+      ],
+      "ordinal": 10,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-11-tooltip-settings",
+      "level": "2-1",
+      "constraint_type": "hover_tooltip",
+      "state_id": "1",
+      "instruction": "Click the Settings.",
+      "target_id": "pagely.header.settings",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='pagely.header.settings']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.header.settings']"
+        }
+      ],
+      "ordinal": 11,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-12-tooltip-move-to",
+      "level": "2-1",
+      "constraint_type": "hover_tooltip",
+      "state_id": "1",
+      "instruction": "Click the Move to.",
+      "target_id": "pagely.more.move",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='pagely.more.move']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.more.move']"
+        }
+      ],
+      "ordinal": 12,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-13-resolve-launch-risk-comment",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction": "Click Resolve on the comment beside Launch risk.",
+      "target_id": "pagely.comment.launch-risk.resolve",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='pagely.comment.launch-risk']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.comment.launch-risk.resolve']"
+        }
+      ],
+      "ordinal": 13,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-14-reply-api-contract-comment",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction": "Click Reply on the comment beside Finalize API contracts.",
+      "target_id": "pagely.comment.api-contract.reply",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 650
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='pagely.comment.api-contract']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.comment.api-contract.reply']"
+        }
+      ],
+      "ordinal": 14,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-15-delete-qa-suite-comment",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction": "Click Delete on the comment beside Complete QA smoke suite.",
+      "target_id": "pagely.comment.qa-suite.delete",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 650
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='pagely.comment.qa-suite']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.comment.qa-suite.delete']"
+        }
+      ],
+      "ordinal": 15,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-16-comment-release-notes",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction": "Click Comment on Draft release notes.",
+      "target_id": "pagely.milestone.release-notes.comment",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 900
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='pagely.milestone.release-notes.row']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.milestone.release-notes.comment']"
+        }
+      ],
+      "ordinal": 16,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-17-sidebar-more-design-system",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction": "Click the more button for Design System in Shared.",
+      "target_id": "pagely.sidebar.page.design-system.more",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='pagely.sidebar.page.design-system']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.sidebar.page.design-system.more']"
+        }
+      ],
+      "ordinal": 17,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-18-api-contract-status-review",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction": "Click In review for Finalize API contracts.",
+      "target_id": "pagely.milestone.api-contracts.status.review",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 650
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.milestone.api-contracts.status']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.milestone.api-contracts.status.review']"
+        }
+      ],
+      "ordinal": 18,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-19-view-timeline",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction": "Click Timeline in the Team roster view menu.",
+      "target_id": "pagely.views.timeline",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1200
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.views.button']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.views.timeline']"
+        }
+      ],
+      "ordinal": 19,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-20-sort-priority",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction": "Click Priority in the Team roster sort menu.",
+      "target_id": "pagely.sort.priority",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1200
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.sort.button']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.sort.priority']"
+        }
+      ],
+      "ordinal": 20,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-21-deploy-status-progress",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction": "Click In progress for Deploy infra changes.",
+      "target_id": "pagely.tasks.deploy-infra.status.progress",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1900
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.tasks.deploy-infra.status']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.tasks.deploy-infra.status.progress']"
+        }
+      ],
+      "ordinal": 21,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-23-notify-customers-status-blocked",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction": "Click Blocked for Notify beta customers.",
+      "target_id": "pagely.tasks.notify-customers.status.blocked",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1900
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.tasks.notify-customers.status']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.tasks.notify-customers.status.blocked']"
+        }
+      ],
+      "ordinal": 23,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-24-postmortem-status-done",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction": "Click Done for Schedule postmortem.",
+      "target_id": "pagely.tasks.postmortem.status.done",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2100
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.tasks.postmortem.status']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.tasks.postmortem.status.done']"
+        }
+      ],
+      "ordinal": 24,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-25-occluded-owner-morgan",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "4",
+      "instruction": "Click Morgan Lee in the Owner property.",
+      "target_id": "pagely.property.owner.morgan",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.page.title']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.property.property-owner.button']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.property.owner.morgan']"
+        }
+      ],
+      "ordinal": 25,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-26-occluded-due-next-week",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "5",
+      "instruction": "Click Next week in the Due date property.",
+      "target_id": "pagely.property.due.next-week",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.page.title']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.property.property-due.button']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.property.due.next-week']"
+        }
+      ],
+      "ordinal": 26,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-27-occluded-priority-p2",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "6",
+      "instruction": "Click P2 in the Priority property.",
+      "target_id": "pagely.property.priority.p2",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.page.title']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.property.property-priority.button']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.property.priority.p2']"
+        }
+      ],
+      "ordinal": 27,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-28-occluded-update-docs-done",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "7",
+      "instruction": "Click Done for Update docs site.",
+      "target_id": "pagely.tasks.update-docs.status.done",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.tasks.deploy-infra.details']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.tasks.update-docs.status']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.tasks.update-docs.status.done']"
+        }
+      ],
+      "ordinal": 28,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-29-click-sync",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "3",
+      "instruction": "Click Sync complete.",
+      "target_id": "pagely.header.sync-complete",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 3500
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.header.sync-complete']"
+        }
+      ],
+      "ordinal": 29,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-30-write-zoom-ai-log",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "8",
+      "instruction": "Click 'Write AI meeting log' in the notification.",
+      "target_id": "pagely.zoom-ai.write-log",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 5000
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.zoom-ai.write-log']"
+        }
+      ],
+      "ordinal": 30,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-31-open-jordan-comment-notification",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "9",
+      "instruction": "Click Go to thread in the Jordan Mills comment notification.",
+      "target_id": "pagely.async.comment.go-to-thread",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 3600,
+          "label": "wait for notification"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.async.comment.go-to-thread']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 31,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-33-open-access-request-notification",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "11",
+      "instruction": "Click Open request in the access request notification.",
+      "target_id": "pagely.async.access.open-request",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 4000,
+          "label": "wait for notification"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.async.access.open-request']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 33,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-34-review-import-mappings-notification",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "12",
+      "instruction": "Click Review mappings in the import review notification.",
+      "target_id": "pagely.async.import.review-mappings",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 4200,
+          "label": "wait for notification"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.async.import.review-mappings']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 34,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "pagely-35-snooze-launch-reminder-notification",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "13",
+      "instruction": "Click Snooze in the launch review reminder notification.",
+      "target_id": "pagely.async.reminder.snooze",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 4400,
+          "label": "wait for notification"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='pagely.async.reminder.snooze']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 35,
+      "gold_trace_executable": true
+    }
+  ]
+}

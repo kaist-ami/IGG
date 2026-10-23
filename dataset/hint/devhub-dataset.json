@@ -1,0 +1,700 @@
+{
+  "app": "devhub",
+  "display_name": "Devhub Repo",
+  "reference_service": "GitHub",
+  "category": "code repository",
+  "datasetPath": "dataset/hint/devhub-dataset.json",
+  "baseUrl": "http://localhost:3208",
+  "states": {
+    "1": "Default repository top view with auto-rotating release banner.",
+    "2": "Notifications popover open while new alerts arrive.",
+    "3": "Blocking security modal open.",
+    "4": "Repository file tree sidebar is open and narrowed, hiding deep filenames until resized."
+  },
+  "tasks": [
+    {
+      "id": "devhub-01-click-open-prs-view-details",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click 'View details' for the Open pull requests metric.",
+      "instruction": "Scroll down and click 'View details' for the Open pull requests metric.",
+      "target_id": "devhub.metrics.open-prs",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 620
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.metrics.open-prs']"
+        }
+      ],
+      "ordinal": 1,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-02-click-new-issue",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click 'New issue'.",
+      "instruction": "Scroll down and click 'New issue'.",
+      "target_id": "devhub.issues.new",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1085
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.issues.new']"
+        }
+      ],
+      "ordinal": 2,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-03-open-billing-service",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click 'Open package' for the Billing Service.",
+      "instruction": "Scroll down and click 'Open package' for the Billing Service.",
+      "target_id": "devhub.packages.billing.open",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2758
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.packages.billing.open']"
+        }
+      ],
+      "ordinal": 3,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-04-open-realtime-gateway",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click 'Open package' for the Realtime Gateway.",
+      "instruction": "Scroll down and click 'Open package' for the Realtime Gateway.",
+      "target_id": "devhub.packages.realtime.open",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2758
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.packages.realtime.open']"
+        }
+      ],
+      "ordinal": 4,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-05-click-webhooks",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click 'Webhooks'.",
+      "instruction": "Scroll down and click 'Webhooks'.",
+      "target_id": "devhub.ops.webhooks",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 3054
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.ops.webhooks']"
+        }
+      ],
+      "ordinal": 5,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-06-click-security-log",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click 'Security log'.",
+      "instruction": "Scroll down and click 'Security log'.",
+      "target_id": "devhub.ops.security-log",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 3116
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.ops.security-log']"
+        }
+      ],
+      "ordinal": 6,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-07-resolve-review-locks",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click 'Resolve' for Add lock timeout fallback.",
+      "instruction": "Scroll down and click 'Resolve' for Add lock timeout fallback.",
+      "target_id": "devhub.audit.review-locks.resolve",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1600
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"devhub.audit.review-locks.resolve\"]"
+        }
+      ],
+      "ordinal": 7,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-08-resolve-timeline-groups",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click 'Resolve' for Memoize collapsed event groups.",
+      "instruction": "Scroll down and click 'Resolve' for Memoize collapsed event groups.",
+      "target_id": "devhub.audit.timeline.resolve",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1600
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"devhub.audit.timeline.resolve\"]"
+        }
+      ],
+      "ordinal": 8,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-09-resolve-session-window",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click 'Resolve' for Clamp stale token window.",
+      "instruction": "Scroll down and click 'Resolve' for Clamp stale token window.",
+      "target_id": "devhub.audit.session.resolve",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2000
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"devhub.audit.session.resolve\"]"
+        }
+      ],
+      "ordinal": 9,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-10-resolve-checks-retry",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click 'Resolve' for Retry provider 429 responses.",
+      "instruction": "Scroll down and click 'Resolve' for Retry provider 429 responses.",
+      "target_id": "devhub.audit.checks.resolve",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2000
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"devhub.audit.checks.resolve\"]"
+        }
+      ],
+      "ordinal": 10,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-11-review-kai-pr",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click 'Review' on Kai Nakamura's pull request.",
+      "instruction": "Scroll down, hover over Kai Nakamura's pull request, and click 'Review'.",
+      "target_id": "devhub.pr.kai.review",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 740
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='devhub.pr.kai.review.row']",
+          "ms": 250
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.pr.kai.review']"
+        }
+      ],
+      "ordinal": 11,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-12-review-maya-pr",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click 'Review' on Maya Singh's pull request.",
+      "instruction": "Scroll down, hover over Maya Singh's pull request, and click 'Review'.",
+      "target_id": "devhub.pr.maya.review",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 817
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='devhub.pr.maya.review.row']",
+          "ms": 250
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.pr.maya.review']"
+        }
+      ],
+      "ordinal": 12,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-13-review-last-pr",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click 'Review' on the last pull request in the queue.",
+      "instruction": "Scroll down, hover over the last pull request in the queue, and click 'Review'.",
+      "target_id": "devhub.pr.nadia.review",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 971
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='devhub.pr.nadia.review.row']",
+          "ms": 250
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.pr.nadia.review']"
+        }
+      ],
+      "ordinal": 13,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-14-assign-mina-issue",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click 'Assign' on Mina Patel's issue.",
+      "instruction": "Scroll down, hover over Mina Patel's issue, and click 'Assign'.",
+      "target_id": "devhub.issues.mina.assign",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1130
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='devhub.issues.mina.assign.row']",
+          "ms": 250
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.issues.mina.assign']"
+        }
+      ],
+      "ordinal": 14,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-15-assign-owen-issue",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click 'Assign' on Owen Miller's issue.",
+      "instruction": "Scroll down, hover over Owen Miller's issue, and click 'Assign'.",
+      "target_id": "devhub.issues.owen.assign",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1207
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='devhub.issues.owen.assign.row']",
+          "ms": 250
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.issues.owen.assign']"
+        }
+      ],
+      "ordinal": 15,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-16-assign-last-issue",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click 'Assign' on the last issue in the triage list.",
+      "instruction": "Scroll down, hover over the last issue in the triage list, and click 'Assign'.",
+      "target_id": "devhub.issues.theo.assign",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1361
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='devhub.issues.theo.assign.row']",
+          "ms": 250
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.issues.theo.assign']"
+        }
+      ],
+      "ordinal": 16,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-17-select-release-branch",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the 'release/2026.05' branch.",
+      "instruction": "Open the branch menu and click the 'release/2026.05' branch.",
+      "target_id": "devhub.branch.release-2026",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.branch.button']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.branch.release-2026']"
+        }
+      ],
+      "ordinal": 17,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-18-select-command-branch",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click 'feature/command-k' branch.",
+      "instruction": "Open the branch menu and click 'feature/command-k' branch.",
+      "target_id": "devhub.branch.feature-command-k",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.branch.button']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.branch.feature-command-k']"
+        }
+      ],
+      "ordinal": 18,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-21-click-needs-review",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the 'Needs review' filter in the PR queue.",
+      "instruction": "Scroll down, open the PR queue filter menu and click the 'Needs review' filter in the PR queue.",
+      "target_id": "devhub.pr.filter.needs-review",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 617
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.pr.filter.button']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.pr.filter.needs-review']"
+        }
+      ],
+      "ordinal": 21,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-23-click-transfer-ownership",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click 'Transfer ownership' for this repository.",
+      "instruction": "Scroll down, open the repository actions menu and click 'Transfer ownership' for this repository.",
+      "target_id": "devhub.repo.actions.transfer",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2918
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.repo.actions.button']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.repo.actions.transfer']"
+        }
+      ],
+      "ordinal": 23,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-24-tree-services-invoice-worker",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "4",
+      "instruction_original": "Click 'invoice-worker.ts' in the file tree.",
+      "instruction": "Expand the file tree and click 'invoice-worker.ts' in the file tree.",
+      "target_id": "devhub.tree.services.billing.invoice",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.tree.services']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.tree.services.billing']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.tree.services.billing.invoice']"
+        }
+      ],
+      "ordinal": 24,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-25-click-actions-tab",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "3",
+      "instruction_original": "Click the 'Actions' tab for this repository.",
+      "instruction": "Dismiss the open modal and click the 'Actions' tab for this repository.",
+      "target_id": "devhub.tabs.actions",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.modal.close']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.tabs.actions']"
+        }
+      ],
+      "ordinal": 25,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-26-click-playwright-topic",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "3",
+      "instruction_original": "Click the 'playwright' topic tag.",
+      "instruction": "Dismiss the open modal and click the 'playwright' topic tag.",
+      "target_id": "devhub.topic.playwright",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.modal.close']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.topic.playwright']"
+        }
+      ],
+      "ordinal": 26,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-27-click-code-scanning",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "3",
+      "instruction_original": "Click 'Code scanning alerts' in the security panel.",
+      "instruction": "Dismiss the open modal and click 'Code scanning alerts' in the security panel.",
+      "target_id": "devhub.security.code-scanning",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.modal.close']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.security.code-scanning']"
+        }
+      ],
+      "ordinal": 27,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-29-open-audit-failed-notification",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "2",
+      "instruction_original": "Click the notification for the failed nightly audit workflow.",
+      "instruction": "Wait for the notification to appear and click the notification for the failed nightly audit workflow.",
+      "target_id": "devhub.notification.audit-failed",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 6000
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"devhub.notification.audit-failed\"]"
+        }
+      ],
+      "ordinal": 29,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-31-open-preview-ready-notification",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "2",
+      "instruction_original": "Click the notification that the preview deploy is ready.",
+      "instruction": "Wait for the notification to appear and click the notification that the preview deploy is ready.",
+      "target_id": "devhub.notification.preview-ready",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 6000
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"devhub.notification.preview-ready\"]"
+        }
+      ],
+      "ordinal": 31,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-32-open-security-alert-notification",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "2",
+      "instruction_original": "Click the notification for the new security alert.",
+      "instruction": "Wait for the notification to appear and click the notification for the new security alert.",
+      "target_id": "devhub.notification.security-alert",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 6000
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"devhub.notification.security-alert\"]"
+        }
+      ],
+      "ordinal": 32,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-33-open-policy-engine-brief",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "1",
+      "instruction_original": "Click 'Open release brief' for Policy engine launch checklist.",
+      "instruction": "Scroll down, use the release dot and click 'Open release brief' for Policy engine launch checklist.",
+      "target_id": "devhub.release.policy-engine.open",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1600
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.release.dot-3']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.release.policy-engine.open']"
+        }
+      ],
+      "ordinal": 33,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-34-open-trace-viewer-brief",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "1",
+      "instruction_original": "Click 'Open release brief' for Trace viewer snapshots.",
+      "instruction": "Scroll down, use the release dot and click 'Open release brief' for Trace viewer snapshots.",
+      "target_id": "devhub.release.trace-viewer.open",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1600
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"devhub.release.dot-1\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"devhub.release.trace-viewer.open\"]"
+        }
+      ],
+      "ordinal": 34,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devhub-35-preview-metrics-brief",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "1",
+      "instruction_original": "Click 'Open release brief' for Preview deploy metrics.",
+      "instruction": "Scroll down, use the release dot and click 'Open release brief' for Preview deploy metrics.",
+      "target_id": "devhub.release.preview-metrics.open",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1600
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.release.dot-2']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devhub.release.preview-metrics.open']"
+        }
+      ],
+      "ordinal": 35,
+      "gold_trace_executable": true
+    }
+  ]
+}

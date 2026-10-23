@@ -1,0 +1,586 @@
+{
+  "app": "shopping",
+  "display_name": "Shopping Mall",
+  "reference_service": "Coupang/Amazon",
+  "category": "shopping",
+  "datasetPath": "dataset/main/shopping-dataset.json",
+  "baseUrl": "http://localhost:3100",
+  "states": {
+    "1": "Main screen (default)",
+    "2": "Main screen (bottom)",
+    "3": "Product detail (top)",
+    "4": "Product detail (bottom)",
+    "5": "Main screen + Time Deals last page",
+    "6": "Product detail + color options open",
+    "7": "Main screen + category panel open",
+    "8": "Main screen + promo popup",
+    "9": "Product detail + promo popup",
+    "10": "Product detail + consultation",
+    "11": "Main screen delivery tracking notification appears after delay",
+    "12": "Main screen member coupon notification appears after delay",
+    "13": "Main screen time deal notification appears after delay"
+  },
+  "tasks": [
+    {
+      "id": "capang-01-find-buy-now-button-waterproof-trekking-hiking-shoes-personalized-picks",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction": "Find the 'Buy Now' button for 'Waterproof Trekking Hiking Shoes' in 'Personalized Picks'.",
+      "target_id": "shopping.home.recommend-hiking-shoes.buy",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2200,
+          "label": "scroll 2200"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.recommend-hiking-shoes.buy']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 1,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "capang-02-click-cart-button-wireless-mechanical-keyboard-tenkeyless-todays-discovery",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction": "Click the 'Cart' button for 'Wireless Mechanical Keyboard Tenkeyless' in 'Today's Discovery'.",
+      "target_id": "shopping.home.today-discovery.keyboard.cart",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1000,
+          "label": "scroll 1000"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"shopping.home.today-discovery.keyboard.cart\"]",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 2,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "capang-04-click-careers-button",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction": "Click the 'Careers' button.",
+      "target_id": "shopping.home.footer-careers",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2500,
+          "label": "scroll down to footer"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.footer-careers']",
+          "label": "click footer careers button"
+        }
+      ],
+      "ordinal": 4,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "capang-05-click-see-noodle-deals-arrow-button",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction": "Click the 'See Noodle Deals' button.",
+      "target_id": "shopping.home.ramen-festa.cta",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2000,
+          "label": "scroll down to ramen festa banner"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.ramen-festa.cta']",
+          "label": "click ramen festa cta button"
+        }
+      ],
+      "ordinal": 5,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "capang-06-click-returns-exchanges-tab",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "3",
+      "instruction": "Click the 'Returns & Exchanges' tab.",
+      "target_id": "shopping.product.earphones.tab-return",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 800,
+          "label": "scroll 800"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.product.earphones.tab-return']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 6,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "capang-08-click-show-more-info-button",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "3",
+      "instruction": "Find Show More Info in the product detail.",
+      "target_id": "shopping.product.earphones.info-expand",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1500,
+          "label": "scroll down to info section"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.product.earphones.info-expand']",
+          "label": "click product info expand button"
+        }
+      ],
+      "ordinal": 8,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "capang-10-click-cart-button-waterproof-trekking-backpack-30l-time-deals",
+      "level": "2-2",
+      "constraint_type": "carousel_reveal",
+      "state_id": "1",
+      "instruction": "Click the 'Cart' button for 'Waterproof Trekking Backpack 30L' in Time Deals.",
+      "target_id": "shopping.home.time-deals.backpack.cart",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2000,
+          "label": "scroll down to time deals section"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.time-deals.next']",
+          "label": "advance time deals to page 2"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.time-deals.next']",
+          "label": "advance time deals to page 3"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.time-deals.backpack.cart']",
+          "label": "click backpack cart button"
+        }
+      ],
+      "ordinal": 10,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "capang-11-click-buy-now-button-large-air-fryer-6l-time-deals",
+      "level": "2-2",
+      "constraint_type": "carousel_reveal",
+      "state_id": "5",
+      "instruction": "Click the 'Buy Now' button for 'Large Air Fryer 6L' in Time Deals.",
+      "target_id": "shopping.home.time-deals.airfryer.buy",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1800,
+          "label": "scroll down to time deals section"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.time-deals.prev']",
+          "label": "move time deals to page 2"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.time-deals.prev']",
+          "label": "move time deals to page 1"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.time-deals.airfryer.buy']",
+          "label": "click airfryer buy button"
+        }
+      ],
+      "ordinal": 11,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "capang-12-find-discounted-product-title-compare-similar-products",
+      "level": "2-2",
+      "constraint_type": "carousel_reveal",
+      "state_id": "3",
+      "instruction": "Find the discounted product title in 'Compare Similar Products'.",
+      "target_id": "shopping.product.earphones.related.discounted-title",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 760,
+          "label": "scroll down to related products carousel"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.product.earphones.related.next']",
+          "label": "advance related carousel to page 2"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.product.earphones.related.next']",
+          "label": "advance related carousel to page 3"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.product.earphones.related.next']",
+          "label": "advance related carousel to page 4"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.product.earphones.related.discounted-title']",
+          "label": "click discounted related product title"
+        }
+      ],
+      "ordinal": 12,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "capang-13-click-remove-button-kettle-cart",
+      "level": "2-2",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction": "Click the remove button for 'Stainless Steel Electric Kettle 1.7L' in the cart.",
+      "target_id": "shopping.home.cart.kettle.remove",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='shopping.home.cart-trigger']",
+          "label": "hover cart to reveal mini cart"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.cart.kettle.remove']",
+          "label": "remove kettle from cart"
+        }
+      ],
+      "ordinal": 13,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "capang-14-click-new-seller-application-sell-on-capang-menu",
+      "level": "2-2",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction": "Click 'New Seller Application' button.",
+      "target_id": "shopping.home.sell.new-application",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='shopping.home.sell-trigger']",
+          "label": "hover Sell on Capang to reveal dropdown"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.sell.new-application']",
+          "label": "click New Seller Application"
+        }
+      ],
+      "ordinal": 14,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "capang-15-click-audio-subcategory-electronics",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction": "Click the 'Audio' subcategory.",
+      "target_id": "shopping.home.nav.electronics.audio",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.category-trigger']",
+          "label": "open category mega-menu"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='shopping.home.nav.electronics']",
+          "label": "hover Electronics to show its subcategories"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.nav.electronics.audio']",
+          "label": "click Audio subcategory"
+        }
+      ],
+      "ordinal": 15,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "capang-16-click-skincare-subcategory-beauty",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction": "Click the 'Skincare' subcategory.",
+      "target_id": "shopping.home.nav.beauty.skincare",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.category-trigger']",
+          "label": "open category mega-menu"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='shopping.home.nav.beauty']",
+          "label": "hover Beauty to show its subcategories"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.nav.beauty.skincare']",
+          "label": "click Skincare subcategory"
+        }
+      ],
+      "ordinal": 16,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "capang-18-click-increase-quantity-button-current-page",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "6",
+      "instruction": "Click the increase quantity button on the current page.",
+      "target_id": "shopping.product.earphones.quantity.increase",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.product.earphones.color-trigger']",
+          "label": "close open color dropdown"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.product.earphones.quantity.increase']",
+          "label": "increase product quantity"
+        }
+      ],
+      "ordinal": 18,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "capang-19-click-cart-button-capang-basics-daily-t-shirt-3-pack",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "7",
+      "instruction": "Click the 'Cart' button for 'Capang Basics Daily T-Shirt 3-Pack'.",
+      "target_id": "shopping.home.today-discovery.capang-basics.cart",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.top-link-first']",
+          "label": "dismiss category panel by clicking outside"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.today-discovery.capang-basics.cart']",
+          "label": "click Capang Basics cart button"
+        }
+      ],
+      "ordinal": 19,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "capang-23-click-end-consultation-button-customer-support-agent-replies",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "10",
+      "instruction": "Click the 'End Consultation' button after the customer support agent replies.",
+      "target_id": "shopping.product.earphones.consultation.end",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 10400,
+          "label": "wait until consultation end button becomes enabled"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.product.earphones.consultation.end']",
+          "label": "click consultation end button"
+        }
+      ],
+      "ordinal": 23,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "capang-24-track-delivery-home-event",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "11",
+      "instruction": "Click Track delivery in the Rocket Delivery notification.",
+      "target_id": "shopping.home.async.delivery.track",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 3400,
+          "label": "wait for home event notification"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.async.delivery.track']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 24,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "capang-25-view-coupon-home-event",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "12",
+      "instruction": "Click View coupon in the member coupon notification.",
+      "target_id": "shopping.home.async.coupon.view",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 3600,
+          "label": "wait for home event notification"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.async.coupon.view']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 25,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "capang-26-see-time-deal-home-event",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "13",
+      "instruction": "Click See time deal in the electronics flash deal notification.",
+      "target_id": "shopping.home.async.timedeal.see",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 3800,
+          "label": "wait for home event notification"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.async.timedeal.see']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 26,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "capang-27-click-shop-now-button-digital-festa-hero-banner",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "1",
+      "instruction": "Click the 'Shop Now' button on the 'Digital Festa' hero banner.",
+      "target_id": "shopping.home.hero.digital-festa.cta",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.hero.digital-festa.dot']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.hero.digital-festa.cta']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 27,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "capang-28-click-see-deals-button-skincare-mid-page-banner",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "1",
+      "instruction": "Click the 'See Deals' button on the 'Skincare up to 65% off' banner.",
+      "target_id": "shopping.home.mid-banner.skincare.cta",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1150,
+          "label": "scroll down to mid-page moving banner"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.mid-banner.skincare.dot']",
+          "label": "show skincare banner"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.mid-banner.skincare.cta']",
+          "label": "click See Deals button"
+        }
+      ],
+      "ordinal": 28,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "capang-29-click-check-deals-button-electronics-mid-page-banner",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "1",
+      "instruction": "Click the 'Check Deals' button on the 'Fans & AC on sale' banner.",
+      "target_id": "shopping.home.mid-banner.electronics.cta",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1150,
+          "label": "scroll down to mid-page moving banner"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.mid-banner.electronics.dot']",
+          "label": "show electronics banner"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.mid-banner.electronics.cta']",
+          "label": "click Check Deals button"
+        }
+      ],
+      "ordinal": 29,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "capang-30-click-shop-now-button-rocket-fresh-hero-banner",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "1",
+      "instruction": "Click the 'Shop Now' button on the 'Rocket Fresh' banner.",
+      "target_id": "shopping.home.hero.rocket-fresh.cta",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.hero.rocket-fresh.dot']",
+          "label": "show Rocket Fresh hero banner"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='shopping.home.hero.rocket-fresh.cta']",
+          "label": "click Shop Now button"
+        }
+      ],
+      "ordinal": 30,
+      "gold_trace_executable": true
+    }
+  ]
+}

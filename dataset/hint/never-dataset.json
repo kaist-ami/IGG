@@ -1,0 +1,708 @@
+{
+  "app": "never",
+  "display_name": "Never Portal",
+  "reference_service": "Naver",
+  "category": "portal/search",
+  "datasetPath": "dataset/hint/never-dataset.json",
+  "baseUrl": "http://localhost:3201",
+  "states": {
+    "1": "Main screen (default)",
+    "2": "Search autocomplete open",
+    "3": "Login modal open"
+  },
+  "tasks": [
+    {
+      "id": "never-02-find-first-article-sports-section",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction_original": "Find the first article in the 'Sports' section.",
+      "instruction": "Scroll down and find the first article in the 'Sports' section.",
+      "target_id": "never.sports.first-article",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1500,
+          "label": "scroll to sports section"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.sports.first-article']",
+          "label": "click sports first article"
+        }
+      ],
+      "ordinal": 2,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-03-find-home-cafe-recipes-card-todays-topics",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction_original": "Find the 'Home Cafe Recipes' card in 'Today's Topics'.",
+      "instruction": "Scroll down and find the 'Home Cafe Recipes' card in 'Today's Topics'.",
+      "target_id": "never.topics.home-cafe",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2600,
+          "label": "scroll to topics section"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.topics.home-cafe']",
+          "label": "click home cafe topic card"
+        }
+      ],
+      "ordinal": 3,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-04-find-careers-button",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction_original": "Find the 'Careers' button.",
+      "instruction": "Scroll down and find the 'Careers' button.",
+      "target_id": "never.footer.careers",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 4600,
+          "label": "scroll to footer links"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.footer.careers']",
+          "label": "click careers footer link"
+        }
+      ],
+      "ordinal": 4,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-05-click-april-1-2026-mini-calendar",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click April 1, 2026 in the mini calendar.",
+      "instruction": "Scroll down and click April 1, 2026 in the mini calendar.",
+      "target_id": "never.calendar.date-2026-04-01",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1200,
+          "label": "scroll 1200"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.calendar.date-2026-04-01']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 5,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-06-click-see-more-button-markets-section",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click the 'See More' button in the 'Markets' section.",
+      "instruction": "Scroll down and click the 'See More' button in the 'Markets' section.",
+      "target_id": "never.markets.see-more",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 600,
+          "label": "scroll 600"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.markets.see-more']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 6,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-07-click-start-free-button-study-pro-ad",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click the 'Start for Free' button in the 'Study Pro' ad.",
+      "instruction": "Scroll down and click the 'Start for Free' button in the 'Study Pro' ad.",
+      "target_id": "never.side-ad.start-for-free",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1100,
+          "label": "scroll 1100"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.side-ad.start-for-free']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 7,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-08-find-pet-care-tips-card-todays-topics",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Find the 'Pet Care Tips' card in 'Today's Topics'.",
+      "instruction": "Scroll down and find the 'Pet Care Tips' card in 'Today's Topics'.",
+      "target_id": "never.topics.pet-care-tips",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2000,
+          "label": "scroll 2000"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.topics.pet-care-tips']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 8,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-09-find-article-volleyball-team-expands-its-touring-youth-program-season",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Find the article 'A Volleyball Team Expands Its Touring Youth Program for the Season'.",
+      "instruction": "Scroll down and find the article 'A Volleyball Team Expands Its Touring Youth Program for the Season'.",
+      "target_id": "never.sports.volleyball-youth-program",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1700,
+          "label": "scroll 1700"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.sports.volleyball-youth-program']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 9,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-10-click-bookmark-button-sports-first-article",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the bookmark button for the first article in the Sports section.",
+      "instruction": "Scroll down, hover over the first article in Sports and click the bookmark button for the first article in the Sports section.",
+      "target_id": "never.sports.first-article.bookmark",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1500,
+          "label": "scroll to sports section"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='never.sports.first-article']",
+          "label": "hover sports article to reveal bookmark"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.sports.first-article.bookmark']",
+          "label": "click bookmark button"
+        }
+      ],
+      "ordinal": 10,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-11-click-bookmark-button-short-form-opener-entertainment-article",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the bookmark button for the article 'A Short-Form Opener Sets a New Completion-Rate High'.",
+      "instruction": "Scroll down, hover over the article and click the bookmark button for the article 'A Short-Form Opener Sets a New Completion-Rate High'.",
+      "target_id": "never.entertainment.second-article.bookmark",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1150,
+          "label": "scroll to entertainment section"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='never.entertainment.second-article']",
+          "label": "hover entertainment article to reveal bookmark"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.entertainment.second-article.bookmark']",
+          "label": "click bookmark button"
+        }
+      ],
+      "ordinal": 11,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-13-find-news-article-seoul-book-festival-opens-this-month",
+      "level": "2-2",
+      "constraint_type": "carousel_reveal",
+      "state_id": "1",
+      "instruction_original": "Find the news article 'Seoul Book Festival Opens This Month'.",
+      "instruction": "Scroll down, reveal more news and find the news article 'Seoul Book Festival Opens This Month'.",
+      "target_id": "never.news.book-festival",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 900,
+          "label": "scroll 900"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.news.daily-view.more']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.news.book-festival']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 13,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-14-find-sun-row-weekly-weather-forecast",
+      "level": "2-2",
+      "constraint_type": "carousel_reveal",
+      "state_id": "1",
+      "instruction_original": "Find the 'Sun' row in the weekly weather forecast.",
+      "instruction": "Scroll down, expand the weekly weather forecast and find the 'Sun' row in the weekly weather forecast.",
+      "target_id": "never.weather.sun-row",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 450,
+          "label": "scroll 450"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.weather.expand-toggle']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.weather.sun-row']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 14,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-15-click-dont-save-searches",
+      "level": "2-2",
+      "constraint_type": "carousel_reveal",
+      "state_id": "1",
+      "instruction_original": "Click 'Don't Save Searches'.",
+      "instruction": "Open the search autocomplete and click 'Don't Save Searches'.",
+      "target_id": "never.search.save-off",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.search.input']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.search.save-off']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 15,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-16-click-rank-15-item-trending-now",
+      "level": "2-2",
+      "constraint_type": "carousel_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the rank 15 item in 'Trending Now'.",
+      "instruction": "Scroll down, expand Trending Now and click the rank 15 item in 'Trending Now'.",
+      "target_id": "never.trending.rank-15",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 250,
+          "label": "scroll 250"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.trending.expand-toggle']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.trending.rank-15']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 16,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-19-find-dictionary-button-main-navigation",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "2",
+      "instruction_original": "Find the 'Dictionary' button.",
+      "instruction": "Close the search autocomplete and find the 'Dictionary' button.",
+      "target_id": "never.nav.dictionary",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.search.input']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.nav.dictionary']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 19,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-20-find-get-app-button",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "3",
+      "instruction_original": "Find the 'Get App' button.",
+      "instruction": "Dismiss the login modal and find the 'Get App' button.",
+      "target_id": "never.header.get-app",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.login-modal.close']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.header.get-app']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 20,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-21-click-morning-line-view-more-articles",
+      "level": "2-3",
+      "constraint_type": "folded_content",
+      "state_id": "2",
+      "instruction_original": "Click the Morning Line 'View more articles' button.",
+      "instruction": "Close the search autocomplete and click the Morning Line 'View more articles' button.",
+      "target_id": "never.news.more.expand",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.search.input']",
+          "label": "close search autocomplete"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.news.more.expand']",
+          "label": "click Morning Line view more articles"
+        }
+      ],
+      "ordinal": 21,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-22-click-cafe-button-login-modal-open",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "3",
+      "instruction_original": "Click the 'Cafe' button in the navigation.",
+      "instruction": "Dismiss the login modal and click the 'Cafe' button in the navigation.",
+      "target_id": "never.nav.cafe",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.login-modal.close']",
+          "label": "close login modal"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.nav.cafe']",
+          "label": "click Cafe nav button"
+        }
+      ],
+      "ordinal": 22,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-23-find-interactive-gui-benchmark-reaches-rank-1-trending-now",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "1",
+      "instruction_original": "Find 'Interactive GUI Benchmark' when it reaches rank 1 in 'Trending Now'.",
+      "instruction": "Wait for the ranking to update and find 'Interactive GUI Benchmark' when it reaches rank 1 in 'Trending Now'.",
+      "target_id": "never.trending.benchmark-rank-1",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 11000,
+          "label": "wait"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.trending.benchmark-rank-1']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 23,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-24-click-search-flights-button-skywings-air-ad",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "1",
+      "instruction_original": "Click the 'Search Flights' button in the 'SkyWings Air' ad.",
+      "instruction": "Scroll down, use the ad dot and click the 'Search Flights' button in the 'SkyWings Air' ad.",
+      "target_id": "never.ad.skywings.cta",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1000,
+          "label": "scroll 1000"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.ad.skywings.dot']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.ad.skywings.cta']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 24,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-25-click-pre-order-now-button-nexphone-ad",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "1",
+      "instruction_original": "Click the 'Pre-Order Now' button in the 'NexPhone' ad.",
+      "instruction": "Scroll down, use the ad dot and click the 'Pre-Order Now' button in the 'NexPhone' ad.",
+      "target_id": "never.ad.nexphone.preorder",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1000,
+          "label": "scroll 1000"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.ad.nexphone.dot']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.ad.nexphone.preorder']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 25,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-26-click-50-off-first-box-button-tastebox-ad",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "1",
+      "instruction_original": "Click the '50% Off First Box' button in the 'TasteBox' ad.",
+      "instruction": "Scroll down, use the ad dot and click the '50% Off First Box' button in the 'TasteBox' ad.",
+      "target_id": "never.ad.tastebox.first-order-50-off",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2000,
+          "label": "scroll 2000"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.ad.tastebox.dot']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.ad.tastebox.first-order-50-off']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 26,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-27-find-glass-harbor-begins-24-hour-pilot-its-shared-work-lounge-breaking-news",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "1",
+      "instruction_original": "Find 'Glass Harbor begins a 24-hour pilot for its shared work lounge' in 'Breaking News'.",
+      "instruction": "Use the Breaking News arrow and find 'Glass Harbor begins a 24-hour pilot for its shared work lounge' in 'Breaking News'.",
+      "target_id": "never.breaking.glass-harbor",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.breaking.next']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.breaking.next']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.breaking.next']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.breaking.next']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.breaking.next']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.breaking.next']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.breaking.glass-harbor']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 27,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-28-find-quiet-lab-paper-texture-e-ink-panel-breaking-news",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "1",
+      "instruction_original": "Find 'Quiet Lab reveals a production timeline for its paper-texture e-ink panel' in Breaking News.",
+      "instruction": "Use the Breaking News arrow and find 'Quiet Lab reveals a production timeline for its paper-texture e-ink panel' in Breaking News.",
+      "target_id": "never.breaking.quiet-lab",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.breaking.next']",
+          "label": "advance breaking news"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.breaking.next']",
+          "label": "advance breaking news"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.breaking.quiet-lab']",
+          "label": "click Quiet Lab breaking news"
+        }
+      ],
+      "ordinal": 28,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-30-find-prism-wallet-rule-sets-breaking-news",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "1",
+      "instruction_original": "Find 'Prism Wallet updates its rule sets for overseas micro-pay alerts' in Breaking News.",
+      "instruction": "Use the Breaking News arrow and find 'Prism Wallet updates its rule sets for overseas micro-pay alerts' in Breaking News.",
+      "target_id": "never.breaking.prism-wallet",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.breaking.next']",
+          "label": "advance breaking news"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.breaking.next']",
+          "label": "advance breaking news"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.breaking.next']",
+          "label": "advance breaking news"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.breaking.next']",
+          "label": "advance breaking news"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.breaking.next']",
+          "label": "advance breaking news"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.breaking.prism-wallet']",
+          "label": "click Prism Wallet breaking news"
+        }
+      ],
+      "ordinal": 30,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "never-31-click-open-account-button-goldtree-bank-ad",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "1",
+      "instruction_original": "Click the 'Open Account' button in the 'GoldTree Bank' ad.",
+      "instruction": "Scroll down, use the ad dot and click the 'Open Account' button in the 'GoldTree Bank' ad.",
+      "target_id": "never.ad.goldtree.open-account",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1000,
+          "label": "scroll to ad banner 1"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.ad.goldtree.dot']",
+          "label": "click GoldTree dot"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='never.ad.goldtree.open-account']",
+          "label": "click Open Account CTA"
+        }
+      ],
+      "ordinal": 31,
+      "gold_trace_executable": true
+    }
+  ]
+}

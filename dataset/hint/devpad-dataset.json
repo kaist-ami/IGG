@@ -1,0 +1,600 @@
+{
+  "app": "devpad",
+  "display_name": "Devpad Code",
+  "reference_service": "Visual Studio Code",
+  "category": "developer-tools/code-editor",
+  "datasetPath": "dataset/hint/devpad-dataset.json",
+  "baseUrl": "http://localhost:3213",
+  "states": {
+    "1": "Default Devpad editor workspace",
+    "2": "Review Assistant attachment upload pending",
+    "3": "All explorer folders expanded for file search",
+    "4": "Explorer apps expanded with wayfind collapsed",
+    "5": "Explorer apps folder collapsed before file search",
+    "6": "Explorer scripts folder collapsed before file search",
+    "7": "Assistant panel nearly collapsed",
+    "8": "Terminal panel nearly collapsed"
+  },
+  "tasks": [
+    {
+      "id": "devpad-01-find-gridly-states",
+      "level": "1-1",
+      "constraint_type": "scroll_find",
+      "state_id": "3",
+      "instruction_original": "Click gridly-states.ts in the file explorer.",
+      "instruction": "Scroll down and click gridly-states.ts in the file explorer.",
+      "target_id": "devpad.explorer.gridly.states",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1500,
+          "selector": "[data-igg-id='devpad.explorer.scroll']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.explorer.gridly.states']"
+        }
+      ],
+      "ordinal": 1,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devpad-02-find-wayfind-status-badge",
+      "level": "1-1",
+      "constraint_type": "scroll_find",
+      "state_id": "3",
+      "instruction_original": "Click StatusBadge.tsx inside the wayfind folder.",
+      "instruction": "Scroll down and click StatusBadge.tsx inside the wayfind folder.",
+      "target_id": "devpad.explorer.wayfind.status-badge",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2150,
+          "selector": "[data-igg-id='devpad.explorer.scroll']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.explorer.wayfind.status-badge']"
+        }
+      ],
+      "ordinal": 2,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devpad-03-find-devpad-dataset",
+      "level": "1-1",
+      "constraint_type": "scroll_find",
+      "state_id": "3",
+      "instruction_original": "Click devpad-dataset.json inside the dataset folder.",
+      "instruction": "Scroll down and click devpad-dataset.json inside the dataset folder.",
+      "target_id": "devpad.explorer.dataset.devpad",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2820,
+          "selector": "[data-igg-id='devpad.explorer.scroll']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.explorer.dataset.devpad']"
+        }
+      ],
+      "ordinal": 3,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devpad-04-find-capture-samples",
+      "level": "1-1",
+      "constraint_type": "scroll_find",
+      "state_id": "3",
+      "instruction_original": "Click capture-samples.mjs inside scripts.",
+      "instruction": "Scroll down and click capture-samples.mjs inside scripts.",
+      "target_id": "devpad.explorer.scripts.review.capture-samples",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='devpad.explorer.scroll']",
+          "dy": 2700
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.explorer.scripts.review.capture-samples']"
+        }
+      ],
+      "ordinal": 4,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devpad-05-find-devhub-status-badge",
+      "level": "1-1",
+      "constraint_type": "scroll_find",
+      "state_id": "3",
+      "instruction_original": "Click StatusBadge.tsx inside the devhub folder.",
+      "instruction": "Scroll down and click StatusBadge.tsx inside the devhub folder.",
+      "target_id": "devpad.explorer.devhub.status-badge",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 600,
+          "selector": "[data-igg-id='devpad.explorer.scroll']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.explorer.devhub.status-badge']"
+        }
+      ],
+      "ordinal": 5,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devpad-08-find-review-runtime",
+      "level": "1-1",
+      "constraint_type": "scroll_find",
+      "state_id": "3",
+      "instruction_original": "Click review-runtime.ts inside the lib folder.",
+      "instruction": "Scroll down and click review-runtime.ts inside the lib folder.",
+      "target_id": "devpad.explorer.lib.review-runtime",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2400,
+          "selector": "[data-igg-id='devpad.explorer.scroll']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.explorer.lib.review-runtime']"
+        }
+      ],
+      "ordinal": 8,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devpad-09-find-interaction-contract",
+      "level": "1-1",
+      "constraint_type": "scroll_find",
+      "state_id": "3",
+      "instruction_original": "Click interaction-contract.mjs inside the lib folder.",
+      "instruction": "Scroll down and click interaction-contract.mjs inside the lib folder.",
+      "target_id": "devpad.explorer.lib.interaction-contract",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2450,
+          "selector": "[data-igg-id='devpad.explorer.scroll']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.explorer.lib.interaction-contract']"
+        }
+      ],
+      "ordinal": 9,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devpad-10-find-benchmark-schema",
+      "level": "1-1",
+      "constraint_type": "scroll_find",
+      "state_id": "3",
+      "instruction_original": "Click benchmark-schema.ts inside the lib folder.",
+      "instruction": "Scroll down and click benchmark-schema.ts inside the lib folder.",
+      "target_id": "devpad.explorer.lib.benchmark-schema",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2550,
+          "selector": "[data-igg-id='devpad.explorer.scroll']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.explorer.lib.benchmark-schema']"
+        }
+      ],
+      "ordinal": 10,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devpad-11-click-source-control-button",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the Source Control button.",
+      "instruction": "Hover over the activity bar and click the Source Control button.",
+      "target_id": "devpad.activity.source",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='devpad.activity.source']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.activity.source']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 11,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devpad-12-click-new-folder-button",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the New Folder button.",
+      "instruction": "Hover over the Explorer toolbar and click the New Folder button.",
+      "target_id": "devpad.explorer.new-folder",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='devpad.explorer.new-folder']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.explorer.new-folder']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 12,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devpad-13-click-collapse-all-button",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the Collapse All button.",
+      "instruction": "Hover over the Explorer toolbar and click the Collapse All button.",
+      "target_id": "devpad.explorer.collapse-all",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='devpad.explorer.collapse-all']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.explorer.collapse-all']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 13,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devpad-14-click-clear-chat-button",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the Clear chat button.",
+      "instruction": "Hover over the Review Assistant toolbar and click the Clear chat button.",
+      "target_id": "devpad.assistant.clear",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='devpad.assistant.clear']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.assistant.clear']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 14,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devpad-15-click-open-in-editor-button",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the Open in editor button.",
+      "instruction": "Hover over the Review Assistant toolbar and click the Open in editor button.",
+      "target_id": "devpad.assistant.open-editor",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='devpad.assistant.open-editor']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.assistant.open-editor']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 15,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devpad-17-open-wayfind-status-badge",
+      "level": "2-2",
+      "constraint_type": "scroll_find",
+      "state_id": "4",
+      "instruction_original": "Click StatusBadge.tsx inside the wayfind folder.",
+      "instruction": "Scroll down, expand the wayfind folder and click StatusBadge.tsx inside the wayfind folder.",
+      "target_id": "devpad.explorer.wayfind.status-badge",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1500,
+          "label": "scroll 1500",
+          "selector": "[data-igg-id='devpad.explorer.scroll']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.explorer.folder.wayfind']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.explorer.folder.wayfind.components']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.explorer.wayfind.status-badge']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 17,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devpad-18-open-gridly-states",
+      "level": "2-2",
+      "constraint_type": "scroll_find",
+      "state_id": "4",
+      "instruction_original": "Click gridly-states.ts inside the gridly folder.",
+      "instruction": "Scroll down, expand the gridly folder and click gridly-states.ts inside the gridly folder.",
+      "target_id": "devpad.explorer.gridly.states",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1000,
+          "label": "scroll 1000",
+          "selector": "[data-igg-id='devpad.explorer.scroll']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.explorer.folder.gridly']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.explorer.folder.gridly.app']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.explorer.gridly.states']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 18,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devpad-22-delete-user-message",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click Delete for the latest user message in the Review Assistant conversation.",
+      "instruction": "Open the message menu and click Delete for the latest user message in the Review Assistant conversation.",
+      "target_id": "devpad.message.4.delete",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.message.4.menu']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.message.4.delete']"
+        }
+      ],
+      "ordinal": 22,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devpad-24-send-after-upload",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "2",
+      "instruction_original": "Click the 'Send' button for the mockup-guide.md upload in the chat.",
+      "instruction": "Wait for the upload to finish and click the 'Send' button for the mockup-guide.md upload in the chat.",
+      "target_id": "devpad.assistant.send",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 4600
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.assistant.send']"
+        }
+      ],
+      "ordinal": 24,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devpad-26-review-uploaded-file",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "2",
+      "instruction_original": "Click Review uploaded file in the chat.",
+      "instruction": "Wait for the upload actions to appear and click Review uploaded file in the chat.",
+      "target_id": "devpad.assistant.upload.review",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 4600
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.assistant.upload.review']"
+        }
+      ],
+      "ordinal": 26,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devpad-28-drag-panel-remove-first-assistant-reply",
+      "level": "3-3",
+      "constraint_type": "drag_then_menu",
+      "state_id": "7",
+      "instruction_original": "Click Delete for the first assistant reply in the Review Assistant conversation.",
+      "instruction": "Drag the right sidebar resize handle and use the message menu to click Delete for the first assistant reply in the Review Assistant conversation.",
+      "target_id": "devpad.message.1.delete",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 1333,
+          "startY": 480,
+          "endX": 930,
+          "endY": 480,
+          "label": "drag",
+          "selector": "[data-igg-id=\"devpad.sidebar.right-resize\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.message.1.menu']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.message.1.delete']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 28,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devpad-29-drag-panel-delete-sidebar-depth-message",
+      "level": "3-3",
+      "constraint_type": "drag_then_menu",
+      "state_id": "7",
+      "instruction_original": "Click Delete for the message about the left sidebar needing more project depth in the Review Assistant conversation.",
+      "instruction": "Drag the right sidebar resize handle and use the message menu to click Delete for the message about the left sidebar needing more project depth in the Review Assistant conversation.",
+      "target_id": "devpad.message.2.delete",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "selector": "[data-igg-id=\"devpad.sidebar.right-resize\"]",
+          "startX": 1333,
+          "startY": 480,
+          "endX": 930,
+          "endY": 480,
+          "label": "drag"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.message.2.menu']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.message.2.delete']"
+        }
+      ],
+      "ordinal": 29,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devpad-30-drag-panel-remove-latest-assistant-reply",
+      "level": "3-3",
+      "constraint_type": "drag_then_menu",
+      "state_id": "7",
+      "instruction_original": "Click Delete for the latest assistant reply in the Review Assistant conversation.",
+      "instruction": "Drag the right sidebar resize handle and use the message menu to click Delete for the latest assistant reply in the Review Assistant conversation.",
+      "target_id": "devpad.message.5.delete",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 1333,
+          "startY": 480,
+          "endX": 930,
+          "endY": 480,
+          "label": "drag",
+          "selector": "[data-igg-id=\"devpad.sidebar.right-resize\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.message.5.menu']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.message.5.delete']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 30,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devpad-31-drag-panel-copy-current-context",
+      "level": "3-3",
+      "constraint_type": "drag_scroll_click",
+      "state_id": "7",
+      "instruction_original": "Click Copy for the current context in the Review Assistant conversation.",
+      "instruction": "Drag the right sidebar resize handle, scroll up and click Copy for the current context in the Review Assistant conversation.",
+      "target_id": "devpad.assistant.context.copy",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "selector": "[data-igg-id='devpad.sidebar.right-resize']",
+          "startX": 1333,
+          "startY": 480,
+          "endX": 930,
+          "endY": 480,
+          "label": "drag"
+        },
+        {
+          "type": "scroll",
+          "dy": -900,
+          "selector": "[data-igg-id='devpad.assistant.chat-scroll']",
+          "label": "scroll up"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.assistant.context.copy']"
+        }
+      ],
+      "ordinal": 31,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "devpad-32-resize-terminal-rerun-failed-command",
+      "level": "3-3",
+      "constraint_type": "drag_then_click",
+      "state_id": "8",
+      "instruction_original": "Click Rerun for the failed terminal command.",
+      "instruction": "Drag the bottom panel resize handle and click Rerun for the failed terminal command.",
+      "target_id": "devpad.terminal.rerun-failed",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 675,
+          "startY": 852,
+          "endX": 675,
+          "endY": 649,
+          "label": "drag",
+          "selector": "[data-igg-id='devpad.bottom-panel.resize']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='devpad.terminal.rerun-failed']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 32,
+      "gold_trace_executable": true
+    }
+  ]
+}

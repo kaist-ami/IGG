@@ -1,0 +1,11 @@
+# Local HF transformers servers (qwen25vl_server.py, qwen3vl_server.py, gui_owl15_server.py).
+# Install torch first from the CUDA index that matches your driver, e.g.
+#   pip install torch==2.11.0 torchvision==0.26.0 --index-url https://download.pytorch.org/whl/cu128
+transformers==5.8.0
+accelerate==1.13.0
+huggingface_hub==1.13.0
+safetensors==0.7.0
+qwen-vl-utils==0.0.14
+pillow==12.1.1
+# API servers (openai_server.py, claude_server.py)
+requests

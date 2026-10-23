@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --docs-bg: #f1f3f4;
+  --docs-surface: #ffffff;
+  --docs-blue: #1a73e8;
+  --docs-blue-soft: #e8f0fe;
+  --docs-border: #dadce0;
+  --docs-text: #202124;
+  --docs-muted: #5f6368;
+  --docs-shadow: 0 12px 36px rgba(60, 64, 67, 0.16);
+}
+
+@theme inline {
+  --color-background: var(--docs-bg);
+  --color-foreground: var(--docs-text);
+  --font-sans: -apple-system, BlinkMacSystemFont, "Google Sans", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at top left, rgba(232, 240, 254, 0.95), transparent 26%),
+    linear-gradient(180deg, #edf2fc 0%, #f1f3f4 22%, #eef2f7 100%);
+  color: var(--docs-text);
+  font-family: var(--font-sans);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(26, 115, 232, 0.18);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(95, 99, 104, 0.32);
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.docs-page-shadow {
+  box-shadow: 0 1px 3px rgba(60, 64, 67, 0.12), 0 4px 18px rgba(60, 64, 67, 0.1);
+}
+
+.docs-floating {
+  box-shadow: var(--docs-shadow);
+}
+
+.docs-grid {
+  background-image:
+    linear-gradient(rgba(95, 99, 104, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(95, 99, 104, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.docs-fade-up {
+  animation: docsFadeUp 180ms ease-out both;
+}
+
+.docs-pop {
+  animation: docsPop 160ms ease-out both;
+}
+
+@keyframes docsFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes docsPop {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

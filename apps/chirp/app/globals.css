@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #e7e9ea;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+[data-igg-review-hover="true"] .group-hover\:opacity-100,
+[data-igg-review-hover="true"].group-hover\:opacity-100 { opacity: 1 !important; }
+[data-igg-review-hover="true"] .group-hover\:flex,
+[data-igg-review-hover="true"].group-hover\:flex { display: flex !important; }
+[data-igg-review-hover="true"] .group-hover\:block,
+[data-igg-review-hover="true"].group-hover\:block { display: block !important; }
+[data-igg-review-hover="true"] .group-hover\:visible,
+[data-igg-review-hover="true"].group-hover\:visible { visibility: visible !important; }
+
+@keyframes chirp-upload-fill {
+  from { width: 12%; }
+  to { width: 100%; }
+}
+
+.chirp-upload-progress {
+  width: 12%;
+  animation: chirp-upload-fill 5.5s ease-out forwards;
+}

@@ -1,0 +1,558 @@
+{
+  "app": "youtube",
+  "display_name": "VideoTube",
+  "reference_service": "YouTube",
+  "category": "video platform",
+  "datasetPath": "dataset/hint/youtube-dataset.json",
+  "baseUrl": "http://localhost:3203",
+  "states": {
+    "1": "Default Viewtube home screen.",
+    "2": "Watch page for `Night Shift UI Notes and a Clean Editing Flow` with a preroll ad playing.",
+    "3": "Viewtube home screen scrolled to the bottom.",
+    "4": "Watch page for `Night Shift UI Notes and a Clean Editing Flow` scrolled slightly down so the area below the player is visible.",
+    "5": "Watch page for `Night Shift UI Notes and a Clean Editing Flow` scrolled down to show the comments, Premium promo, and recommended videos.",
+    "6": "Viewtube home screen with the search box focused and the recent searches panel visible.",
+    "7": "Viewtube home screen — a new subscriber notification will appear in the top-right after 5 seconds.",
+    "8": "Viewtube home screen — a new comment notification will appear in the top-right after 5 seconds.",
+    "9": "Viewtube home screen — a reaction notification will appear in the top-right after 5 seconds.",
+    "10": "Viewtube home screen — a reply notification will appear in the top-right after 5 seconds.",
+    "11": "Viewtube home screen — a new upload notification will appear in the top-right after 5 seconds."
+  },
+  "tasks": [
+    {
+      "id": "youtube-03-find-kitchen-notes-egg-rice-tiny-weekend-reset-video",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction_original": "Find the 'Kitchen Notes, Egg Rice, and a Tiny Weekend Reset' video.",
+      "instruction": "Scroll down and find the 'Kitchen Notes, Egg Rice, and a Tiny Weekend Reset' video.",
+      "target_id": "youtube.home.kitchen-reset",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1000
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.home.kitchen-reset']"
+        }
+      ],
+      "ordinal": 3,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "youtube-05-find-save-button-current-video",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "5",
+      "instruction_original": "Find the 'Save' button for the current video.",
+      "instruction": "Scroll up and find the 'Save' button for the current video.",
+      "target_id": "youtube.video.save",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -1500
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.video.save']"
+        }
+      ],
+      "ordinal": 5,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "youtube-06-click-share-button-current-video",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "5",
+      "instruction_original": "Click the 'Share' button for the current video.",
+      "instruction": "Scroll up and click the 'Share' button for the current video.",
+      "target_id": "youtube.watch.share",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -1500
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.watch.share']"
+        }
+      ],
+      "ordinal": 6,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "youtube-09-find-small-apartment-plant-care-video",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction_original": "Find the 'Small Apartment Plant Care Without Overwatering' video.",
+      "instruction": "Scroll down and find the 'Small Apartment Plant Care Without Overwatering' video.",
+      "target_id": "youtube.home.plant-care",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2300
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.home.plant-care']"
+        }
+      ],
+      "ordinal": 9,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "youtube-10-find-budget-meal-prep-fried-tofu-rice-video",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "1",
+      "instruction_original": "Find the 'Budget Meal Prep With Fried Tofu and Rice' video.",
+      "instruction": "Scroll down and find the 'Budget Meal Prep With Fried Tofu and Rice' video.",
+      "target_id": "youtube.home.budget-meal-prep",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2700
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.home.budget-meal-prep']"
+        }
+      ],
+      "ordinal": 10,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "youtube-12-click-theater-mode-button",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "2",
+      "instruction_original": "Click the 'Theater mode' button.",
+      "instruction": "Hover over the video controls and click the 'Theater mode' button.",
+      "target_id": "youtube.watch.theater",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='youtube.watch.theater']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.watch.theater']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 12,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "youtube-13-click-newest-first-option-comments-sort-menu",
+      "level": "2-2",
+      "constraint_type": "scroll_vertical",
+      "state_id": "4",
+      "instruction_original": "Find the button that sorts comments by 'Newest first'.",
+      "instruction": "Open the comments sort menu and find the button that sorts comments by 'Newest first'.",
+      "target_id": "youtube.comments.sort_newest",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.comments.sort_toggle']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.comments.sort_newest']"
+        }
+      ],
+      "ordinal": 13,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "youtube-14-click-egg-rice-recipe-recent-searches-panel",
+      "level": "2-2",
+      "constraint_type": "carousel_reveal",
+      "state_id": "1",
+      "instruction_original": "Click 'egg rice recipe' in the recent searches.",
+      "instruction": "Open the recent searches panel and click 'egg rice recipe' in the recent searches.",
+      "target_id": "youtube.search.recent.egg-rice",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.home.search.input']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.search.recent.egg-rice']"
+        }
+      ],
+      "ordinal": 14,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "youtube-15-find-nightcraft-channel-subscriptions-list",
+      "level": "2-2",
+      "constraint_type": "carousel_reveal",
+      "state_id": "1",
+      "instruction_original": "Find the 'NightCraft' channel in the Subscriptions.",
+      "instruction": "Reveal more subscriptions and find the 'NightCraft' channel in the Subscriptions.",
+      "target_id": "youtube.sidebar.subscriptions.nightcraft",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.sidebar.subscriptions.more']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.sidebar.subscriptions.nightcraft']"
+        }
+      ],
+      "ordinal": 15,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "youtube-18-click-design-tag-video-description",
+      "level": "2-2",
+      "constraint_type": "carousel_reveal",
+      "state_id": "4",
+      "instruction_original": "Click the '#design' tag.",
+      "instruction": "Expand the video description and click the '#design' tag.",
+      "target_id": "youtube.description.tag.design",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.description.expand']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.description.tag.design']"
+        }
+      ],
+      "ordinal": 18,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "youtube-19-find-like-button-ellaresearchlab-reply-minjoon-comment",
+      "level": "2-2",
+      "constraint_type": "carousel_reveal",
+      "state_id": "2",
+      "instruction_original": "Find the 'Like' button on ellaresearchlab reply under minjoon comment.",
+      "instruction": "Scroll down, reveal the replies and find the 'Like' button on ellaresearchlab reply under minjoon comment.",
+      "target_id": "youtube.comments.minjoon.reply.ella.like",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 700
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.comments.minjoon.replies-toggle']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.comments.minjoon.reply.ella.like']"
+        }
+      ],
+      "ordinal": 19,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "youtube-20-click-2x-playback-speed-menu",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "2",
+      "instruction_original": "Click '2x' in the Playback speed.",
+      "instruction": "Open the playback settings menu and click '2x' in the Playback speed.",
+      "target_id": "youtube.watch.settings.speed.2x",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.watch.settings']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.watch.settings.speed']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.watch.settings.speed.2x']"
+        }
+      ],
+      "ordinal": 20,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "youtube-22-find-top-5-things-cats-hate-short-shorts-section",
+      "level": "2-2",
+      "constraint_type": "carousel_reveal",
+      "state_id": "1",
+      "instruction_original": "Find the 'Top 5 Things Cats Hate' Short.",
+      "instruction": "Scroll down, use the Shorts row arrow and find the 'Top 5 Things Cats Hate' Short.",
+      "target_id": "youtube.shorts.cats-top5",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 200,
+          "label": "scroll 200"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.shorts.arrow-right']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.shorts.arrow-right']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.shorts.cats-top5']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 22,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "youtube-23-click-late-night-studio-vlog-unexpected-mid-roll-video-card",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "6",
+      "instruction_original": "Click the 'Late-night Studio Vlog with an Unexpected Mid-roll' video card.",
+      "instruction": "Close the recent searches panel and click the 'Late-night Studio Vlog with an Unexpected Mid-roll' video card.",
+      "target_id": "youtube.home.midroll-vlog",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.home.search.input']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.home.midroll-vlog']"
+        }
+      ],
+      "ordinal": 23,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "youtube-24-click-recently-uploaded-chip-filter-bar",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "6",
+      "instruction_original": "Click the 'Recently uploaded' chip in the filter bar.",
+      "instruction": "Close the recent searches panel and click the 'Recently uploaded' chip in the filter bar.",
+      "target_id": "youtube.filter.recent",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.home.search.input']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.filter.recent']"
+        }
+      ],
+      "ordinal": 24,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "youtube-25-click-skip-ad-button-nova-air-pro-max-ad",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "2",
+      "instruction_original": "Click the 'Skip Ad' button for the 'NOVA AIR PRO MAX' ad.",
+      "instruction": "Wait for the ad skip button and click the 'Skip Ad' button for the 'NOVA AIR PRO MAX' ad.",
+      "target_id": "youtube.ad.skip",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 5500
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.ad.skip']"
+        }
+      ],
+      "ordinal": 25,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "youtube-26-click-subscriber-toast-notification-minjoon-dev",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "7",
+      "instruction_original": "Click the notification that says minjoon_dev subscribed to your channel.",
+      "instruction": "Wait for the notification and click the notification that says minjoon_dev subscribed to your channel.",
+      "target_id": "youtube.toast.subscriber-minjoon",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 5500
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.toast.subscriber-minjoon']"
+        }
+      ],
+      "ordinal": 26,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "youtube-28-click-reaction-toast-notification-groundingarena",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "9",
+      "instruction_original": "Click the notification that says groundingarena liked your comment.",
+      "instruction": "Wait for the notification and click the notification that says groundingarena liked your comment.",
+      "target_id": "youtube.toast.reaction-groundingarena",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 5500
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.toast.reaction-groundingarena']"
+        }
+      ],
+      "ordinal": 28,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "youtube-29-click-reply-toast-notification-jupli",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "10",
+      "instruction_original": "Click the notification that says jupli replied to your comment.",
+      "instruction": "Wait for the notification and click the notification that says jupli replied to your comment.",
+      "target_id": "youtube.toast.reply-jupli",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 5500
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.toast.reply-jupli']"
+        }
+      ],
+      "ordinal": 29,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "youtube-30-click-upload-toast-notification-mock-ui-studio",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "11",
+      "instruction_original": "Click the notification that says Mock UI Studio uploaded a new video.",
+      "instruction": "Wait for the notification and click the notification that says Mock UI Studio uploaded a new video.",
+      "target_id": "youtube.toast.upload-mockui",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 5500
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.toast.upload-mockui']"
+        }
+      ],
+      "ordinal": 30,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "youtube-31-click-browse-cars-weekend-rental-car-deal-last-chance-home-ad-banner",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "1",
+      "instruction_original": "Click 'Browse Cars' for 'Weekend Rental Car Deal — Last Chance' in the home ad banner.",
+      "instruction": "Use the home ad banner arrow and click 'Browse Cars' for 'Weekend Rental Car Deal — Last Chance' in the home ad banner.",
+      "target_id": "youtube.home.promo.rentalcar-view",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.home.promo.arrow-right']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.home.promo.arrow-right']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.home.promo.rentalcar-view']"
+        }
+      ],
+      "ordinal": 31,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "youtube-32-click-view-plan-meditation-app-40-off-annual-plan-watch-page-ad-banner",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "4",
+      "instruction_original": "Click 'View Plan' for 'Meditation App — 40% Off Annual Plan' in the watch page ad banner.",
+      "instruction": "Use the watch page ad banner arrow and click 'View Plan' for 'Meditation App — 40% Off Annual Plan' in the watch page ad banner.",
+      "target_id": "youtube.watch.promo.meditation-plan",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.watch.promo.arrow-right']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.watch.promo.arrow-right']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.watch.promo.meditation-plan']"
+        }
+      ],
+      "ordinal": 32,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "youtube-33-click-get-coupon-weekend-hotel-coupon-home-ad-banner",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "1",
+      "instruction_original": "Click 'Get Coupon' for 'Weekend Hotel Coupon — Today Only' in the home ad banner.",
+      "instruction": "Use the home ad banner arrow and click 'Get Coupon' for 'Weekend Hotel Coupon — Today Only' in the home ad banner.",
+      "target_id": "youtube.home.promo.hotel-coupon",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.home.promo.arrow-right']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.home.promo.hotel-coupon']"
+        }
+      ],
+      "ordinal": 33,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "youtube-34-click-get-discount-sleep-sound-app-watch-page-ad-banner",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "4",
+      "instruction_original": "Click 'Get Discount' for 'Sleep Sound App — New User Discount' in the watch page ad banner.",
+      "instruction": "Use the watch page ad banner arrow and click 'Get Discount' for 'Sleep Sound App — New User Discount' in the watch page ad banner.",
+      "target_id": "youtube.watch.promo.sleep-discount",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.watch.promo.arrow-right']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='youtube.watch.promo.sleep-discount']"
+        }
+      ],
+      "ordinal": 34,
+      "gold_trace_executable": true
+    }
+  ]
+}

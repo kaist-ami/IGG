@@ -1,0 +1,62 @@
+{
+  "name": "igg-benchmark",
+  "version": "1.0.0",
+  "private": true,
+  "description": "IGG: Interactive GUI Grounding benchmark (EMNLP 2026)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev:shopping:port3100": "next dev ./apps/shopping --port 3100 --webpack",
+    "dev:never:port3201": "next dev ./apps/never --port 3201 --webpack",
+    "dev:figma:port3202": "next dev ./apps/figma --port 3202 --webpack",
+    "dev:youtube:port3203": "next dev ./apps/youtube --port 3203 --webpack",
+    "dev:docs:port3204": "next dev ./apps/docs --port 3204 --webpack",
+    "dev:discord:port3205": "next dev ./apps/discord --port 3205 --webpack",
+    "dev:mailo:port3207": "next dev ./apps/mailo --port 3207 --webpack",
+    "dev:devhub:port3208": "next dev ./apps/devhub --port 3208 --webpack",
+    "dev:dayplan:port3209": "next dev ./apps/dayplan --port 3209 --webpack",
+    "dev:gridly:port3211": "next dev ./apps/gridly --port 3211 --webpack",
+    "dev:wayfind:port3212": "next dev ./apps/wayfind --port 3212 --webpack",
+    "dev:devpad:port3213": "next dev ./apps/devpad --port 3213 --webpack",
+    "dev:pagely:port3214": "next dev ./apps/pagely --port 3214 --webpack",
+    "dev:chirp:port3215": "next dev ./apps/chirp --port 3215 --webpack",
+    "dev:wavr:port3216": "next dev ./apps/wavr --port 3216 --webpack",
+    "dev:reelify:port3217": "next dev ./apps/reelify --port 3217 --webpack",
+    "dev:all": "concurrently -n shopping,never,figma,youtube,docs,discord,mailo,devhub,dayplan,gridly,wayfind,devpad,pagely,chirp,wavr,reelify \"next dev ./apps/shopping --port 3100 --webpack\" \"next dev ./apps/never --port 3201 --webpack\" \"next dev ./apps/figma --port 3202 --webpack\" \"next dev ./apps/youtube --port 3203 --webpack\" \"next dev ./apps/docs --port 3204 --webpack\" \"next dev ./apps/discord --port 3205 --webpack\" \"next dev ./apps/mailo --port 3207 --webpack\" \"next dev ./apps/devhub --port 3208 --webpack\" \"next dev ./apps/dayplan --port 3209 --webpack\" \"next dev ./apps/gridly --port 3211 --webpack\" \"next dev ./apps/wayfind --port 3212 --webpack\" \"next dev ./apps/devpad --port 3213 --webpack\" \"next dev ./apps/pagely --port 3214 --webpack\" \"next dev ./apps/chirp --port 3215 --webpack\" \"next dev ./apps/wavr --port 3216 --webpack\" \"next dev ./apps/reelify --port 3217 --webpack\"",
+    "build:shopping": "next build ./apps/shopping",
+    "build:never": "next build ./apps/never",
+    "build:figma": "next build ./apps/figma",
+    "build:youtube": "next build ./apps/youtube",
+    "build:docs": "next build ./apps/docs",
+    "build:discord": "next build ./apps/discord",
+    "build:mailo": "next build ./apps/mailo",
+    "build:devhub": "next build ./apps/devhub",
+    "build:dayplan": "next build ./apps/dayplan",
+    "build:gridly": "next build ./apps/gridly",
+    "build:wayfind": "next build ./apps/wayfind",
+    "build:devpad": "next build ./apps/devpad",
+    "build:pagely": "next build ./apps/pagely",
+    "build:chirp": "next build ./apps/chirp",
+    "build:wavr": "next build ./apps/wavr",
+    "build:reelify": "next build ./apps/reelify",
+    "eval": "node eval/run.mjs",
+    "verify": "node eval/run.mjs --gold --name gold-replay"
+  },
+  "dependencies": {
+    "next": "16.2.2",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.59.1",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "concurrently": "^9.2.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

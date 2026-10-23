@@ -1,0 +1,1026 @@
+{
+  "app": "wavr",
+  "display_name": "Wavr",
+  "reference_service": "Spotify",
+  "category": "music streaming",
+  "datasetPath": "dataset/hint/wavr-dataset.json",
+  "baseUrl": "http://localhost:3216",
+  "states": {
+    "1": "Album detail — Liked Songs playlist",
+    "2": "Album detail — Fans also like section visible",
+    "3": "Album detail — Track more menu open",
+    "4": "Search overlay open",
+    "5": "Device picker dialog occluding content",
+    "6": "Auto rotating featured banner — starts on Neon Drift (slide 0)",
+    "7": "Auto rotating featured banner — starts on Lena Shore (slide 2)",
+    "8": "Floating player occludes track list — drag to move",
+    "9": "Async notification — new release ready",
+    "10": "Async notification — nearby concert tickets",
+    "11": "Async notification — playlist refreshed",
+    "12": "Async notification — friend activity",
+    "13": "Async notification — downloads ready",
+    "14": "Floating player occludes left artist follows — drag to move"
+  },
+  "tasks": [
+    {
+      "id": "wavr-01-click-paper-birds-down",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click the song 'Paper Birds'.",
+      "instruction": "Scroll down and click the song 'Paper Birds'.",
+      "target_id": "wavr.track.paper-birds.title",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 420
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.track.paper-birds.title']"
+        }
+      ],
+      "ordinal": 1,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-02-click-neon-city-down",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click the song 'Neon City'.",
+      "instruction": "Scroll down and click the song 'Neon City'.",
+      "target_id": "wavr.track.neon-city.title",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 560
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.track.neon-city.title']"
+        }
+      ],
+      "ordinal": 2,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-05-follow-mara-flynn-down",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click Follow for Mara Flynn.",
+      "instruction": "Scroll down and click Follow for Mara Flynn.",
+      "target_id": "wavr.artist.mara-flynn.follow",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1300
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.artist.mara-flynn.follow']"
+        }
+      ],
+      "ordinal": 5,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-06-click-midnight-pulse-up",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "2",
+      "instruction_original": "Click the song 'Midnight Pulse'.",
+      "instruction": "Scroll up and click the song 'Midnight Pulse'.",
+      "target_id": "wavr.track.midnight-pulse.title",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -900
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.track.midnight-pulse.title']"
+        }
+      ],
+      "ordinal": 6,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-07-click-glass-rooms-up",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "2",
+      "instruction_original": "Click the song 'Glass Rooms'.",
+      "instruction": "Scroll up and click the song 'Glass Rooms'.",
+      "target_id": "wavr.track.glass-rooms.title",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -860
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.track.glass-rooms.title']"
+        }
+      ],
+      "ordinal": 7,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-10-click-normalize-volume-icon",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the Normalize volume icon.",
+      "instruction": "Hover over the player bar and click the Normalize volume icon.",
+      "target_id": "wavr.player.normalize",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wavr.player.normalize']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.player.normalize']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 10,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-11-click-enable-repeat-icon",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the Enable repeat icon.",
+      "instruction": "Hover over the player bar and click the Enable repeat icon.",
+      "target_id": "wavr.player.repeat",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wavr.player.repeat']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.player.repeat']"
+        }
+      ],
+      "ordinal": 11,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-12-hover-06-queue",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the Queue icon in the player bar.",
+      "instruction": "Hover over the player bar and click the Queue icon in the player bar.",
+      "target_id": "wavr.player.queue",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id=\"wavr.player.queue\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"wavr.player.queue\"]"
+        }
+      ],
+      "ordinal": 12,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-13-hover-07-device",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the Connect to a device icon in the player bar.",
+      "instruction": "Hover over the player bar and click the Connect to a device icon in the player bar.",
+      "target_id": "wavr.player.device",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id=\"wavr.player.device\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id=\"wavr.player.device\"]"
+        }
+      ],
+      "ordinal": 13,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-14-click-crossfade-icon-player-bar",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the Crossfade icon in the player bar.",
+      "instruction": "Hover over the player bar and click the Crossfade icon in the player bar.",
+      "target_id": "wavr.player.crossfade",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wavr.player.crossfade']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.player.crossfade']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 14,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-15-hover-11-like-midnight-pulse",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the heart for 'Midnight Pulse'.",
+      "instruction": "Hover over 'Midnight Pulse' and click the heart for 'Midnight Pulse'.",
+      "target_id": "wavr.track.midnight-pulse.like",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wavr.track.midnight-pulse.row']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.track.midnight-pulse.like']"
+        }
+      ],
+      "ordinal": 15,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-16-hover-12-like-half-awake",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the heart for 'Half Awake'.",
+      "instruction": "Hover over 'Half Awake' and click the heart for 'Half Awake'.",
+      "target_id": "wavr.track.half-awake.like",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wavr.track.half-awake.row']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.track.half-awake.like']"
+        }
+      ],
+      "ordinal": 16,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-17-hover-15-more-static-rain",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click More options on 'Static Rain'.",
+      "instruction": "Scroll down, hover over 'Static Rain' and click More options on 'Static Rain'.",
+      "target_id": "wavr.track.static-rain.more",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 200
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wavr.track.static-rain.row']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.track.static-rain.more']"
+        }
+      ],
+      "ordinal": 17,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-18-hover-16-like-paper-birds-scroll",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the heart for 'Paper Birds'.",
+      "instruction": "Scroll down, hover over 'Paper Birds' and click the heart for 'Paper Birds'.",
+      "target_id": "wavr.track.paper-birds.like",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 420
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wavr.track.paper-birds.row']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.track.paper-birds.like']"
+        }
+      ],
+      "ordinal": 18,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-19-hover-17-like-neon-city-scroll",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the heart for 'Neon City'.",
+      "instruction": "Scroll down, hover over 'Neon City' and click the heart for 'Neon City'.",
+      "target_id": "wavr.track.neon-city.like",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 560
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wavr.track.neon-city.row']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.track.neon-city.like']"
+        }
+      ],
+      "ordinal": 19,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-20-drag-02-more-half-awake",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "8",
+      "instruction_original": "Click More options on 'Half Awake'.",
+      "instruction": "Scroll down, hover over 'Half Awake' and click More options on 'Half Awake'.",
+      "target_id": "wavr.track.half-awake.more",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 500,
+          "label": "scroll 500"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wavr.track.half-awake.more']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.track.half-awake.more']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 20,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-21-drag-04-more-solar-flare",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "8",
+      "instruction_original": "Click More options on 'Solar Flare'.",
+      "instruction": "Scroll down, hover over 'Solar Flare' and click More options on 'Solar Flare'.",
+      "target_id": "wavr.track.solar-flare.more",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 500,
+          "label": "scroll 500"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wavr.track.solar-flare.row']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.track.solar-flare.more']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 21,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-23-more-go-artist",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click to go to the artist page for 'Midnight Pulse'.",
+      "instruction": "Hover over 'Midnight Pulse', open the track menu and click to go to the artist page for 'Midnight Pulse'.",
+      "target_id": "wavr.track.more.go-artist",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wavr.track.midnight-pulse.row']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.track.midnight-pulse.more']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.track.more.go-artist']"
+        }
+      ],
+      "ordinal": 23,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-24-filter-playlists",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click to filter your library to show Playlists.",
+      "instruction": "Open the library filter menu and click to filter your library to show Playlists.",
+      "target_id": "wavr.library.filter.playlists",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.library.filter.button']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.library.filter.playlists']"
+        }
+      ],
+      "ordinal": 24,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-25-filter-albums",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click to filter your library to show Albums.",
+      "instruction": "Open the library filter menu and click to filter your library to show Albums.",
+      "target_id": "wavr.library.filter.albums",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.library.filter.button']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.library.filter.albums']"
+        }
+      ],
+      "ordinal": 25,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-26-filter-artists",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click to filter your library to show Artists.",
+      "instruction": "Open the library filter menu and click to filter your library to show Artists.",
+      "target_id": "wavr.library.filter.artists",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.library.filter.button']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.library.filter.artists']"
+        }
+      ],
+      "ordinal": 26,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-27-player-go-radio",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click to go to song radio for the current track.",
+      "instruction": "Open the player more menu and click to go to song radio for the current track.",
+      "target_id": "wavr.player.more.go-radio",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.player.more.button']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.player.more.go-radio']"
+        }
+      ],
+      "ordinal": 27,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-28-menu-05-sidebar-focus-flow-remove",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click to remove 'Focus Flow' from your library.",
+      "instruction": "Hover over 'Focus Flow', open its menu and click to remove 'Focus Flow' from your library.",
+      "target_id": "wavr.sidebar.playlist.more.remove",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wavr.sidebar.playlist.focus-flow']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.sidebar.playlist.focus-flow.more']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.sidebar.playlist.more.remove']"
+        }
+      ],
+      "ordinal": 28,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-29-menu-07-cold-front-add-playlist-scroll",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click to add 'Cold Front' to a playlist.",
+      "instruction": "Scroll down, hover over 'Cold Front', open the track menu and click to add 'Cold Front' to a playlist.",
+      "target_id": "wavr.track.more.add-playlist",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 650
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wavr.track.cold-front.row']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.track.cold-front.more']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.track.more.add-playlist']"
+        }
+      ],
+      "ordinal": 29,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-30-click-home",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "5",
+      "instruction_original": "Click 'Home'.",
+      "instruction": "Dismiss the device picker dialog and click 'Home'.",
+      "target_id": "wavr.sidebar.home",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.popup.dismiss']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.sidebar.home']"
+        }
+      ],
+      "ordinal": 30,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-32-popup-01-like-midnight-pulse-dialog",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "5",
+      "instruction_original": "Click the heart for 'Midnight Pulse'.",
+      "instruction": "Dismiss the device picker dialog, hover over 'Midnight Pulse' and click the heart for 'Midnight Pulse'.",
+      "target_id": "wavr.track.midnight-pulse.like",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.popup.dismiss']"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wavr.track.midnight-pulse.row']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.track.midnight-pulse.like']"
+        }
+      ],
+      "ordinal": 32,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-34-popup-05-more-half-awake-menu-open",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "3",
+      "instruction_original": "Click More options on 'Half Awake'.",
+      "instruction": "Close the open track menu, hover over 'Half Awake' and click More options on 'Half Awake'.",
+      "target_id": "wavr.track.half-awake.more",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.track.midnight-pulse.more']"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wavr.track.half-awake.row']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.track.half-awake.more']"
+        }
+      ],
+      "ordinal": 34,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-35-popup-06-like-half-awake-menu-open",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "3",
+      "instruction_original": "Click the heart for 'Half Awake'.",
+      "instruction": "Close the open track menu, hover over 'Half Awake' and click the heart for 'Half Awake'.",
+      "target_id": "wavr.track.half-awake.like",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.track.midnight-pulse.more']"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wavr.track.half-awake.row']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.track.half-awake.like']"
+        }
+      ],
+      "ordinal": 35,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-36-play-new-release-notification",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "9",
+      "instruction_original": "Click the Play release button in the 'Neon Drift just dropped Flux Deluxe' notification popup.",
+      "instruction": "Wait for the notification popup and click the Play release button in the 'Neon Drift just dropped Flux Deluxe' notification popup.",
+      "target_id": "wavr.async.release.play",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 2100
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.async.release.play']"
+        }
+      ],
+      "ordinal": 36,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-38-open-refreshed-playlist-notification",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "11",
+      "instruction_original": "Click the Open mix button in the 'Your Night Drive Mix refreshed' notification popup.",
+      "instruction": "Wait for the notification popup and click the Open mix button in the 'Your Night Drive Mix refreshed' notification popup.",
+      "target_id": "wavr.async.playlist.open",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 2300
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.async.playlist.open']"
+        }
+      ],
+      "ordinal": 38,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-39-listen-friend-activity-notification",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "12",
+      "instruction_original": "Click the Listen now button in the 'Mina started listening to Glass Rooms' notification popup.",
+      "instruction": "Wait for the notification popup and click the Listen now button in the 'Mina started listening to Glass Rooms' notification popup.",
+      "target_id": "wavr.async.friend.listen",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 2700
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.async.friend.listen']"
+        }
+      ],
+      "ordinal": 39,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-40-view-downloads-ready-notification",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "13",
+      "instruction_original": "Click the View downloads button in the 'Focus Flow is available offline' notification popup.",
+      "instruction": "Wait for the notification popup and click the View downloads button in the 'Focus Flow is available offline' notification popup.",
+      "target_id": "wavr.async.download.view",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 2400
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.async.download.view']"
+        }
+      ],
+      "ordinal": 40,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-41-get-tickets-brixton",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "6",
+      "instruction_original": "Click 'Get tickets' for Lena Shore at Brixton Academy.",
+      "instruction": "Use the featured banner dot and click 'Get tickets' for Lena Shore at Brixton Academy.",
+      "target_id": "wavr.featured.brixton.tickets",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.featured.dot-3']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.featured.brixton.tickets']"
+        }
+      ],
+      "ordinal": 41,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-42-auto-02-listen-neon-drift",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "7",
+      "instruction_original": "Click 'Listen' for Neon Drift.",
+      "instruction": "Use the featured banner dot and click 'Listen' for Neon Drift.",
+      "target_id": "wavr.featured.neon-drift.listen",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.featured.dot-1']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.featured.neon-drift.listen']"
+        }
+      ],
+      "ordinal": 42,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-43-drag-07-follow-violet-haze",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "8",
+      "instruction_original": "Click Follow for Violet Haze.",
+      "instruction": "Scroll down, drag the floating player aside and click Follow for Violet Haze.",
+      "target_id": "wavr.artist.violet-haze.follow",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 930
+        },
+        {
+          "type": "drag",
+          "startX": 1090,
+          "startY": 468,
+          "endX": 400,
+          "endY": 80
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wavr.artist.violet-haze.follow']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.artist.violet-haze.follow']"
+        }
+      ],
+      "ordinal": 43,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-44-drag-08-follow-kai-rivers",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "8",
+      "instruction_original": "Click Follow for Kai Rivers.",
+      "instruction": "Scroll down, drag the floating player aside and click Follow for Kai Rivers.",
+      "target_id": "wavr.artist.kai-rivers.follow",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 930
+        },
+        {
+          "type": "drag",
+          "startX": 1090,
+          "startY": 468,
+          "endX": 400,
+          "endY": 80
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wavr.artist.kai-rivers.follow']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.artist.kai-rivers.follow']"
+        }
+      ],
+      "ordinal": 44,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-46-drag-11-follow-drift-radio",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "8",
+      "instruction_original": "Click Follow for Drift Radio.",
+      "instruction": "Scroll down, drag the floating player aside and click Follow for Drift Radio.",
+      "target_id": "wavr.artist.drift-radio.follow",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1130
+        },
+        {
+          "type": "drag",
+          "startX": 1090,
+          "startY": 468,
+          "endX": 400,
+          "endY": 70
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wavr.artist.drift-radio.follow']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.artist.drift-radio.follow']"
+        }
+      ],
+      "ordinal": 46,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-47-drag-12-follow-aurora-drift-left",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "14",
+      "instruction_original": "Click Follow for Aurora Drift.",
+      "instruction": "Scroll down, drag the floating player aside and click Follow for Aurora Drift.",
+      "target_id": "wavr.artist.aurora-drift.follow",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 930
+        },
+        {
+          "type": "drag",
+          "startX": 620,
+          "startY": 468,
+          "endX": 1040,
+          "endY": 80
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wavr.artist.aurora-drift.follow']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.artist.aurora-drift.follow']"
+        }
+      ],
+      "ordinal": 47,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-48-drag-13-follow-the-pale-route-left",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "14",
+      "instruction_original": "Click Follow for The Pale Route.",
+      "instruction": "Scroll down, drag the floating player aside and click Follow for The Pale Route.",
+      "target_id": "wavr.artist.the-pale-route.follow",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 930
+        },
+        {
+          "type": "drag",
+          "startX": 620,
+          "startY": 468,
+          "endX": 1040,
+          "endY": 80
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wavr.artist.the-pale-route.follow']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.artist.the-pale-route.follow']"
+        }
+      ],
+      "ordinal": 48,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-49-drag-14-follow-mara-flynn-left",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "14",
+      "instruction_original": "Click Follow for Mara Flynn.",
+      "instruction": "Scroll down, drag the floating player aside and click Follow for Mara Flynn.",
+      "target_id": "wavr.artist.mara-flynn.follow",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1130
+        },
+        {
+          "type": "drag",
+          "startX": 620,
+          "startY": 468,
+          "endX": 1040,
+          "endY": 70
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wavr.artist.mara-flynn.follow']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.artist.mara-flynn.follow']"
+        }
+      ],
+      "ordinal": 49,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "wavr-50-drag-15-follow-synth-collective-left",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "14",
+      "instruction_original": "Click Follow for Synth Collective.",
+      "instruction": "Scroll down, drag the floating player aside and click Follow for Synth Collective.",
+      "target_id": "wavr.artist.synth-collective.follow",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1130
+        },
+        {
+          "type": "drag",
+          "startX": 620,
+          "startY": 468,
+          "endX": 1040,
+          "endY": 70
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='wavr.artist.synth-collective.follow']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='wavr.artist.synth-collective.follow']"
+        }
+      ],
+      "ordinal": 50,
+      "gold_trace_executable": true
+    }
+  ]
+}

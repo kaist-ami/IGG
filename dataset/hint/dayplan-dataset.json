@@ -1,0 +1,525 @@
+{
+  "app": "dayplan",
+  "display_name": "Dayplan Calendar",
+  "reference_service": "Google Calendar",
+  "category": "calendar",
+  "datasetPath": "dataset/hint/dayplan-dataset.json",
+  "baseUrl": "http://localhost:3209",
+  "states": {
+    "1": "Default week calendar view with auto rotating focus banner",
+    "2": "Agenda section visible",
+    "3": "Sync button waiting for availability",
+    "4": "Join link generating for 5:15 PM meeting",
+    "5": "Join link generating for 6:30 PM meeting",
+    "6": "Design Review popup open, blocking May 13 events",
+    "7": "Rendering Pipeline Sync popup open, blocking May 20 events",
+    "8": "Lumina AI Collab popup open, blocking May 21 events"
+  },
+  "tasks": [
+    {
+      "id": "dayplan-01-reserve-boardroom-a",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click 'Reserve' for Boardroom A.",
+      "instruction": "Scroll down and click 'Reserve' for Boardroom A.",
+      "target_id": "dayplan.resources.boardroom-a.reserve",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 1900
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.resources.boardroom-a.reserve']"
+        }
+      ],
+      "ordinal": 1,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "dayplan-02-reserve-training-lab",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click 'Reserve' for Training Lab.",
+      "instruction": "Scroll down and click 'Reserve' for Training Lab.",
+      "target_id": "dayplan.resources.training-lab.reserve",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2050
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.resources.training-lab.reserve']"
+        }
+      ],
+      "ordinal": 2,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "dayplan-03-reserve-war-room-delta",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click 'Reserve' for War Room Delta.",
+      "instruction": "Scroll down and click 'Reserve' for War Room Delta.",
+      "target_id": "dayplan.resources.delta.reserve",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2350
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.resources.delta.reserve']"
+        }
+      ],
+      "ordinal": 3,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "dayplan-04",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "2",
+      "instruction_original": "Click on the Monthly Roundtable event in the calendar.",
+      "instruction": "Scroll up and click on the Monthly Roundtable event in the calendar.",
+      "target_id": "dayplan.event.g-monthly.details",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -1000
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.event.g-monthly.details']"
+        }
+      ],
+      "ordinal": 4,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "dayplan-05",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "2",
+      "instruction_original": "Click on the Benchmark Demo Day event in the calendar.",
+      "instruction": "Scroll up and click on the Benchmark Demo Day event in the calendar.",
+      "target_id": "dayplan.event.igg-bench.details",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -1000
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.event.igg-bench.details']"
+        }
+      ],
+      "ordinal": 5,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "dayplan-07-search-result-renewal",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "2",
+      "instruction_original": "Click on the 'Sophie Park 1:1' event in the calendar.",
+      "instruction": "Scroll up and click on the 'Sophie Park 1:1' event in the calendar.",
+      "target_id": "dayplan.event.may11-1on1.details",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": -1000
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.event.may11-1on1.details']"
+        }
+      ],
+      "ordinal": 7,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "dayplan-09-reserve-terrace-lounge",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click 'Reserve' for Terrace Lounge.",
+      "instruction": "Scroll down and click 'Reserve' for Terrace Lounge.",
+      "target_id": "dayplan.resources.terrace.reserve",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 2200
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.resources.terrace.reserve']"
+        }
+      ],
+      "ordinal": 9,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "dayplan-10-sidebar-deadlines",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction_original": "Click the CVPR Session Review meeting in the calendar.",
+      "instruction": "Scroll down and click the CVPR Session Review meeting in the calendar.",
+      "target_id": "dayplan.event.jun1-cvpr.details",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 400,
+          "label": "scroll 400"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.event.jun1-cvpr.details']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 10,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "dayplan-12-notes-noah",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "2",
+      "instruction_original": "Click 'Notes' for Noah Kim's meeting.",
+      "instruction": "Hover over Noah Kim's meeting and click 'Notes'.",
+      "target_id": "dayplan.agenda.noah.join.notes",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='dayplan.agenda.noah.join.row']",
+          "ms": 250
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.agenda.noah.join.notes']"
+        }
+      ],
+      "ordinal": 12,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "dayplan-13-join-iris",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "2",
+      "instruction_original": "Click 'Join' for Iris Chen's meeting.",
+      "instruction": "Hover over Iris Chen's meeting and click 'Join'.",
+      "target_id": "dayplan.agenda.iris.join",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='dayplan.agenda.iris.join.row']",
+          "ms": 250
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.agenda.iris.join']"
+        }
+      ],
+      "ordinal": 13,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "dayplan-14-join-noah",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "2",
+      "instruction_original": "Click 'Join' for Noah Kim's meeting.",
+      "instruction": "Hover over Noah Kim's meeting and click 'Join'.",
+      "target_id": "dayplan.agenda.noah.join",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='dayplan.agenda.noah.join.row']",
+          "ms": 250
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.agenda.noah.join']"
+        }
+      ],
+      "ordinal": 14,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "dayplan-16-notes-leah",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "2",
+      "instruction_original": "Click 'Notes' for Leah Martin's meeting.",
+      "instruction": "Hover over Leah Martin's meeting and click 'Notes'.",
+      "target_id": "dayplan.agenda.leah.join.notes",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='dayplan.agenda.leah.join.row']",
+          "ms": 250
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.agenda.leah.join.notes']"
+        }
+      ],
+      "ordinal": 16,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "dayplan-17-overflow-today",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click 'Join Zoom meeting' for the 5:15 PM event today.",
+      "instruction": "Reveal more events today and click 'Join Zoom meeting' for the 5:15 PM event today.",
+      "target_id": "dayplan.event.may13-retro.join",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.overflow.5-13']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.event.may13-retro.details']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.event.may13-retro.join']"
+        }
+      ],
+      "ordinal": 17,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "dayplan-20-click-schedule-view",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the button to switch to weekly view.",
+      "instruction": "Open the view menu and click the button to switch to weekly view.",
+      "target_id": "dayplan.view.week",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.view.button']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.view.week']"
+        }
+      ],
+      "ordinal": 20,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "dayplan-21-click-focus-block",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the option to create a focus block.",
+      "instruction": "Open the create menu and click the option to create a focus block.",
+      "target_id": "dayplan.create.focus-block",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.create.button']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.create.focus-block']"
+        }
+      ],
+      "ordinal": 21,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "dayplan-22-click-out-of-office",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click the option to create an out of office block.",
+      "instruction": "Open the create menu and click the option to create an out of office block.",
+      "target_id": "dayplan.create.out-of-office",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.create.button']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.create.out-of-office']"
+        }
+      ],
+      "ordinal": 22,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "dayplan-23",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "1",
+      "instruction_original": "Click on the Signal Processing Collab event on May 11.",
+      "instruction": "Reveal more events on May 11 and click on the Signal Processing Collab event on May 11.",
+      "target_id": "dayplan.event.may11-signal.details",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.overflow.5-11']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.event.may11-signal.details']"
+        }
+      ],
+      "ordinal": 23,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "dayplan-25-popup-launch",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "6",
+      "instruction_original": "Click on the Launch Readiness event in the calendar.",
+      "instruction": "Dismiss the open event popup and click on the Launch Readiness event in the calendar.",
+      "target_id": "dayplan.event.launch.details",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.event.design-review.close']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.event.launch.details']"
+        }
+      ],
+      "ordinal": 25,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "dayplan-27-popup-robotics",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "8",
+      "instruction_original": "Click on the Robotics Collab event on May 22.",
+      "instruction": "Dismiss the open event popup and click on the Robotics Collab event on May 22.",
+      "target_id": "dayplan.event.may22-robotics.details",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.event.may21-lumina.close']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.event.may22-robotics.details']"
+        }
+      ],
+      "ordinal": 27,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "dayplan-29-join-leah-meeting",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "4",
+      "instruction_original": "Click 'Join' for the 5:15 PM meeting once the link is ready.",
+      "instruction": "Wait for the link to be ready, then click 'Join' for the 5:15 PM meeting.",
+      "target_id": "dayplan.agenda.leah.join",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 5200
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.agenda.leah.join']"
+        }
+      ],
+      "ordinal": 29,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "dayplan-31-open-board-packet",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "1",
+      "instruction_original": "Click 'Open focus block' for Board packet final review.",
+      "instruction": "Scroll down, use the focus dot and click 'Open focus block' for Board packet final review.",
+      "target_id": "dayplan.focus.board-packet.open",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 800
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.focus.dot-3']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.focus.board-packet.open']"
+        }
+      ],
+      "ordinal": 31,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "dayplan-32-open-renewal-strategy",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "1",
+      "instruction_original": "Click 'Open focus block' for Draft renewal strategy.",
+      "instruction": "Scroll down, use the focus dot and click 'Open focus block' for Draft renewal strategy.",
+      "target_id": "dayplan.focus.renewal.open",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 800
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.focus.dot-1']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.focus.renewal.open']"
+        }
+      ],
+      "ordinal": 32,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "dayplan-33-open-airport-transfer",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "1",
+      "instruction_original": "Click 'Open focus block' for Airport transfer window.",
+      "instruction": "Scroll down, use the focus dot and click 'Open focus block' for Airport transfer window.",
+      "target_id": "dayplan.focus.airport.open",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "dy": 800
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.focus.dot-2']"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='dayplan.focus.airport.open']"
+        }
+      ],
+      "ordinal": 33,
+      "gold_trace_executable": true
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+# OpenCUA-72B: the model is served by vLLM and opencua_vllm_server.py adapts it to /act.
+#   pip install -r requirements-vllm.txt --extra-index-url https://download.pytorch.org/whl/cu128
+vllm==0.16.0
+pillow

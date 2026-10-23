@@ -1,0 +1,963 @@
+{
+  "app": "discord",
+  "display_name": "Discord Chat",
+  "reference_service": "Discord",
+  "category": "chat/server",
+  "datasetPath": "dataset/main/discord-dataset.json",
+  "baseUrl": "http://localhost:3205",
+  "states": {
+    "1": "DM home screen. No conversation is open; the DM list is visible in its initial state.",
+    "2": "Server `s1` `#general` channel. The member list is open and server categories are expanded.",
+    "3": "DM with `Alice` is open. Older messages require scrolling up to view.",
+    "4": "Server `#research` channel. The channel list is scrolled to center on the research/dev section.",
+    "5": "Server `#general` channel. The `INFORMATION` and `DEVELOPMENT` categories are collapsed.",
+    "6": "Server `#general` channel. The bottom profile status menu is open, with the voice channel section in view.",
+    "7": "Server `#research` channel. The server menu is open and partially overlaps the channel list.",
+    "8": "DM with `Jisu` is open. A file upload card is in progress and the Send button is still disabled.",
+    "9": "Server `#general` channel. `Yuna`'s inbox toast will arrive shortly — temporal state.",
+    "10": "Server `#rules` channel. The member list is open in compact avatar-only view (narrowed to 80px).",
+    "11": "DM home screen. A 5-slide Nitro promotion popup is floating over the UI — slide 0 is active, slides 1-4 require clicking the ▶ arrow to reach.",
+    "12": "Server `#general` channel. A 5-slide Server Boost promotion popup is floating over the UI — slide 0 is active, slides 1-4 require clicking the ▶ arrow to reach.",
+    "13": "Server `#general` channel. `Kai`'s inbox toast will arrive shortly — temporal state.",
+    "14": "Server `#general` channel. `Mia`'s inbox toast will arrive shortly — temporal state."
+  },
+  "tasks": [
+    {
+      "id": "discord-01-find-kai-direct-message-list",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction": "Find 'Kai' in the direct message list.",
+      "target_id": "discord.dm.kai",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='discord.dm.list']",
+          "dy": 1000,
+          "label": "scroll 1000"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.dm.kai']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 1,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-03-click-oldest-message-conversation-alice",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "3",
+      "instruction": "Click the oldest message in the conversation with Alice.",
+      "target_id": "discord.message.alice.late-night",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='discord.message.list']",
+          "dy": -5000,
+          "label": "scroll -5000"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.message.alice.late-night']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 3,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-04-click-code-review-channel-current-server",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "2",
+      "instruction": "Click the '#code-review' channel in the current server.",
+      "target_id": "discord.channel.code-review",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='discord.channel.list']",
+          "dy": 500,
+          "label": "scroll 500"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.channel.code-review']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 4,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-05-click-roles-channel-current-server",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "4",
+      "instruction": "Click the '#roles' channel in the current server.",
+      "target_id": "discord.channel.roles",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='discord.channel.list']",
+          "dy": -500,
+          "label": "scroll -500"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.channel.roles']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 5,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-07-find-photos-channel-server",
+      "level": "1-1",
+      "constraint_type": "scroll_vertical",
+      "state_id": "2",
+      "instruction": "Find the '#photos' channel in the server.",
+      "target_id": "discord.channel.photos",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='discord.channel.list']",
+          "dy": 1500,
+          "label": "scroll down to social category"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.channel.photos']",
+          "label": "click photos channel"
+        }
+      ],
+      "ordinal": 7,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-08-find-wonjun-direct-message-list",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction": "Find 'Wonjun' in the direct message list.",
+      "target_id": "discord.dm.wonjun",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='discord.dm.list']",
+          "dy": 1200,
+          "label": "scroll 1200"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.dm.wonjun']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 8,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-09-find-eunha-direct-message-list",
+      "level": "1-1",
+      "constraint_type": "off_screen",
+      "state_id": "1",
+      "instruction": "Find 'Eunha' in the direct message list.",
+      "target_id": "discord.dm.eunha",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='discord.dm.list']",
+          "dy": 1400,
+          "label": "scroll 1400"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.dm.eunha']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 9,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-11-find-creator-dock-server",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "2",
+      "instruction": "Find the 'Creator Dock' server.",
+      "target_id": "discord.server.creator-dock",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='discord.server.creator-dock']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.server.creator-dock']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 11,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-12-find-inbox-button",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "4",
+      "instruction": "Find the 'Inbox' button.",
+      "target_id": "discord.inbox",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='discord.inbox']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.inbox']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 12,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-13-find-add-reaction-button-message-alice-sent-ok-good-luck-today",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "3",
+      "instruction": "Find the 'Add Reaction' button on the message Alice sent: 'ok good luck today and'.",
+      "target_id": "discord.message.alice.encouragement.react",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='discord.message.alice.encouragement']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='discord.message.alice.encouragement.react']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.message.alice.encouragement.react']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 13,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-14-click-reply-button-minjis-message-current-channel",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "4",
+      "instruction": "Click the 'Reply' button on Minji's message in the current channel.",
+      "target_id": "discord.channel.research.minji-message.reply",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='discord.channel.research.minji-message']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='discord.channel.research.minji-message.reply']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.channel.research.minji-message.reply']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 14,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-15-click-hide-member-list",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "2",
+      "instruction": "Click 'Hide Member List'.",
+      "target_id": "discord.toggle.member-list",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='discord.toggle.member-list']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.toggle.member-list']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 15,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-17-find-view-all-button-research-channels-thread-panel",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "2",
+      "instruction": "Find the 'View All' button in the '#research' channel's thread panel.",
+      "target_id": "discord.channel.research.thread-preview.show-all",
+      "gold_trace": [
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='discord.channel.list']",
+          "dy": 600,
+          "label": "scroll 600"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='discord.channel.research']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.channel.research.thread-preview.show-all']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 17,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-18-find-help-button-top-bar",
+      "level": "2-1",
+      "constraint_type": "hover_reveal",
+      "state_id": "4",
+      "instruction": "Find the 'Help' button.",
+      "target_id": "discord.topbar.help",
+      "gold_trace": [
+        {
+          "type": "move",
+          "selector": "[data-igg-id='discord.topbar.help']",
+          "ms": 220,
+          "label": "hover help button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.topbar.help']",
+          "label": "click help"
+        }
+      ],
+      "ordinal": 18,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-19-find-code-review-channel",
+      "level": "2-2",
+      "constraint_type": "carousel_reveal",
+      "state_id": "5",
+      "instruction": "Find the '#code-review' channel.",
+      "target_id": "discord.channel.code-review",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.category.development']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.channel.code-review']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 19,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-20-find-button-sets-profile-status-do-not-disturb",
+      "level": "2-2",
+      "constraint_type": "carousel_reveal",
+      "state_id": "5",
+      "instruction": "Find the button that sets your profile status to 'Do Not Disturb'.",
+      "target_id": "discord.profile.status.dnd",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.profile.jordan']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.profile.status-dropdown']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.profile.status.dnd']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 20,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-21-find-game-night-server",
+      "level": "2-2",
+      "constraint_type": "carousel_reveal",
+      "state_id": "5",
+      "instruction": "Find the 'Game Night' server.",
+      "target_id": "discord.server.game-night",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.server.folder']",
+          "label": "click observed"
+        },
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='discord.server.list']",
+          "dy": 200,
+          "label": "scroll 200"
+        },
+        {
+          "type": "move",
+          "selector": "[data-igg-id='discord.server.game-night']",
+          "ms": 220,
+          "label": "move observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.server.game-night']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 21,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-22-find-edit-server-profile-button",
+      "level": "2-2",
+      "constraint_type": "carousel_reveal",
+      "state_id": "5",
+      "instruction": "Find the 'Edit Server Profile' button.",
+      "target_id": "discord.server.edit-profile",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.server.project-moshiki.header']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.server.edit-profile']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 22,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-23-click-invite-people-server-menu",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "5",
+      "instruction": "Click 'Invite People' in the server menu.",
+      "target_id": "discord.server.menu.invite",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.server.project-moshiki.header']",
+          "label": "open server menu"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.server.menu.invite']",
+          "label": "click invite people"
+        }
+      ],
+      "ordinal": 23,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-24-click-server-settings-server-menu",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "5",
+      "instruction": "Click 'Server Settings' in the server menu.",
+      "target_id": "discord.server.menu.settings",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.server.project-moshiki.header']",
+          "label": "open server menu"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.server.menu.settings']",
+          "label": "click server settings"
+        }
+      ],
+      "ordinal": 24,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-25-click-notification-settings-server-menu",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "5",
+      "instruction": "Click 'Notification Settings' in the server menu.",
+      "target_id": "discord.server.menu.notifications",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.server.project-moshiki.header']",
+          "label": "open server menu"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.server.menu.notifications']",
+          "label": "click notification settings"
+        }
+      ],
+      "ordinal": 25,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-26-click-leave-server-server-menu",
+      "level": "2-2",
+      "constraint_type": "menu_reveal",
+      "state_id": "5",
+      "instruction": "Click 'Leave Server' in the server menu.",
+      "target_id": "discord.server.menu.leave",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.server.project-moshiki.header']",
+          "label": "open server menu"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.server.menu.leave']",
+          "label": "click leave server"
+        }
+      ],
+      "ordinal": 26,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-27-find-photos-channel",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "6",
+      "instruction": "Find the '#photos' channel.",
+      "target_id": "discord.channel.photos",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.profile.jordan']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.channel.photos']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 27,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-28-find-general-channel",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "7",
+      "instruction": "Find the '#general' channel.",
+      "target_id": "discord.channel.general",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.server.project-moshiki.header']",
+          "label": "click observed"
+        },
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='discord.channel.list']",
+          "dy": -200,
+          "label": "scroll -200"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.channel.general']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 28,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-29-find-photos-channel-profile-card-open",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "6",
+      "instruction": "Find the '#photos' channel.",
+      "target_id": "discord.channel.photos",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.profile.jordan']",
+          "label": "close profile card"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.channel.photos']",
+          "label": "click photos channel"
+        }
+      ],
+      "ordinal": 29,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-30-find-announcements-channel-server-menu-open",
+      "level": "2-3",
+      "constraint_type": "popup_occlusion",
+      "state_id": "7",
+      "instruction": "Find the '#announcements' channel.",
+      "target_id": "discord.channel.announcements",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.server.project-moshiki.header']",
+          "label": "click observed"
+        },
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='discord.channel.list']",
+          "dy": -600,
+          "label": "scroll -600"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.channel.announcements']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 30,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-33-click-view-message-kais-message-can-you-review-pr",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "13",
+      "instruction": "Click 'View message' in Kai's message popup that says 'can you review this PR real quick?'.",
+      "target_id": "discord.inbox.kai.view-message",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 3100,
+          "label": "wait for toast"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.inbox.kai.view-message']",
+          "label": "click view message"
+        }
+      ],
+      "ordinal": 33,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-34-click-view-message-mias-message-research-notes",
+      "level": "3-1",
+      "constraint_type": "async_wait",
+      "state_id": "14",
+      "instruction": "Click 'View message' in Mia's message popup about research notes.",
+      "target_id": "discord.inbox.mia.view-message",
+      "gold_trace": [
+        {
+          "type": "wait",
+          "ms": 3100,
+          "label": "wait for toast"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.inbox.mia.view-message']",
+          "label": "click view message"
+        }
+      ],
+      "ordinal": 34,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-36-nitro-banner-next-slide-basic-compare",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "11",
+      "instruction": "Click the 'Compare plans' button in the Nitro Basic slide.",
+      "target_id": "discord.nitro.banner.basic.compare",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.nitro.banner.next']",
+          "label": "click next to slide 1"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.nitro.banner.basic.compare']",
+          "label": "click compare plans"
+        }
+      ],
+      "ordinal": 36,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-38-nitro-banner-slide3-upload-perk",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "11",
+      "instruction": "Click the 'Unlock larger uploads' button in the promotion banner.",
+      "target_id": "discord.nitro.banner.perk.upload",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.nitro.banner.dot.3']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.nitro.banner.perk.upload']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 38,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-39-nitro-banner-slide4-gift",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "11",
+      "instruction": "Click the 'Gift Nitro' button in the promotion banner.",
+      "target_id": "discord.nitro.banner.gift",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.nitro.banner.dot.4']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.nitro.banner.gift']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 39,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-40-boost-banner-slide1-emoji-perk",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "12",
+      "instruction": "Click the 'More Emoji Slots' perk in the Server Boost banner.",
+      "target_id": "discord.boost.banner.perk.emoji",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.boost.banner.next']",
+          "label": "click next to slide 1"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.boost.banner.perk.emoji']",
+          "label": "click emoji perk"
+        }
+      ],
+      "ordinal": 40,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-41-boost-banner-slide2-audio-perk",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "12",
+      "instruction": "Click the '128 kbps Audio Quality' perk in the Server Boost banner.",
+      "target_id": "discord.boost.banner.perk.audio",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.boost.banner.dot.2']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.boost.banner.perk.audio']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 41,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-43-boost-banner-slide4-nitro-link",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "12",
+      "instruction": "Click 'Learn about Nitro' in the Server Boost banner.",
+      "target_id": "discord.boost.banner.nitro-link",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.boost.banner.dot.4']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.boost.banner.nitro-link']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 43,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-44-boost-banner-slide4-nitro-subscribe",
+      "level": "3-2",
+      "constraint_type": "auto_transition",
+      "state_id": "12",
+      "instruction": "Click 'Subscribe & Boost' in the Server Boost banner.",
+      "target_id": "discord.boost.banner.nitro.subscribe",
+      "gold_trace": [
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.boost.banner.dot.4']",
+          "label": "click observed"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.boost.banner.nitro.subscribe']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 44,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-45-find-alice-name-narrow-member-list",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "10",
+      "instruction": "Find 'Alice' in the member list.",
+      "target_id": "discord.member.name.alice",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 1362,
+          "startY": 400,
+          "endX": 1150,
+          "endY": 400,
+          "label": "drag to expand member list"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.member.name.alice']",
+          "label": "click alice name"
+        }
+      ],
+      "ordinal": 45,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-46-find-kai-name-narrow-member-list",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "10",
+      "instruction": "Find 'Kai' in the member list.",
+      "target_id": "discord.member.name.kai",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 1362,
+          "startY": 400,
+          "endX": 1150,
+          "endY": 400,
+          "label": "drag to expand member list"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.member.name.kai']",
+          "label": "click kai name"
+        }
+      ],
+      "ordinal": 46,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-47-find-minji-name-narrow-member-list",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "10",
+      "instruction": "Find 'Minji' in the member list.",
+      "target_id": "discord.member.name.minji",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 1362,
+          "startY": 400,
+          "endX": 1150,
+          "endY": 400,
+          "label": "drag to expand member list"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.member.name.minji']",
+          "label": "click minji name"
+        }
+      ],
+      "ordinal": 47,
+      "gold_trace_executable": true
+    },
+    {
+      "id": "discord-48-find-david-name-narrow-member-list",
+      "level": "3-3",
+      "constraint_type": "drag_occlusion",
+      "state_id": "10",
+      "instruction": "Find 'David' in the member list.",
+      "target_id": "discord.member.name.david",
+      "gold_trace": [
+        {
+          "type": "drag",
+          "startX": 1362,
+          "startY": 400,
+          "endX": 1150,
+          "endY": 400,
+          "label": "drag"
+        },
+        {
+          "type": "scroll",
+          "selector": "[data-igg-id='discord.member.list']",
+          "dy": 400,
+          "label": "scroll 400"
+        },
+        {
+          "type": "click",
+          "selector": "[data-igg-id='discord.member.name.david']",
+          "label": "click observed"
+        }
+      ],
+      "ordinal": 48,
+      "gold_trace_executable": true
+    }
+  ]
+}

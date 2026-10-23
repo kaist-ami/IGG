@@ -1,0 +1,25 @@
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import type { NextConfig } from "next";
+
+const appDir = path.dirname(fileURLToPath(import.meta.url));
+
+const nextConfig: NextConfig = {
+  devIndicators: false,
+  turbopack: {
+    root: path.join(appDir, "../.."),
+  },
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          { key: "X-Frame-Options", value: "ALLOWALL" },
+          { key: "Content-Security-Policy", value: "frame-ancestors *" },
+        ],
+      },
+    ];
+  },
+};
+
+export default nextConfig;
