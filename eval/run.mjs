@@ -175,6 +175,13 @@ async function main() {
     }
   }
 
+  if (results.length === 0) {
+    throw new Error(
+      `No tasks were evaluated for apps: ${opts.apps.join(", ") || "(none)"} (dataset: ${opts.dataset}). ` +
+      "Check --apps and --task-ids, or omit --task-ids to run all tasks for the selected apps.",
+    );
+  }
+
   const summary = {
     agent: opts.gold ? "gold_trace" : opts.agentUrl,
     dataset: opts.dataset,
